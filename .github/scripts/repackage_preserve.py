@@ -121,12 +121,10 @@ def main():
             info.compress_type = method
             info.create_system = 3
             info.external_attr = 0o100644 << 16
-            with source.open("rb") as stream, apk.open(info, "w") as target:
-                while True:
-                    block = stream.read(4 * 1024 * 1024)
-                    if not block:
-                        break
-                    target.write(block)
+            # writestr writes complete local-header CRC/size fields and avoids
+            # ZIP data descriptors (flag bit 3), which some native APK/ZIP
+            # readers used by signature/integrity hooks do not handle.
+            apk.writestr(info, source.read_bytes())
             output_hashes[relative] = sha256
             included += 1
             total += size
@@ -141,14 +139,20 @@ def main():
     with output.open("rb") as stream:
         output_digest = hashlib.file_digest(stream, "sha256").hexdigest()
     origin_size, origin_crc, origin_sha256 = file_crc_and_sha256(origin_path)
+    with zipfile.ZipFile(output) as check:
+        data_descriptor_count = sum(1 for i in check.infolist() if i.flag_bits & 0x8)
+    with zipfile.ZipFile(origin_path) as check:
+        origin_data_descriptor_count = sum(1 for i in check.infolist() if i.flag_bits & 0x8)
 
     report = {
-        "mode": "preserve-v1" if args.preserve_v1 else "debug-unsigned",
+        "mode": "preserve-v1" if args.preserve_v1 else "release-unsigned",
         "source_code_modified": False,
         "files_packaged": included,
         "source_bytes_packaged": total,
         "output_bytes": output.stat().st_size,
         "output_sha256": output_digest,
+        "zip_data_descriptor_entries": data_descriptor_count,
+        "original_asset_zip_data_descriptor_entries": origin_data_descriptor_count,
         "original_asset": {
             "path": "assets/SignatureKiller/origin.apk",
             "size": origin_size,

@@ -1,0 +1,173 @@
+name: Testar APK release com chave gerada
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [arena/19984eb5-teste]
+    paths:
+      - .github/workflows/release-test-emulator.yml
+      - .github/scripts/repackage_preserve.py
+      - .github/scripts/emulator-crash-test.sh
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-test-8ball-apk-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  release-test:
+    name: Assinar com chave release e capturar crash em ARM64
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Checkout com arquivos grandes
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Configurar Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Configurar Android SDK
+        uses: android-actions/setup-android@v4
+        with:
+          packages: platform-tools
+          log-accepted-android-sdk-licenses: false
+
+      - name: Instalar ferramentas de empacotamento
+        run: sdkmanager "build-tools;35.0.0"
+
+      - name: Reempacotar sem alterar códigos
+        run: |
+          set -euo pipefail
+          mkdir -p dist report
+          python3 .github/scripts/repackage_preserve.py \
+            --output "$RUNNER_TEMP/8Ball-Pool-Android-V2-5-release-unsigned.apk" \
+            --report report/release-packaging.json
+
+      - name: Verificar metadados do ZIP reempacotado
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, pathlib
+          data = json.loads(pathlib.Path('report/release-packaging.json').read_text())
+          count = data.get('zip_data_descriptor_entries')
+          origin = data.get('original_asset_zip_data_descriptor_entries')
+          print(f"::notice title=ZIP data descriptors::output={count} original_asset={origin}")
+          if count != 0:
+              raise SystemExit(f"APK still has {count} data-descriptor entries")
+          PY
+
+      - name: Gerar chave release de teste, assinar e verificar
+        run: |
+          set -euo pipefail
+          BUILD_TOOLS="$ANDROID_HOME/build-tools/35.0.0"
+          KEYSTORE="$RUNNER_TEMP/release-test.keystore"
+          STOREPASS="$(openssl rand -hex 24)"
+          keytool -genkeypair -noprompt \
+            -keystore "$KEYSTORE" \
+            -storepass "$STOREPASS" -keypass "$STOREPASS" \
+            -alias release-test -keyalg RSA -keysize 4096 -validity 10000 \
+            -dname "CN=8BallPool Release Test, O=Community Build, C=BR"
+          "$BUILD_TOOLS/zipalign" -P 16 -f 4 \
+            "$RUNNER_TEMP/8Ball-Pool-Android-V2-5-release-unsigned.apk" \
+            "$RUNNER_TEMP/8Ball-Pool-Android-V2-5-release-aligned.apk"
+          "$BUILD_TOOLS/apksigner" sign \
+            --ks "$KEYSTORE" \
+            --ks-key-alias release-test \
+            --ks-pass "pass:$STOREPASS" --key-pass "pass:$STOREPASS" \
+            --v1-signing-enabled true --v2-signing-enabled true \
+            --v3-signing-enabled true --v4-signing-enabled false \
+            --out "dist/8Ball-Pool-Android-V2-5-release-test.apk" \
+            "$RUNNER_TEMP/8Ball-Pool-Android-V2-5-release-aligned.apk"
+          "$BUILD_TOOLS/apksigner" verify --verbose --print-certs \
+            "dist/8Ball-Pool-Android-V2-5-release-test.apk" > report/release-signature.txt 2>&1
+          "$BUILD_TOOLS/zipalign" -c -P 16 4 \
+            "dist/8Ball-Pool-Android-V2-5-release-test.apk" > report/zipalign-check.txt 2>&1
+          "$BUILD_TOOLS/aapt2" dump badging \
+            "dist/8Ball-Pool-Android-V2-5-release-test.apk" > report/release-badging.txt 2>&1
+          sha256sum dist/*.apk > report/sha256.txt
+          {
+            echo "# APK release de teste"
+            echo
+            echo "- Chave gerada no Actions apenas para teste; não é a chave original da Miniclip/HUNTT."
+            echo "- A chave privada não é publicada. Como é uma chave nova, desinstale versões anteriores antes de instalar."
+            echo "- Nenhum código do aplicativo foi lido ou alterado; apenas reempacotamento, alinhamento e assinatura."
+            echo
+            echo '```text'
+            head -n 30 report/release-signature.txt
+            echo '```'
+          } > report/summary.md
+          cat report/summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Habilitar KVM para o emulador
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Instalar e iniciar em emulador x86_64 com tradução ARM64
+        id: emulator
+        continue-on-error: true
+        uses: ReactiveCircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          profile: pixel_5
+          cores: 4
+          ram-size: 4096M
+          disk-size: 8G
+          force-avd-creation: true
+          emulator-boot-timeout: 900
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -no-snapshot -wipe-data
+          disable-animations: true
+          disable-linux-hw-accel: false
+          script: bash .github/scripts/emulator-crash-test.sh
+
+      - name: Publicar relatório do emulador
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 8Ball-Pool-Android-V2-5-release-test
+          path: |
+            dist/*.apk
+            report/*
+            emulator-report/*
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Publicar APK release de teste em pré-release
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="v2.5-release-test-${{ github.run_id }}"
+          files=(dist/8Ball-Pool-Android-V2-5-release-test.apk report/sha256.txt)
+          if [ -f report/summary.md ]; then
+            files+=(report/summary.md)
+          fi
+          if [ -f emulator-report/summary.md ]; then
+            cp emulator-report/summary.md report/emulator-summary.md
+            files+=(report/emulator-summary.md)
+          fi
+          {
+            echo "APK de teste assinado com chave release gerada no GitHub Actions. Não é a assinatura original. Desinstale qualquer versão anterior antes de instalar. O relatório do emulador ARM64 acompanha a pré-release quando disponível."
+            if [ -f emulator-report/summary.md ]; then
+              echo
+              cat emulator-report/summary.md
+            fi
+          } > release-notes.md
+          gh release create "$tag" \
+            "${files[@]}" \
+            --repo "${{ github.repository }}" \
+            --target "${{ github.sha }}" \
+            --prerelease \
+            --title "8BallPool V2.5 - APK release de teste" \
+            --notes-file release-notes.md
