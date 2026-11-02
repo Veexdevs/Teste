@@ -116,6 +116,24 @@ jobs:
           grep -E '^(package:|sdkVersion:|targetSdkVersion:|native-code:|launchable-activity:)' report/preserve-v1-badging.txt | head -n 10 | while IFS= read -r line; do
             echo "::notice title=Metadados preserve-v1::$line"
           done
+          python3 - <<'PY'
+          import json, pathlib
+          def escape(value):
+              return value.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
+          sig = pathlib.Path('report/preserve-v1-signature.txt')
+          if sig.exists():
+              for line in sig.read_text(errors='replace').splitlines()[:40]:
+                  print(f"::notice title=apksigner preserve-v1::{escape(line)}")
+          for name in ['preserve-v1-packaging.json', 'debug-packaging.json']:
+              path = pathlib.Path('report') / name
+              if path.exists():
+                  data = json.loads(path.read_text())
+                  comp = data.get('comparison_to_original_asset', {})
+                  print(f"::notice title={name}::same={comp.get('same_crc_count')} changed={comp.get('changed_crc_count')} added={comp.get('added_count')} removed={comp.get('removed_count')}")
+                  for key in ['changed_paths_sample', 'added_paths_sample', 'removed_paths_sample']:
+                      for item in comp.get(key, [])[:10]:
+                          print(f"::notice title={name} {key}::{escape(item)}")
+          PY
 
       - name: Publicar relatório e variantes
         uses: actions/upload-artifact@v4
