@@ -135,16 +135,16 @@ for label in ['original', 'release-test']:
                 if len(hits) > 200:
                     break
     if app_rows:
-        lines_out.append('\n### app process logs\n```text')
-        lines_out.extend(app_rows[:300])
+        lines_out.append('\n### app process logs (last 220 lines)\n```text')
+        lines_out.extend(app_rows[-220:])
         lines_out.append('```')
     if custom_rows:
         lines_out.append('\n### loader / signature / mod logs\n```text')
-        lines_out.extend(custom_rows[:200])
+        lines_out.extend(custom_rows[-160:])
         lines_out.append('```')
-    if hits:
+    if hits and not app_rows:
         lines_out.append('\n### logcat highlights\n```text')
-        lines_out.extend(hits[:200])
+        lines_out.extend(hits[:120])
         lines_out.append('```')
     elif not app_rows and not custom_rows:
         lines_out.append('\nNo fatal/crash/native-load keywords found in captured logcat.')
