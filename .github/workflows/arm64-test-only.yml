@@ -83,7 +83,11 @@ jobs:
 
       - name: Instalar e iniciar APKs
         if: always()
-        run: bash .github/scripts/emulator-crash-test.sh
+        run: |
+          set -uo pipefail
+          export ANDROID_SERIAL=127.0.0.1:5555
+          adb devices -l > emulator-report/adb-devices.txt 2>&1 || true
+          bash .github/scripts/emulator-crash-test.sh
 
       - name: Publicar diagnóstico na pré-release
         if: always()
