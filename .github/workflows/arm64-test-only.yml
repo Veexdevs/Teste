@@ -97,9 +97,17 @@ jobs:
         run: |
           set -uo pipefail
           tag="${{ github.event.inputs.tag || 'v2.5-compat-41447529163' }}"
-          gh release view "$tag" --repo "${{ github.repository }}" --json body --jq .body > release-body.md
+          gh release view "$tag" --repo "${{ github.repository }}" --json body --jq .body > existing-body.md
+          python3 - <<'PY'
+          from pathlib import Path
+          text = Path('existing-body.md').read_text(encoding='utf-8')
+          for marker in ('## Resultado do teste ARM64', '## Novo teste ARM64'):
+              index = text.find(marker)
+              if index != -1:
+                  text = text[:index]
+          Path('release-body.md').write_text(text.rstrip() + '\n\n', encoding='utf-8')
+          PY
           {
-            echo
             echo "## Novo teste ARM64"
             echo
             if [ -f emulator-report/host.txt ]; then
@@ -109,22 +117,31 @@ jobs:
             fi
             if [ -f emulator-report/summary.md ]; then
               echo '```text'
-              cat emulator-report/summary.md
+              head -c 70000 emulator-report/summary.md
+              echo
               echo '```'
             fi
             if [ -f emulator-report/redroid-docker.log ]; then
               echo '```text'
-              tail -n 160 emulator-report/redroid-docker.log
+              tail -n 120 emulator-report/redroid-docker.log
               echo '```'
             fi
             if [ -f emulator-report/dmesg-tail.txt ]; then
               echo '```text'
-              tail -n 80 emulator-report/dmesg-tail.txt
+              tail -n 60 emulator-report/dmesg-tail.txt
               echo '```'
             fi
           } >> release-body.md
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('release-body.md')
+          text = p.read_text(encoding='utf-8')
+          if len(text) > 120000:
+              text = text[:120000] + '\n\n[truncated]\n'
+          p.write_text(text, encoding='utf-8')
+          PY
           gh release edit "$tag" --repo "${{ github.repository }}" --notes-file release-body.md
-          cat release-body.md
+          tail -n 260 release-body.md
 
       - uses: actions/upload-artifact@v4
         if: always()
