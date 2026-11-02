@@ -1,4 +1,18 @@
 {
+  "file_signatures": {
+    "8Ball-Pool-Android-V2-5/AndroidManifest.xml": {
+      "first_8_bytes_hex": "03000800704d0100",
+      "size": 85360
+    },
+    "8Ball-Pool-Android-V2-5/classes.dex": {
+      "first_8_bytes_hex": "6465780a30333500",
+      "size": 12043232
+    },
+    "8Ball-Pool-Android-V2-5/resources.arsc": {
+      "first_8_bytes_hex": "02000c0060572800",
+      "size": 2643808
+    }
+  },
   "filename": "8Ball-Pool-Android-V2-5.zip",
   "size": 360808535,
   "sha256": "a99e4cc9133ce386c14506962d5145bdad778e93b2eb8a3094849470e84d6576",
