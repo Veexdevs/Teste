@@ -69,7 +69,15 @@ def main():
                      if PurePosixPath(entry["path"]).name in
                      {"gradlew", "gradlew.bat", "settings.gradle", "settings.gradle.kts",
                       "build.gradle", "build.gradle.kts", "AndroidManifest.xml", "CMakeLists.txt"}]
+    signatures = {}
+    with zipfile.ZipFile(destination) as archive:
+        for name in archive.namelist():
+            if PurePosixPath(name).name in {"AndroidManifest.xml", "resources.arsc", "apktool.yml"} or name.endswith("/classes.dex"):
+                with archive.open(name) as source:
+                    header = source.read(8)
+                signatures[name] = {"first_8_bytes_hex": header.hex(), "size": archive.getinfo(name).file_size}
     manifest = {
+        "file_signatures": signatures,
         "filename": FILENAME,
         "size": size,
         "sha256": digest.hexdigest(),
