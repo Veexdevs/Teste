@@ -1,10 +1,8 @@
-build Mon Nov  2 20:36:03 UTC 2026
+build Mon Nov  2 20:38:57 UTC 2026
 godot=4.5.stable.official.876b29033
-runner=Linux (local)
-selftest=PASS - 0 erros | 9 combatentes | 2 objectivos | glTF | balistica | fortificacao | carga
-apk_signature=v2+v3 OK (certs/debug.keystore)
-builds/SENTINELA.apk 86709897 bytes sha256=38ac865c8c12a5c851a9a4e62553a297f0bc2506ce7d7075f4a2cb409bf3c49d
-builds/SENTINELA.exe 130518120 bytes sha256=73e7a3cdbdd48f35b1b8e9c445f95bb147d0854b5795a738859f8d269f819feb
-builds/SENTINELA.x86_64 104154488 bytes sha256=2e9788f849cdf5e8490097d0eb582e496d1e601bde701a0a8dcb741d30b59901
-builds/SENTINELA_macos.zip 92751614 bytes sha256=93ae284dfcd10fed76dadaa989d14860445c66b4c019a7aa5619feb05b49cba4
-builds/SENTINELA_ios_xcode.zip 135225293 bytes sha256=b5e73ba9a8cbf94e55213de130580dae59806126e8c6f0f9e0f6ef00a6abb1b7
+runner=Linux
+builds/SENTINELA.apk 86709897 bytes sha256=78916264fc2698131106d04e606f7d934a5a34feccae3af53956be9884e685e6
+builds/SENTINELA.exe 130518120 bytes sha256=64932c393181b78c89e07889544b62b6d5e4508d6f106e5cf5c779e78f9ec7ef
+builds/SENTINELA.x86_64 104154488 bytes sha256=3d70f5d6af64ad136a2a76c2b3071686a045f1edcfc9611d95a43ac00765bc18
+builds/SENTINELA_macos.zip 92752586 bytes sha256=bfbebcb89829607c9b3e49796ff9d880ffca27d2df6067836db005ad10ad449f
+builds/SENTINELA_ios_xcode.zip 135869231 bytes sha256=457a2290662b09a88fc33af9e1fd8ca50ce44ded9c89b2aa605928aff39767ec
