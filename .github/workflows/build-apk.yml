@@ -3,7 +3,7 @@ name: Compilar APK Android
 on:
   workflow_dispatch:
   push:
-    branches: [main, arena/fe38b21c-teste]
+    branches: [main]
 
 permissions:
   contents: read
