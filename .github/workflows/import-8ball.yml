@@ -1,4 +1,4 @@
-name: Importar ZIP 8BallPool
+name: Importar e compilar ZIP 8BallPool
 
 on:
   workflow_dispatch:
@@ -7,6 +7,8 @@ on:
     paths:
       - .github/workflows/import-8ball.yml
       - .github/scripts/inspect_mediafire_zip.py
+      - .github/scripts/import_mediafire_zip.py
+      - .github/scripts/package_apk.py
 
 permissions:
   contents: write
@@ -16,10 +18,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  inspect:
-    name: Verificar e inventariar o ZIP
+  import-build:
+    name: Importar arquivos e gerar APK
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 45
     steps:
       - name: Checkout da branch de trabalho
         uses: actions/checkout@v4
@@ -27,13 +29,83 @@ jobs:
           ref: arena/28562b70-teste
           fetch-depth: 0
 
-      - name: Baixar e conferir o ZIP sem abrir os códigos
-        run: python3 .github/scripts/inspect_mediafire_zip.py
+      - name: Configurar Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
 
-      - name: Salvar somente o inventário de arquivos
+      - name: Configurar Android SDK
+        uses: android-actions/setup-android@v4
+        with:
+          packages: platform-tools
+          log-accepted-android-sdk-licenses: false
+
+      - name: Instalar ferramentas de empacotamento
+        run: sdkmanager "build-tools;35.0.0"
+
+      - name: Baixar, verificar e extrair sem ler os códigos
+        run: python3 .github/scripts/import_mediafire_zip.py
+
+      - name: Publicar os arquivos originais no GitHub
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .github/import-manifest.json
-          git commit -m "Record verified 8BallPool ZIP inventory"
+          git lfs install --local
+          git add .gitattributes
+          git add -A
+          git commit -m "Import verified 8BallPool APK contents without source changes"
           git push origin HEAD:arena/28562b70-teste
+
+      - name: Remontar APK sem alterar os códigos
+        run: python3 .github/scripts/package_apk.py
+
+      - name: Alinhar e assinar APK debug
+        run: |
+          set -euo pipefail
+          BUILD_TOOLS="$ANDROID_HOME/build-tools/35.0.0"
+          mkdir -p dist
+          keytool -genkeypair -noprompt \
+            -keystore "$RUNNER_TEMP/debug.keystore" \
+            -storepass android -keypass android \
+            -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 \
+            -dname "CN=Android Debug,O=Android,C=US"
+          "$BUILD_TOOLS/zipalign" -P 16 -f 4 \
+            "$RUNNER_TEMP/8Ball-Pool-Android-V2-5-unsigned.apk" \
+            "$RUNNER_TEMP/8Ball-Pool-Android-V2-5-aligned.apk"
+          "$BUILD_TOOLS/apksigner" sign \
+            --ks "$RUNNER_TEMP/debug.keystore" \
+            --ks-key-alias androiddebugkey \
+            --ks-pass pass:android --key-pass pass:android \
+            --v1-signing-enabled true --v2-signing-enabled true \
+            --v3-signing-enabled true --v4-signing-enabled false \
+            --out "dist/8Ball-Pool-Android-V2-5-debug.apk" \
+            "$RUNNER_TEMP/8Ball-Pool-Android-V2-5-aligned.apk"
+          "$BUILD_TOOLS/zipalign" -c -P 16 4 "dist/8Ball-Pool-Android-V2-5-debug.apk"
+          "$BUILD_TOOLS/apksigner" verify --verbose --print-certs "dist/8Ball-Pool-Android-V2-5-debug.apk"
+          sha256sum "dist/8Ball-Pool-Android-V2-5-debug.apk" > "dist/8Ball-Pool-Android-V2-5-debug.apk.sha256"
+
+      - name: Publicar artefato do Actions
+        uses: actions/upload-artifact@v4
+        with:
+          name: 8Ball-Pool-Android-V2-5-debug
+          path: dist/*
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 0
+
+      - name: Publicar APK em uma pré-release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="v2.5-debug-${{ github.run_id }}"
+          gh release create "$tag" \
+            dist/8Ball-Pool-Android-V2-5-debug.apk \
+            dist/8Ball-Pool-Android-V2-5-debug.apk.sha256 \
+            --repo "${{ github.repository }}" \
+            --target "$(git rev-parse HEAD)" \
+            --prerelease \
+            --title "8BallPool V2.5 - APK debug" \
+            --notes "APK remontado a partir do ZIP fornecido, sem alterar os códigos. Assinatura debug para testes; não é a assinatura original. ZIP de origem verificado por SHA-256."
