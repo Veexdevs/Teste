@@ -1,0 +1,27 @@
+
+SurpriseBoxes_Arrow.png
+size: 368,130
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Cue_Arrow_Blue
+  rotate: false
+  xy: 10, 12
+  size: 110, 108
+  orig: 110, 108
+  offset: 0, 0
+  index: -1
+Cue_Arrow_Green
+  rotate: false
+  xy: 130, 12
+  size: 110, 108
+  orig: 110, 108
+  offset: 0, 0
+  index: -1
+Cue_Arrow_Light
+  rotate: true
+  xy: 250, 10
+  size: 110, 108
+  orig: 110, 108
+  offset: 0, 0
+  index: -1

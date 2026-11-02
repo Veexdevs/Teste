@@ -1,0 +1,26 @@
+
+DailySpin_BigFrames.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Spin_Frame
+  rotate: false
+  xy: 6, 6
+  size: 1092, 1092
+  orig: 1092, 1092
+  offset: 0, 0
+  index: -1
+
+DailySpin_BigFrames2.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Golden_Frame
+  rotate: false
+  xy: 6, 6
+  size: 1088, 1089
+  orig: 1088, 1089
+  offset: 0, 0
+  index: -1

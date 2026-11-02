@@ -1,0 +1,104 @@
+
+GS_header_Rings_Animation.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Rings_Popup/GS_Popup_Ring_1_2_3_4_Fill
+  rotate: false
+  xy: 10, 784
+  size: 205, 187
+  orig: 1994, 187
+  offset: 0, 0
+  index: -1
+Rings_Popup/GS_Popup_Ring_1_2_3_Fill
+  rotate: false
+  xy: 10, 587
+  size: 205, 187
+  orig: 1994, 187
+  offset: 0, 0
+  index: -1
+Rings_Popup/GS_Popup_Ring_1_2_Fill
+  rotate: false
+  xy: 225, 784
+  size: 205, 187
+  orig: 1994, 187
+  offset: 0, 0
+  index: -1
+Rings_Popup/GS_Popup_Ring_1_Fill
+  rotate: false
+  xy: 10, 390
+  size: 205, 187
+  orig: 1994, 187
+  offset: 0, 0
+  index: -1
+Rings_Popup/GS_Popup_Ring_1_Stroke
+  rotate: false
+  xy: 225, 587
+  size: 108, 187
+  orig: 1994, 187
+  offset: 99, 0
+  index: -1
+Rings_Popup/GS_Popup_Ring_2_3_4_Fill
+  rotate: false
+  xy: 440, 837
+  size: 142, 134
+  orig: 1994, 187
+  offset: 0, 0
+  index: -1
+Rings_Popup/GS_Popup_Ring_2_3_Fill
+  rotate: false
+  xy: 10, 246
+  size: 142, 134
+  orig: 1994, 187
+  offset: 0, 0
+  index: -1
+Rings_Popup/GS_Popup_Ring_2_Fill
+  rotate: false
+  xy: 10, 108
+  size: 136, 128
+  orig: 1994, 187
+  offset: 0, 0
+  index: -1
+Rings_Popup/GS_Popup_Ring_2_Stroke
+  rotate: false
+  xy: 592, 840
+  size: 138, 131
+  orig: 1994, 187
+  offset: 0, 0
+  index: -1
+Rings_Popup/GS_Popup_Ring_3_4_Fill
+  rotate: false
+  xy: 740, 883
+  size: 97, 88
+  orig: 1994, 187
+  offset: 0, 0
+  index: -1
+Rings_Popup/GS_Popup_Ring_3_Fill
+  rotate: false
+  xy: 10, 10
+  size: 97, 88
+  orig: 1994, 187
+  offset: 0, 0
+  index: -1
+Rings_Popup/GS_Popup_Ring_3_Stroke
+  rotate: false
+  xy: 225, 487
+  size: 97, 90
+  orig: 1994, 187
+  offset: 0, 0
+  index: -1
+Rings_Popup/GS_Popup_Ring_4_Fill
+  rotate: false
+  xy: 440, 786
+  size: 41, 41
+  orig: 1994, 187
+  offset: 22, 15
+  index: -1
+Rings_Popup/GS_Popup_Ring_4_Stroke
+  rotate: false
+  xy: 343, 726
+  size: 48, 48
+  orig: 1994, 187
+  offset: 18, 11
+  index: -1

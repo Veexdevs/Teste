@@ -1,0 +1,27 @@
+
+ClubsOverview_Top.png
+size: 982,416
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Top
+  rotate: false
+  xy: 10, 10
+  size: 314, 396
+  orig: 314, 396
+  offset: 0, 0
+  index: -1
+Top_Achived
+  rotate: false
+  xy: 334, 11
+  size: 314, 395
+  orig: 314, 395
+  offset: 0, 0
+  index: -1
+Top_Highlight
+  rotate: false
+  xy: 658, 11
+  size: 314, 395
+  orig: 314, 395
+  offset: 0, 0
+  index: -1

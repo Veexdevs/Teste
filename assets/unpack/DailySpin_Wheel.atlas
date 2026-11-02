@@ -1,0 +1,20 @@
+
+DailySpin_Wheel.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Generic_Lights_Center
+  rotate: false
+  xy: 6, 6
+  size: 408, 408
+  orig: 408, 408
+  offset: 0, 0
+  index: -1
+Generic_Prize_Darker_Cell
+  rotate: false
+  xy: 420, 81
+  size: 174, 333
+  orig: 174, 333
+  offset: 0, 0
+  index: -1

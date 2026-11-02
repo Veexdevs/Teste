@@ -1,0 +1,1322 @@
+
+CueMastery-Upgrade.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Badge-Glow-Center
+  rotate: false
+  xy: 388, 636
+  size: 372, 384
+  orig: 372, 384
+  offset: 0, 0
+  index: -1
+Badge-Glow-Out
+  rotate: false
+  xy: 941, 1118
+  size: 364, 384
+  orig: 364, 384
+  offset: 0, 0
+  index: -1
+Fix_Position
+  rotate: false
+  xy: 886, 653
+  size: 2, 2
+  orig: 2, 2
+  offset: 0, 0
+  index: -1
+Floor
+  rotate: false
+  xy: 941, 1889
+  size: 1024, 157
+  orig: 1024, 157
+  offset: 0, 0
+  index: -1
+Ray-1
+  rotate: false
+  xy: 2, 636
+  size: 384, 384
+  orig: 384, 384
+  offset: 0, 0
+  index: -1
+Ray-2
+  rotate: false
+  xy: 941, 1504
+  size: 384, 383
+  orig: 384, 384
+  offset: 0, 1
+  index: -1
+Ray-3
+  rotate: false
+  xy: 2, 257
+  size: 383, 377
+  orig: 384, 384
+  offset: 0, 4
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_01
+  rotate: false
+  xy: 1283, 552
+  size: 60, 94
+  orig: 132, 132
+  offset: 18, 23
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_02
+  rotate: true
+  xy: 594, 83
+  size: 75, 98
+  orig: 132, 132
+  offset: 18, 19
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_03
+  rotate: true
+  xy: 791, 3
+  size: 91, 99
+  orig: 132, 132
+  offset: 18, 18
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_04
+  rotate: true
+  xy: 1779, 371
+  size: 96, 101
+  orig: 132, 132
+  offset: 18, 16
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_05
+  rotate: true
+  xy: 1675, 371
+  size: 96, 102
+  orig: 132, 132
+  offset: 18, 15
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_06
+  rotate: true
+  xy: 1842, 1553
+  size: 96, 102
+  orig: 132, 132
+  offset: 18, 15
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_07
+  rotate: true
+  xy: 1842, 1455
+  size: 96, 102
+  orig: 132, 132
+  offset: 18, 15
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_08
+  rotate: false
+  xy: 1849, 1246
+  size: 96, 102
+  orig: 132, 132
+  offset: 18, 15
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_09
+  rotate: false
+  xy: 1864, 892
+  size: 96, 102
+  orig: 132, 132
+  offset: 18, 15
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_10
+  rotate: false
+  xy: 1882, 788
+  size: 96, 102
+  orig: 132, 132
+  offset: 18, 15
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_11
+  rotate: false
+  xy: 1883, 684
+  size: 96, 102
+  orig: 132, 132
+  offset: 18, 15
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_12
+  rotate: false
+  xy: 1883, 580
+  size: 96, 102
+  orig: 132, 132
+  offset: 18, 15
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_13
+  rotate: true
+  xy: 1775, 174
+  size: 96, 102
+  orig: 132, 132
+  offset: 18, 15
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_14
+  rotate: true
+  xy: 869, 337
+  size: 96, 101
+  orig: 132, 132
+  offset: 18, 15
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_15
+  rotate: true
+  xy: 972, 336
+  size: 96, 97
+  orig: 132, 132
+  offset: 18, 15
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_16
+  rotate: false
+  xy: 869, 242
+  size: 96, 93
+  orig: 132, 132
+  offset: 18, 15
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_17
+  rotate: false
+  xy: 967, 245
+  size: 94, 89
+  orig: 132, 132
+  offset: 20, 15
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_18
+  rotate: true
+  xy: 1980, 804
+  size: 90, 60
+  orig: 132, 132
+  offset: 24, 15
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_19
+  rotate: false
+  xy: 892, 12
+  size: 80, 33
+  orig: 132, 132
+  offset: 31, 15
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_19
+  rotate: false
+  xy: 892, 12
+  size: 80, 33
+  orig: 132, 132
+  offset: 31, 15
+  index: -1
+Shine_Effect_Lvl1/Shine_Effect_Lvl1_20
+  rotate: true
+  xy: 1135, 367
+  size: 66, 22
+  orig: 132, 132
+  offset: 39, 15
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_20
+  rotate: true
+  xy: 1135, 367
+  size: 66, 22
+  orig: 132, 132
+  offset: 39, 15
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_20
+  rotate: true
+  xy: 1135, 367
+  size: 66, 22
+  orig: 132, 132
+  offset: 39, 15
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_01
+  rotate: false
+  xy: 694, 181
+  size: 63, 94
+  orig: 132, 132
+  offset: 15, 23
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_02
+  rotate: true
+  xy: 594, 3
+  size: 78, 98
+  orig: 132, 132
+  offset: 15, 19
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_03
+  rotate: true
+  xy: 1947, 1274
+  size: 94, 99
+  orig: 132, 132
+  offset: 15, 18
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_04
+  rotate: true
+  xy: 1634, 1414
+  size: 103, 101
+  orig: 132, 132
+  offset: 15, 16
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_05
+  rotate: true
+  xy: 1634, 1309
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_06
+  rotate: true
+  xy: 1641, 1204
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_07
+  rotate: true
+  xy: 1642, 1099
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_08
+  rotate: true
+  xy: 1643, 994
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_09
+  rotate: true
+  xy: 1656, 889
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_10
+  rotate: true
+  xy: 1674, 784
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_11
+  rotate: true
+  xy: 1675, 679
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_12
+  rotate: true
+  xy: 1675, 574
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_13
+  rotate: true
+  xy: 1675, 469
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_14
+  rotate: false
+  xy: 1670, 268
+  size: 103, 101
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_15
+  rotate: false
+  xy: 1667, 169
+  size: 103, 97
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_16
+  rotate: false
+  xy: 1946, 1461
+  size: 100, 93
+  orig: 132, 132
+  offset: 18, 15
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_17
+  rotate: false
+  xy: 1947, 1087
+  size: 98, 89
+  orig: 132, 132
+  offset: 20, 15
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_18
+  rotate: false
+  xy: 1850, 1101
+  size: 93, 68
+  orig: 132, 132
+  offset: 24, 15
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_19
+  rotate: true
+  xy: 1805, 1567
+  size: 80, 33
+  orig: 132, 132
+  offset: 31, 15
+  index: -1
+Shine_Effect_Lvl2/Shine_Effect_Lvl2_20
+  rotate: false
+  xy: 1159, 410
+  size: 66, 22
+  orig: 132, 132
+  offset: 39, 15
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_01
+  rotate: false
+  xy: 694, 85
+  size: 63, 94
+  orig: 132, 132
+  offset: 15, 23
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_02
+  rotate: false
+  xy: 1962, 896
+  size: 78, 98
+  orig: 132, 132
+  offset: 15, 19
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_03
+  rotate: true
+  xy: 1947, 1178
+  size: 94, 99
+  orig: 132, 132
+  offset: 15, 18
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_04
+  rotate: true
+  xy: 1737, 1414
+  size: 103, 101
+  orig: 132, 132
+  offset: 15, 16
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_05
+  rotate: true
+  xy: 1738, 1309
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_06
+  rotate: true
+  xy: 1745, 1204
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_07
+  rotate: true
+  xy: 1746, 1099
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_08
+  rotate: true
+  xy: 1747, 994
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_09
+  rotate: true
+  xy: 1760, 889
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_10
+  rotate: true
+  xy: 1842, 1350
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_11
+  rotate: true
+  xy: 1778, 784
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_12
+  rotate: true
+  xy: 1779, 679
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_13
+  rotate: true
+  xy: 1779, 574
+  size: 103, 102
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_14
+  rotate: true
+  xy: 1779, 469
+  size: 103, 101
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_15
+  rotate: false
+  xy: 1775, 272
+  size: 103, 97
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_16
+  rotate: true
+  xy: 1851, 996
+  size: 103, 93
+  orig: 132, 132
+  offset: 15, 15
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_17
+  rotate: false
+  xy: 1946, 996
+  size: 98, 89
+  orig: 132, 132
+  offset: 20, 15
+  index: -1
+Shine_Effect_Lvl3/Shine_Effect_Lvl3_18
+  rotate: true
+  xy: 892, 47
+  size: 93, 73
+  orig: 132, 132
+  offset: 24, 15
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_01
+  rotate: false
+  xy: 1274, 333
+  size: 69, 101
+  orig: 132, 132
+  offset: 12, 23
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_02
+  rotate: true
+  xy: 1345, 289
+  size: 84, 106
+  orig: 132, 132
+  offset: 12, 19
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_03
+  rotate: false
+  xy: 1247, 648
+  size: 97, 107
+  orig: 132, 132
+  offset: 12, 18
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_04
+  rotate: false
+  xy: 1455, 580
+  size: 108, 109
+  orig: 132, 132
+  offset: 12, 16
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_05
+  rotate: false
+  xy: 759, 207
+  size: 108, 110
+  orig: 132, 132
+  offset: 12, 15
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_06
+  rotate: false
+  xy: 1564, 729
+  size: 108, 110
+  orig: 132, 132
+  offset: 12, 15
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_07
+  rotate: false
+  xy: 1565, 617
+  size: 108, 110
+  orig: 132, 132
+  offset: 12, 15
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_08
+  rotate: false
+  xy: 1565, 505
+  size: 108, 110
+  orig: 132, 132
+  offset: 12, 15
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_09
+  rotate: false
+  xy: 1455, 468
+  size: 108, 110
+  orig: 132, 132
+  offset: 12, 15
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_10
+  rotate: false
+  xy: 1565, 393
+  size: 108, 110
+  orig: 132, 132
+  offset: 12, 15
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_11
+  rotate: false
+  xy: 374, 145
+  size: 108, 110
+  orig: 132, 132
+  offset: 12, 15
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_12
+  rotate: false
+  xy: 484, 154
+  size: 108, 110
+  orig: 132, 132
+  offset: 12, 15
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_13
+  rotate: false
+  xy: 759, 96
+  size: 108, 109
+  orig: 132, 132
+  offset: 12, 15
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_14
+  rotate: false
+  xy: 484, 47
+  size: 108, 105
+  orig: 132, 132
+  offset: 12, 15
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_15
+  rotate: true
+  xy: 1946, 1661
+  size: 107, 100
+  orig: 132, 132
+  offset: 13, 15
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_16
+  rotate: false
+  xy: 1346, 563
+  size: 107, 96
+  orig: 132, 132
+  offset: 13, 15
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_17
+  rotate: false
+  xy: 1946, 1370
+  size: 100, 89
+  orig: 132, 132
+  offset: 20, 15
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_18
+  rotate: false
+  xy: 1850, 1171
+  size: 95, 73
+  orig: 132, 132
+  offset: 24, 15
+  index: -1
+Shine_Effect_Lvl4/Shine_Effect_Lvl4_19
+  rotate: false
+  xy: 1753, 1532
+  size: 80, 33
+  orig: 132, 132
+  offset: 31, 15
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_01
+  rotate: false
+  xy: 1274, 436
+  size: 69, 105
+  orig: 132, 132
+  offset: 12, 19
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_02
+  rotate: false
+  xy: 986, 546
+  size: 84, 109
+  orig: 132, 132
+  offset: 12, 16
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_03
+  rotate: false
+  xy: 1544, 954
+  size: 97, 111
+  orig: 132, 132
+  offset: 12, 14
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_04
+  rotate: false
+  xy: 759, 433
+  size: 108, 112
+  orig: 132, 132
+  offset: 12, 13
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_05
+  rotate: false
+  xy: 1434, 923
+  size: 108, 114
+  orig: 132, 132
+  offset: 12, 11
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_06
+  rotate: true
+  xy: 886, 657
+  size: 108, 118
+  orig: 132, 132
+  offset: 12, 7
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_07
+  rotate: true
+  xy: 1006, 658
+  size: 108, 118
+  orig: 132, 132
+  offset: 12, 7
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_08
+  rotate: false
+  xy: 1307, 1263
+  size: 108, 118
+  orig: 132, 132
+  offset: 12, 7
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_09
+  rotate: false
+  xy: 1005, 878
+  size: 108, 119
+  orig: 132, 132
+  offset: 12, 6
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_10
+  rotate: false
+  xy: 1115, 878
+  size: 108, 119
+  orig: 132, 132
+  offset: 12, 6
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_11
+  rotate: true
+  xy: 1005, 768
+  size: 108, 119
+  orig: 132, 132
+  offset: 12, 6
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_12
+  rotate: false
+  xy: 1126, 757
+  size: 108, 119
+  orig: 132, 132
+  offset: 12, 6
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_13
+  rotate: false
+  xy: 1307, 1143
+  size: 108, 118
+  orig: 132, 132
+  offset: 12, 6
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_14
+  rotate: false
+  xy: 1453, 807
+  size: 108, 114
+  orig: 132, 132
+  offset: 12, 6
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_15
+  rotate: true
+  xy: 374, 36
+  size: 107, 108
+  orig: 132, 132
+  offset: 13, 7
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_16
+  rotate: false
+  xy: 877, 547
+  size: 107, 104
+  orig: 132, 132
+  offset: 13, 7
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_17
+  rotate: true
+  xy: 1072, 546
+  size: 100, 97
+  orig: 132, 132
+  offset: 20, 7
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_18
+  rotate: false
+  xy: 694, 2
+  size: 95, 81
+  orig: 132, 132
+  offset: 24, 7
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_19
+  rotate: true
+  xy: 1656, 1563
+  size: 80, 41
+  orig: 132, 132
+  offset: 31, 7
+  index: -1
+Shine_Effect_Lvl5/Shine_Effect_Lvl5_20
+  rotate: true
+  xy: 1103, 364
+  size: 69, 30
+  orig: 132, 132
+  offset: 36, 7
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_01
+  rotate: true
+  xy: 1561, 220
+  size: 67, 104
+  orig: 132, 132
+  offset: 13, 20
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_02
+  rotate: false
+  xy: 1079, 435
+  size: 83, 109
+  orig: 132, 132
+  offset: 13, 16
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_03
+  rotate: false
+  xy: 594, 160
+  size: 98, 110
+  orig: 132, 132
+  offset: 13, 15
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_04
+  rotate: false
+  xy: 759, 319
+  size: 107, 112
+  orig: 132, 132
+  offset: 13, 13
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_05
+  rotate: false
+  xy: 1455, 691
+  size: 107, 114
+  orig: 132, 132
+  offset: 13, 11
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_06
+  rotate: false
+  xy: 1308, 1023
+  size: 107, 118
+  orig: 132, 132
+  offset: 13, 7
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_07
+  rotate: false
+  xy: 1346, 661
+  size: 107, 118
+  orig: 132, 132
+  offset: 13, 7
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_08
+  rotate: false
+  xy: 1416, 1398
+  size: 107, 118
+  orig: 132, 132
+  offset: 13, 7
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_09
+  rotate: false
+  xy: 1225, 878
+  size: 107, 119
+  orig: 132, 132
+  offset: 13, 6
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_10
+  rotate: false
+  xy: 1236, 757
+  size: 107, 119
+  orig: 132, 132
+  offset: 13, 6
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_11
+  rotate: true
+  xy: 1126, 648
+  size: 107, 119
+  orig: 132, 132
+  offset: 13, 6
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_12
+  rotate: false
+  xy: 1307, 1383
+  size: 107, 119
+  orig: 132, 132
+  offset: 13, 6
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_13
+  rotate: false
+  xy: 1417, 1278
+  size: 107, 118
+  orig: 132, 132
+  offset: 13, 6
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_14
+  rotate: false
+  xy: 1525, 1403
+  size: 107, 114
+  orig: 132, 132
+  offset: 13, 6
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_15
+  rotate: true
+  xy: 1164, 434
+  size: 107, 108
+  orig: 132, 132
+  offset: 13, 7
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_16
+  rotate: false
+  xy: 1345, 375
+  size: 107, 104
+  orig: 132, 132
+  offset: 13, 7
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_17
+  rotate: true
+  xy: 1946, 1556
+  size: 103, 100
+  orig: 132, 132
+  offset: 17, 7
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_18
+  rotate: true
+  xy: 869, 142
+  size: 98, 91
+  orig: 132, 132
+  offset: 21, 7
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_19
+  rotate: false
+  xy: 1665, 1519
+  size: 86, 42
+  orig: 132, 132
+  offset: 28, 7
+  index: -1
+Shine_Effect_Lvl6/Shine_Effect_Lvl6_20
+  rotate: false
+  xy: 372, 4
+  size: 71, 30
+  orig: 132, 132
+  offset: 37, 7
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_01
+  rotate: false
+  xy: 1967, 1942
+  size: 76, 104
+  orig: 132, 132
+  offset: 5, 20
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_02
+  rotate: false
+  xy: 1563, 841
+  size: 91, 111
+  orig: 132, 132
+  offset: 5, 16
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_03
+  rotate: false
+  xy: 1526, 1288
+  size: 106, 113
+  orig: 132, 132
+  offset: 5, 15
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_04
+  rotate: false
+  xy: 635, 277
+  size: 122, 116
+  orig: 132, 132
+  offset: 5, 13
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_05
+  rotate: false
+  xy: 1327, 1765
+  size: 122, 122
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_06
+  rotate: false
+  xy: 511, 513
+  size: 122, 121
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_07
+  rotate: false
+  xy: 762, 775
+  size: 122, 121
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_08
+  rotate: false
+  xy: 126, 11
+  size: 122, 120
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_09
+  rotate: false
+  xy: 250, 135
+  size: 122, 120
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_10
+  rotate: false
+  xy: 1575, 1645
+  size: 122, 119
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_11
+  rotate: false
+  xy: 511, 272
+  size: 122, 117
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_12
+  rotate: false
+  xy: 635, 395
+  size: 122, 117
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_13
+  rotate: false
+  xy: 1823, 1651
+  size: 121, 117
+  orig: 132, 132
+  offset: 6, 7
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_14
+  rotate: false
+  xy: 1064, 999
+  size: 120, 117
+  orig: 132, 132
+  offset: 7, 7
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_15
+  rotate: true
+  xy: 1417, 1159
+  size: 117, 108
+  orig: 132, 132
+  offset: 10, 7
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_16
+  rotate: false
+  xy: 762, 547
+  size: 113, 104
+  orig: 132, 132
+  offset: 14, 7
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_17
+  rotate: true
+  xy: 869, 435
+  size: 110, 103
+  orig: 132, 132
+  offset: 17, 7
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_18
+  rotate: false
+  xy: 1454, 364
+  size: 106, 102
+  orig: 132, 132
+  offset: 21, 7
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_19
+  rotate: true
+  xy: 1981, 716
+  size: 86, 42
+  orig: 132, 132
+  offset: 28, 7
+  index: -1
+Shine_Effect_Lvl7/Shine_Effect_Lvl7_20
+  rotate: false
+  xy: 484, 15
+  size: 71, 30
+  orig: 132, 132
+  offset: 37, 7
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_01
+  rotate: true
+  xy: 1699, 1567
+  size: 80, 104
+  orig: 132, 132
+  offset: 5, 20
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_02
+  rotate: false
+  xy: 1947, 1770
+  size: 91, 117
+  orig: 132, 132
+  offset: 5, 10
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_03
+  rotate: false
+  xy: 1417, 1039
+  size: 106, 118
+  orig: 132, 132
+  offset: 5, 10
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_04
+  rotate: false
+  xy: 387, 266
+  size: 122, 120
+  orig: 132, 132
+  offset: 5, 9
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_05
+  rotate: false
+  xy: 2, 133
+  size: 122, 122
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_06
+  rotate: false
+  xy: 1327, 1518
+  size: 122, 121
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_07
+  rotate: false
+  xy: 1451, 1642
+  size: 122, 121
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_08
+  rotate: false
+  xy: 511, 391
+  size: 122, 120
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_09
+  rotate: false
+  xy: 635, 514
+  size: 122, 120
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_10
+  rotate: false
+  xy: 1699, 1768
+  size: 122, 119
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_11
+  rotate: false
+  xy: 1699, 1649
+  size: 122, 117
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_12
+  rotate: false
+  xy: 1823, 1770
+  size: 122, 117
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_13
+  rotate: false
+  xy: 941, 999
+  size: 121, 117
+  orig: 132, 132
+  offset: 6, 7
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_14
+  rotate: false
+  xy: 1186, 999
+  size: 120, 117
+  orig: 132, 132
+  offset: 7, 7
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_15
+  rotate: false
+  xy: 886, 883
+  size: 117, 114
+  orig: 132, 132
+  offset: 10, 7
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_16
+  rotate: false
+  xy: 1527, 1067
+  size: 113, 104
+  orig: 132, 132
+  offset: 14, 7
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_17
+  rotate: true
+  xy: 974, 434
+  size: 110, 103
+  orig: 132, 132
+  offset: 17, 7
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_18
+  rotate: false
+  xy: 1453, 260
+  size: 106, 102
+  orig: 132, 132
+  offset: 21, 7
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_19
+  rotate: true
+  xy: 1981, 628
+  size: 86, 42
+  orig: 132, 132
+  offset: 28, 7
+  index: -1
+Shine_Effect_Lvl8/Shine_Effect_Lvl8_20
+  rotate: true
+  xy: 1071, 361
+  size: 71, 30
+  orig: 132, 132
+  offset: 37, 7
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_01
+  rotate: true
+  xy: 1345, 481
+  size: 80, 108
+  orig: 132, 132
+  offset: 5, 20
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_02
+  rotate: false
+  xy: 1334, 902
+  size: 98, 119
+  orig: 132, 132
+  offset: 5, 10
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_03
+  rotate: false
+  xy: 1345, 781
+  size: 106, 119
+  orig: 132, 132
+  offset: 5, 10
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_04
+  rotate: false
+  xy: 762, 653
+  size: 122, 120
+  orig: 132, 132
+  offset: 5, 9
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_05
+  rotate: false
+  xy: 387, 512
+  size: 122, 122
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_06
+  rotate: false
+  xy: 762, 898
+  size: 122, 122
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_07
+  rotate: false
+  xy: 1327, 1641
+  size: 122, 122
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_08
+  rotate: false
+  xy: 1451, 1765
+  size: 122, 122
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_09
+  rotate: false
+  xy: 2, 9
+  size: 122, 122
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_10
+  rotate: false
+  xy: 126, 133
+  size: 122, 122
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_11
+  rotate: false
+  xy: 387, 388
+  size: 122, 122
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_12
+  rotate: false
+  xy: 1575, 1766
+  size: 122, 121
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_13
+  rotate: false
+  xy: 1451, 1519
+  size: 121, 121
+  orig: 132, 132
+  offset: 6, 7
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_14
+  rotate: false
+  xy: 250, 13
+  size: 120, 120
+  orig: 132, 132
+  offset: 7, 7
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_15
+  rotate: false
+  xy: 886, 767
+  size: 117, 114
+  orig: 132, 132
+  offset: 10, 7
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_16
+  rotate: true
+  xy: 1527, 1173
+  size: 113, 112
+  orig: 132, 132
+  offset: 14, 7
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_17
+  rotate: false
+  xy: 1171, 543
+  size: 110, 103
+  orig: 132, 132
+  offset: 17, 7
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_18
+  rotate: false
+  xy: 1562, 289
+  size: 106, 102
+  orig: 132, 132
+  offset: 21, 7
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_19
+  rotate: false
+  xy: 1574, 1519
+  size: 89, 42
+  orig: 132, 132
+  offset: 25, 7
+  index: -1
+Shine_Effect_Lvl9/Shine_Effect_Lvl9_20
+  rotate: false
+  xy: 1967, 1910
+  size: 73, 30
+  orig: 132, 132
+  offset: 35, 7
+  index: -1
+Spotlight
+  rotate: false
+  xy: 2, 1022
+  size: 937, 1024
+  orig: 952, 1024
+  offset: 15, 0
+  index: -1

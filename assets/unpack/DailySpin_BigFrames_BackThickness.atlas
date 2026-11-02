@@ -1,0 +1,34 @@
+
+DailySpin_BigFrames_BackThickness.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Golden_WheelBody
+  rotate: false
+  xy: 6, 65
+  size: 544, 1088
+  orig: 544, 1088
+  offset: 0, 0
+  index: -1
+Golden_WheelBody_Thickness
+  rotate: true
+  xy: 6, 6
+  size: 53, 1088
+  orig: 53, 1088
+  offset: 0, 0
+  index: -1
+Spin_WheelBody
+  rotate: false
+  xy: 556, 65
+  size: 544, 1088
+  orig: 544, 1088
+  offset: 0, 0
+  index: -1
+Spin_WheelBody_Thickness
+  rotate: false
+  xy: 1106, 65
+  size: 53, 1088
+  orig: 53, 1088
+  offset: 0, 0
+  index: -1

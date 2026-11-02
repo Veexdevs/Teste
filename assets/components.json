@@ -1,0 +1,68 @@
+{
+  "components": [
+    {
+      "class": "com.zmaticoo.sdk.flow.components.CacheVerifyComponent",
+      "enabled": true
+    },
+    {
+      "class": "com.zmaticoo.sdk.flow.components.LoadAdComponent",
+      "enabled": true
+    },
+    {
+      "class": "com.zmaticoo.sdk.flow.components.AssetDownloadComponent",
+      "enabled": true
+    },
+    {
+      "class": "com.zmaticoo.sdk.flow.components.TemplatePlayComponent",
+      "enabled": true
+    },
+    {
+      "class": "com.zmaticoo.sdk.flow.components.AdRequestComponent",
+      "enabled": true
+    },
+    {
+      "class": "com.zmaticoo.sdk.flow.components.ShowAdComponent",
+      "enabled": true
+    },
+    {
+      "class": "com.zmaticoo.sdk.flow.components.PostVideoRouterComponent",
+      "enabled": true
+    },
+    {
+      "class": "com.zmaticoo.sdk.flow.components.VastCompanionComponent",
+      "enabled": true
+    },
+    {
+      "class": "com.zmaticoo.sdk.flow.components.EndCard1DisplayComponent",
+      "enabled": true
+    },
+    {
+      "class": "com.zmaticoo.sdk.flow.components.EndCard2DisplayComponent",
+      "enabled": true
+    },
+    {
+      "class": "com.zmaticoo.sdk.flow.components.AdResponseVerifyComponent",
+      "enabled": true
+    },
+    {
+      "class": "com.zmaticoo.sdk.flow.components.TemplateBannerComponent",
+      "enabled": true
+    },
+    {
+      "class": "com.zmaticoo.sdk.flow.components.BannerViewComponent",
+      "enabled": true
+    },
+    {
+      "class": "com.zmaticoo.sdk.flow.components.BannerVideoComponent",
+      "enabled": true
+    },
+    {
+      "class": "com.zmaticoo.sdk.flow.components.NativeVideoComponent",
+      "enabled": true
+    },
+    {
+      "class": "com.zmaticoo.sdk.flow.components.NativeImageComponent",
+      "enabled": true
+    }
+  ]
+} 

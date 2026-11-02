@@ -1,0 +1,13 @@
+
+ClubsOverview_ConnectingLine.png
+size: 88,453
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Connecting_Line
+  rotate: false
+  xy: 10, 10
+  size: 68, 433
+  orig: 68, 433
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,54 @@
+
+AvatarFrameRankUp.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Explosion-Light
+  rotate: false
+  xy: 1175, 1192
+  size: 739, 739
+  orig: 739, 739
+  offset: 0, 0
+  index: -1
+Explosion-Rays-Thin
+  rotate: false
+  xy: 10, 801
+  size: 1155, 1130
+  orig: 1155, 1130
+  offset: 0, 0
+  index: -1
+Explosion-Ring-Fat
+  rotate: false
+  xy: 10, 10
+  size: 781, 781
+  orig: 781, 781
+  offset: 0, 0
+  index: -1
+Explosion-Ring-Thin
+  rotate: false
+  xy: 1175, 443
+  size: 739, 739
+  orig: 739, 739
+  offset: 0, 0
+  index: -1
+Glow-Border
+  rotate: true
+  xy: 801, 401
+  size: 390, 269
+  orig: 390, 269
+  offset: 0, 0
+  index: -1
+
+AvatarFrameRankUp2.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Explosion-Rays-Fat
+  rotate: false
+  xy: 10, 10
+  size: 1122, 1121
+  orig: 1122, 1121
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,27 @@
+
+GD-Animation-PrizeGlow.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Fix-Position
+  rotate: false
+  xy: 2, 2
+  size: 2, 2
+  orig: 2, 2
+  offset: 0, 0
+  index: -1
+GD-ProShop-Prize-Glow-Ray-1
+  rotate: false
+  xy: 2, 6
+  size: 712, 711
+  orig: 836, 836
+  offset: 62, 62
+  index: -1
+GD-ProShop-Prize-Glow-Ray-2
+  rotate: false
+  xy: 716, 50
+  size: 671, 667
+  orig: 836, 836
+  offset: 83, 84
+  index: -1

@@ -1,0 +1,2103 @@
+{
+"skeleton": { "hash": "mKNumbroM10Dx5Dd4jWimEvOOek", "spine": "3.6.53", "width": 4739, "height": 2668 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "GS_Table_Rings", "parent": "root" },
+	{ "name": "Line_Animation", "parent": "root" },
+	{ "name": "Glow_Line_Popup_Golden", "parent": "Line_Animation" },
+	{ "name": "Glow_Popup_Golden", "parent": "root" },
+	{ "name": "Ring_1", "parent": "GS_Table_Rings", "x": -7.29, "y": 3.65 },
+	{ "name": "Ring_2", "parent": "GS_Table_Rings" },
+	{ "name": "Ring_3", "parent": "GS_Table_Rings" },
+	{ "name": "Ring_4", "parent": "GS_Table_Rings" }
+],
+"slots": [
+	{ "name": "Rings_Fill_Opaque", "bone": "Ring_1", "blend": "additive" },
+	{ "name": "Rings_1_Fill", "bone": "Ring_1", "attachment": "Rings_Popup/GS_Popup_Ring_1_Fill" },
+	{ "name": "Rings_1_Stroke", "bone": "Ring_1", "attachment": "Rings_Popup/GS_Popup_Ring_1_Stroke" },
+	{ "name": "Rings_2_Fill", "bone": "Ring_2", "attachment": "Rings_Popup/GS_Popup_Ring_2_Fill" },
+	{ "name": "Rings_2_Stroke", "bone": "Ring_2", "attachment": "Rings_Popup/GS_Popup_Ring_2_Stroke" },
+	{ "name": "Rings_3_Fill", "bone": "Ring_3", "attachment": "Rings_Popup/GS_Popup_Ring_3_Fill" },
+	{ "name": "Rings_3_Stroke", "bone": "Ring_3", "attachment": "Rings_Popup/GS_Popup_Ring_3_Stroke" },
+	{ "name": "Rings_4_Fill", "bone": "Ring_4", "attachment": "Rings_Popup/GS_Popup_Ring_4_Fill" },
+	{ "name": "Rings_4_Stroke", "bone": "Ring_4", "attachment": "Rings_Popup/GS_Popup_Ring_4_Stroke", "blend": "additive" },
+	{ "name": "Glow_Popup_Golden", "bone": "Glow_Popup_Golden", "blend": "additive" },
+	{ "name": "Glow_Line_Popup_Golden", "bone": "Glow_Line_Popup_Golden", "attachment": "Teste", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"Glow_Line_Popup_Golden": {
+			"Rings_Popup/Glow_Line_Popup_Golden": { "width": 781, "height": 767 }
+		},
+		"Glow_Popup_Golden": {
+			"Rings_Popup/Glow_Popup_Golden": { "width": 1289, "height": 1202 }
+		},
+		"Rings_1_Fill": {
+			"Rings_Popup/GS_Popup_Ring_1_Fill": { "width": 2314, "height": 1540 }
+		},
+		"Rings_1_Stroke": {
+			"Rings_Popup/GS_Popup_Ring_1_Stroke": { "width": 2314, "height": 1540 }
+		},
+		"Rings_2_Fill": {
+			"Rings_Popup/GS_Popup_Ring_2_Fill": { "width": 2314, "height": 1540 }
+		},
+		"Rings_2_Stroke": {
+			"Rings_Popup/GS_Popup_Ring_2_Stroke": { "width": 2314, "height": 1540 }
+		},
+		"Rings_3_Fill": {
+			"Rings_Popup/GS_Popup_Ring_3_Fill": { "width": 2314, "height": 1540 }
+		},
+		"Rings_3_Stroke": {
+			"Rings_Popup/GS_Popup_Ring_3_Stroke": { "width": 2314, "height": 1540 }
+		},
+		"Rings_4_Fill": {
+			"Rings_Popup/GS_Popup_Ring_4_Fill": { "width": 2314, "height": 1540 }
+		},
+		"Rings_4_Stroke": {
+			"Rings_Popup/GS_Popup_Ring_4_Stroke": { "width": 2314, "height": 1540 }
+		},
+		"Rings_Fill_Opaque": {
+			"Rings_Popup/GS_Popup_Ring_1_2_3_4_Fill": { "width": 2314, "height": 1540 },
+			"Rings_Popup/GS_Popup_Ring_1_2_3_Fill": { "width": 2314, "height": 1540 },
+			"Rings_Popup/GS_Popup_Ring_1_2_Fill": { "width": 2314, "height": 1540 },
+			"Rings_Popup/GS_Popup_Ring_2_3_4_Fill": { "width": 2314, "height": 1540 },
+			"Rings_Popup/GS_Popup_Ring_2_3_Fill": { "width": 2314, "height": 1540 },
+			"Rings_Popup/GS_Popup_Ring_3_4_Fill": { "width": 2314, "height": 1540 }
+		}
+	}
+},
+"events": {
+	"GS_Particle_Circle_Ring1": {},
+	"GS_Particle_Circle_Ring2": {},
+	"GS_Particle_Circle_Ring3": {},
+	"GS_Particle_Continues_Ring1": {},
+	"GS_Particle_Continues_Ring2": {},
+	"GS_Particle_Continues_Ring3": {},
+	"GS_Particle_Continues_Ring4": {},
+	"GS_Particle_Explode_Ring4": {}
+},
+"animations": {
+	"GS_Popup_Change_To_Golden": {
+		"slots": {
+			"Glow_Line_Popup_Golden": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.6667, "name": "Rings_Popup/Glow_Line_Popup_Golden" },
+					{ "time": 1.3333, "name": null },
+					{ "time": 1.5, "name": "Rings_Popup/Glow_Line_Popup_Golden" }
+				]
+			},
+			"Glow_Popup_Golden": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/Glow_Popup_Golden" }
+				]
+			},
+			"Rings_1_Fill": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Rings_1_Stroke": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Rings_2_Fill": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Rings_2_Stroke": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Rings_3_Fill": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Rings_3_Stroke": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Rings_4_Fill": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Rings_4_Stroke": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"Glow_Popup_Golden": {
+				"scale": [
+					{ "time": 0, "x": 2.932, "y": 3.223 }
+				]
+			},
+			"Glow_Line_Popup_Golden": {
+				"translate": [
+					{ "time": 0, "x": -2380.18, "y": 0, "curve": "stepped" },
+					{
+						"time": 0.6667,
+						"x": -2380.18,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 1.3333,
+						"x": 2230.74,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 1.5,
+						"x": -2380.18,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 1.9667, "x": 2230.74, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0.6667, "x": 3.597, "y": 4.681 },
+					{ "time": 1, "x": 5.826, "y": 7.582 },
+					{ "time": 1.3333, "x": 3.597, "y": 4.681, "curve": "stepped" },
+					{ "time": 1.5, "x": 3.597, "y": 4.681 },
+					{ "time": 1.7333, "x": 5.826, "y": 7.582 },
+					{ "time": 1.9667, "x": 3.597, "y": 4.681 }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_1": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1d" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1a" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1a" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff19",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_1_2_3_4_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_2": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "0096ffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "0096ff00" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "00aeffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff26" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff18" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{
+						"time": 0,
+						"color": "0096ff13",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "0096ff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_2_3_4_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_3": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1c" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1c" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ff2121ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ff2f2fff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1d" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1f" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_4": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff19" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffe900ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "fff775ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1b" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_1_2": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1d" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_2_Fill" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1a" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1a" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "0096ff11" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_2_3_4_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_1_3": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1d" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_2_Fill" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff21" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ff1f1fff" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ff1f1fff" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1a" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff0b" },
+					{ "time": 0.5, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_1_2_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_1_4": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1d" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_2_Fill" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff21" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1f" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffe900ff" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "fff775ff" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff17" },
+					{ "time": 0.5, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_1_2_3_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_1_2_3": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff07" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1d" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ff2020ff" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ff2f2fff" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff18" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_1_2_4": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff07" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1d" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1c" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffea00ff" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "fff875ff" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "0096ff0d" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_2_3_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_1_2_3_4": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff07" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1d" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ff2020ff" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ff2f2fff" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffea00ff" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "fff875ff" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_1_3_4": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff07" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1d" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1d" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ff2020ff" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ff2f2fff" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffea00ff" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "fff875ff" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff05" },
+					{ "time": 0.5, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_1_2_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_2_1": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" },
+					{ "time": 0.5, "color": "0096ff00" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" },
+					{ "time": 0.5, "color": "ffffff26" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff18" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "0096ff13" },
+					{ "time": 0.5, "color": "0096ff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_2_3_4_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_2_3": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff21" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" },
+					{ "time": 0.5, "color": "0096ff00" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" },
+					{ "time": 0.5, "color": "ffffff26" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ff1f1fff" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ff1f1fff" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff18" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "0096ff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_3_4_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_2_4": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff21" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" },
+					{ "time": 0.5, "color": "0096ff00" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" },
+					{ "time": 0.5, "color": "ffffff26" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1a" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffe900ff" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffe900ff" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "0096ff12" },
+					{ "time": 0.5, "color": "0096ff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_2_3_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_2_1_3": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" },
+					{ "time": 0.5, "color": "0096ff00" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" },
+					{ "time": 0.5, "color": "ffffff26" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ff2020ff" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ff2f2fff" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1c" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_2_1_4": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" },
+					{ "time": 0.5, "color": "0096ff00" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" },
+					{ "time": 0.5, "color": "ffffff26" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1c" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffe900ff" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "fff875ff" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "00aeff11" },
+					{ "time": 0.5, "color": "00aeff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_2_3_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_2_1_3_4": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" },
+					{ "time": 0.5, "color": "0096ff00" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" },
+					{ "time": 0.5, "color": "ffffff26" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ff2020ff" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ff2f2fff" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffe900ff" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "fff875ff" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_2_3_4": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" },
+					{ "time": 0.5, "color": "0096ff00" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" },
+					{ "time": 0.5, "color": "ffffff26" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ff2020ff" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ff2f2fff" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffe900ff" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "fff875ff" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_3_1": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ff2121ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ff2f2fff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1d" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff0b" },
+					{ "time": 0.5, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_1_2_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_3_2": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1c" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ff2121ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ff2f2fff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1d" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1f" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_3_4": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1d" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ff2121ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ff2f2fff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1d" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffea00ff" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "fff875ff" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_3_1_2": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ff2121ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ff2f2fff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1d" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1b" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_3_1_4": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ff2121ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ff2f2fff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1d" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffea00ff" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "fff875ff" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff09" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_1_2_3_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_3_1_2_4": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ff2121ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ff2f2fff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1d" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffea00ff" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "fff875ff" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_3_2_4": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff19" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ff2121ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ff2f2fff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1d" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffea00ff" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{ "time": 0, "color": "fff875ff" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_4_1": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffe900ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "fff775ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff61" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff11" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_1_2_3_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_4_2": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1d" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffe900ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "fff775ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1b" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "0096ff14" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_2_3_4_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_4_3": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1b" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ff2020ff" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ff2f2fff" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffe900ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "fff775ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1b" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_1_2_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_4_1_2": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffe900ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "fff775ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1b" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "0096ff11" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_2_3_4_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_4_1_3": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ff2020ff" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ff2f2fff" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffe900ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "fff775ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1b" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff0a" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Rings_Popup/GS_Popup_Ring_1_2_Fill" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_4_1_2_3": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ff2020ff" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ff2f2fff" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffe900ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "fff775ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1b" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		}
+	},
+	"GS_Popup_Hit_Ring_4_2_3": {
+		"slots": {
+			"Rings_1_Fill": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Rings_1_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ffffff1e" }
+				]
+			},
+			"Rings_2_Fill": {
+				"color": [
+					{ "time": 0, "color": "0096ffff" }
+				]
+			},
+			"Rings_2_Stroke": {
+				"color": [
+					{ "time": 0, "color": "00aeffff" }
+				]
+			},
+			"Rings_3_Fill": {
+				"color": [
+					{ "time": 0, "color": "ff2020ff" }
+				]
+			},
+			"Rings_3_Stroke": {
+				"color": [
+					{ "time": 0, "color": "ff2f2fff" }
+				]
+			},
+			"Rings_4_Fill": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffe900ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"Rings_4_Stroke": {
+				"color": [
+					{
+						"time": 0,
+						"color": "fff775ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5, "color": "ffffff1b" }
+				]
+			},
+			"Rings_Fill_Opaque": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		}
+	}
+}
+}

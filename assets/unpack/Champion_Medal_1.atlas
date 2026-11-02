@@ -1,0 +1,41 @@
+
+Champion_Medal_1.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BG_Rays_01
+  rotate: false
+  xy: 10, 74
+  size: 817, 816
+  orig: 817, 816
+  offset: 0, 0
+  index: -1
+Canvas
+  rotate: false
+  xy: 1041, 888
+  size: 2, 2
+  orig: 2, 2
+  offset: 0, 0
+  index: -1
+Glow_Medal_01a
+  rotate: false
+  xy: 837, 696
+  size: 194, 194
+  orig: 194, 194
+  offset: 0, 0
+  index: -1
+Glow_Medal_01b
+  rotate: false
+  xy: 837, 501
+  size: 185, 185
+  orig: 185, 185
+  offset: 0, 0
+  index: -1
+Glow_Medal_Shine_01
+  rotate: false
+  xy: 10, 10
+  size: 132, 54
+  orig: 132, 54
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,193 @@
+{
+"skeleton": { "hash": "hJ9wW/C5g1cCGlVPRnb89xmUBN8", "spine": "3.6.52", "width": 2368, "height": 1334 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "2_BOTTOM_ICON_SHINE                        ClubsOverview_BottomShine", "parent": "root" }
+],
+"slots": [
+	{
+		"name": "Bottom_Icon_Shine2",
+		"bone": "2_BOTTOM_ICON_SHINE                        ClubsOverview_BottomShine",
+		"color": "ffffff90",
+		"attachment": "Bottom_Icon_Shine",
+		"blend": "additive"
+	}
+],
+"skins": {
+	"default": {
+		"Bottom_Icon_Shine2": {
+			"Bottom_Icon_Shine": { "width": 271, "height": 271 }
+		}
+	}
+},
+"animations": {
+	"1_Start_Bottom": {
+		"slots": {
+			"Bottom_Icon_Shine2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.5, "color": "ffffff00" },
+					{
+						"time": 0.8333,
+						"color": "ffffff83",
+						"curve": [ 0.25, 0, 0.154, 1 ]
+					},
+					{ "time": 1.8333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Bottom_Icon_Shine" }
+				]
+			}
+		},
+		"bones": {
+			"2_BOTTOM_ICON_SHINE                        ClubsOverview_BottomShine": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			}
+		}
+	},
+	"1_Start_Top": {
+		"slots": {
+			"Bottom_Icon_Shine2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Bottom_Icon_Shine" }
+				]
+			}
+		}
+	},
+	"2_Idle_Top": {
+		"slots": {
+			"Bottom_Icon_Shine2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 1,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 1.3333,
+						"color": "ffffff59",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 2.1667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Bottom_Icon_Shine" }
+				]
+			}
+		}
+	},
+	"4_Idle_Bottom": {
+		"slots": {
+			"Bottom_Icon_Shine2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.5, "color": "ffffff00" },
+					{
+						"time": 0.8333,
+						"color": "ffffff83",
+						"curve": [ 0.25, 0, 0.154, 1 ]
+					},
+					{ "time": 1.8333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Bottom_Icon_Shine" }
+				]
+			}
+		},
+		"bones": {
+			"2_BOTTOM_ICON_SHINE                        ClubsOverview_BottomShine": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0 }
+		]
+	},
+	"9_Achived_Bottom": {
+		"slots": {
+			"Bottom_Icon_Shine2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Bottom_Icon_Shine" }
+				]
+			}
+		},
+		"bones": {
+			"2_BOTTOM_ICON_SHINE                        ClubsOverview_BottomShine": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			}
+		}
+	},
+	"9_Achived_Top": {
+		"slots": {
+			"Bottom_Icon_Shine2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Bottom_Icon_Shine" }
+				]
+			}
+		},
+		"bones": {
+			"2_BOTTOM_ICON_SHINE                        ClubsOverview_BottomShine": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			}
+		}
+	},
+	"9_Base_Bottom": {
+		"slots": {
+			"Bottom_Icon_Shine2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Bottom_Icon_Shine" }
+				]
+			}
+		},
+		"bones": {
+			"2_BOTTOM_ICON_SHINE                        ClubsOverview_BottomShine": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			}
+		}
+	},
+	"9_Base_Top": {
+		"slots": {
+			"Bottom_Icon_Shine2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Bottom_Icon_Shine" }
+				]
+			}
+		},
+		"bones": {
+			"2_BOTTOM_ICON_SHINE                        ClubsOverview_BottomShine": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			}
+		}
+	}
+}
+}

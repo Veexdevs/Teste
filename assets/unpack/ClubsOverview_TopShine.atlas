@@ -1,0 +1,13 @@
+
+ClubsOverview_TopShine.png
+size: 281,281
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Top_Icon_Shine
+  rotate: false
+  xy: 10, 10
+  size: 261, 261
+  orig: 261, 261
+  offset: 0, 0
+  index: -1

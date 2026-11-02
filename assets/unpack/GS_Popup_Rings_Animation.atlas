@@ -1,0 +1,124 @@
+
+GS_Popup_Rings_Animation.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Rings_Popup/GS_Popup_Ring_1_2_3_4_Fill
+  rotate: true
+  xy: 10, 818
+  size: 607, 628
+  orig: 1157, 770
+  offset: 0, 142
+  index: -1
+Rings_Popup/GS_Popup_Ring_1_2_3_Fill
+  rotate: true
+  xy: 1307, 1429
+  size: 607, 628
+  orig: 1157, 770
+  offset: 0, 142
+  index: -1
+Rings_Popup/GS_Popup_Ring_1_2_Fill
+  rotate: true
+  xy: 1307, 812
+  size: 607, 628
+  orig: 1157, 770
+  offset: 0, 142
+  index: -1
+Rings_Popup/GS_Popup_Ring_1_Fill
+  rotate: true
+  xy: 648, 808
+  size: 607, 628
+  orig: 1157, 770
+  offset: 0, 142
+  index: -1
+Rings_Popup/GS_Popup_Ring_1_Stroke
+  rotate: true
+  xy: 665, 1425
+  size: 611, 632
+  orig: 1157, 770
+  offset: 0, 138
+  index: -1
+Rings_Popup/GS_Popup_Ring_2_3_4_Fill
+  rotate: false
+  xy: 1049, 95
+  size: 466, 487
+  orig: 1157, 770
+  offset: 0, 283
+  index: -1
+Rings_Popup/GS_Popup_Ring_2_3_Fill
+  rotate: true
+  xy: 1525, 336
+  size: 466, 487
+  orig: 1157, 770
+  offset: 0, 283
+  index: -1
+Rings_Popup/GS_Popup_Ring_2_Stroke
+  rotate: true
+  xy: 10, 341
+  size: 467, 488
+  orig: 1157, 770
+  offset: 0, 282
+  index: -1
+Rings_Popup/GS_Popup_Ring_3_4_Fill
+  rotate: true
+  xy: 10, 10
+  size: 321, 342
+  orig: 1157, 770
+  offset: 0, 428
+  index: -1
+Rings_Popup/GS_Popup_Ring_3_Fill
+  rotate: true
+  xy: 362, 10
+  size: 321, 342
+  orig: 1157, 770
+  offset: 0, 428
+  index: -1
+Rings_Popup/GS_Popup_Ring_3_Stroke
+  rotate: false
+  xy: 714, 51
+  size: 325, 346
+  orig: 1157, 770
+  offset: 0, 424
+  index: -1
+Rings_Popup/GS_Popup_Ring_4_Fill
+  rotate: false
+  xy: 1118, 600
+  size: 198, 198
+  orig: 1157, 770
+  offset: 4, 547
+  index: -1
+Rings_Popup/GS_Popup_Ring_4_Stroke
+  rotate: false
+  xy: 902, 592
+  size: 206, 206
+  orig: 1157, 770
+  offset: 0, 543
+  index: -1
+Rings_Popup/Glow_Line_Popup_Golden
+  rotate: true
+  xy: 508, 407
+  size: 391, 384
+  orig: 391, 384
+  offset: 0, 0
+  index: -1
+Rings_Popup/Glow_Popup_Golden
+  rotate: false
+  xy: 10, 1435
+  size: 645, 601
+  orig: 645, 601
+  offset: 0, 0
+  index: -1
+
+GS_Popup_Rings_Animation2.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Rings_Popup/GS_Popup_Ring_2_Fill
+  rotate: false
+  xy: 10, 10
+  size: 466, 487
+  orig: 1157, 770
+  offset: 0, 283
+  index: -1

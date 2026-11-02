@@ -1,0 +1,13 @@
+
+ClubsOverview_BottomShine.png
+size: 291,291
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bottom_Icon_Shine
+  rotate: false
+  xy: 10, 10
+  size: 271, 271
+  orig: 271, 271
+  offset: 0, 0
+  index: -1

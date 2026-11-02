@@ -1,0 +1,237 @@
+
+CueMastery-FeatureUnlock.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Badge-Glow-Center
+  rotate: false
+  xy: 1327, 1018
+  size: 372, 384
+  orig: 372, 384
+  offset: 0, 0
+  index: -1
+Badge-Glow-Out
+  rotate: true
+  xy: 934, 267
+  size: 364, 384
+  orig: 364, 384
+  offset: 0, 0
+  index: -1
+CueMastery-Badge-Level03
+  rotate: false
+  xy: 1439, 1464
+  size: 416, 421
+  orig: 512, 512
+  offset: 48, 38
+  index: -1
+CueMastery-Badge-Level04
+  rotate: false
+  xy: 499, 567
+  size: 433, 451
+  orig: 512, 512
+  offset: 40, 39
+  index: -1
+CueMastery-Badge-Level05
+  rotate: false
+  xy: 2, 34
+  size: 432, 483
+  orig: 512, 512
+  offset: 40, 7
+  index: -1
+CueMastery-Badge-Level07
+  rotate: false
+  xy: 941, 1404
+  size: 496, 481
+  orig: 512, 512
+  offset: 8, 6
+  index: -1
+CueMastery-Badge-Level09
+  rotate: false
+  xy: 2, 519
+  size: 495, 499
+  orig: 512, 512
+  offset: 9, 6
+  index: -1
+Fix_Position
+  rotate: false
+  xy: 1692, 629
+  size: 2, 2
+  orig: 2, 2
+  offset: 0, 0
+  index: -1
+Floor
+  rotate: false
+  xy: 941, 1887
+  size: 1024, 157
+  orig: 1024, 157
+  offset: 0, 0
+  index: -1
+Ray-1
+  rotate: false
+  xy: 941, 1018
+  size: 384, 384
+  orig: 384, 384
+  offset: 0, 0
+  index: -1
+Ray-2
+  rotate: false
+  xy: 934, 633
+  size: 384, 383
+  orig: 384, 384
+  offset: 0, 1
+  index: -1
+Ray-3
+  rotate: true
+  xy: 1320, 633
+  size: 383, 377
+  orig: 384, 384
+  offset: 0, 4
+  index: -1
+Shine_Effect/Shine_Effect_01
+  rotate: true
+  xy: 1857, 1444
+  size: 80, 108
+  orig: 132, 132
+  offset: 5, 20
+  index: -1
+Shine_Effect/Shine_Effect_02
+  rotate: false
+  xy: 436, 398
+  size: 98, 119
+  orig: 132, 132
+  offset: 5, 10
+  index: -1
+Shine_Effect/Shine_Effect_03
+  rotate: false
+  xy: 436, 277
+  size: 106, 119
+  orig: 132, 132
+  offset: 5, 10
+  index: -1
+Shine_Effect/Shine_Effect_04
+  rotate: false
+  xy: 1320, 263
+  size: 122, 120
+  orig: 132, 132
+  offset: 5, 9
+  index: -1
+Shine_Effect/Shine_Effect_05
+  rotate: false
+  xy: 1320, 509
+  size: 122, 122
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect/Shine_Effect_06
+  rotate: false
+  xy: 1320, 385
+  size: 122, 122
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect/Shine_Effect_07
+  rotate: false
+  xy: 1444, 509
+  size: 122, 122
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect/Shine_Effect_08
+  rotate: false
+  xy: 1444, 385
+  size: 122, 122
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect/Shine_Effect_09
+  rotate: false
+  xy: 1568, 509
+  size: 122, 122
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect/Shine_Effect_10
+  rotate: false
+  xy: 1568, 385
+  size: 122, 122
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect/Shine_Effect_11
+  rotate: false
+  xy: 1444, 261
+  size: 122, 122
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect/Shine_Effect_12
+  rotate: false
+  xy: 1568, 262
+  size: 122, 121
+  orig: 132, 132
+  offset: 5, 7
+  index: -1
+Shine_Effect/Shine_Effect_13
+  rotate: false
+  xy: 1857, 1764
+  size: 121, 121
+  orig: 132, 132
+  offset: 6, 7
+  index: -1
+Shine_Effect/Shine_Effect_14
+  rotate: false
+  xy: 1857, 1642
+  size: 120, 120
+  orig: 132, 132
+  offset: 7, 7
+  index: -1
+Shine_Effect/Shine_Effect_15
+  rotate: false
+  xy: 1857, 1526
+  size: 117, 114
+  orig: 132, 132
+  offset: 10, 7
+  index: -1
+Shine_Effect/Shine_Effect_16
+  rotate: true
+  xy: 436, 162
+  size: 113, 112
+  orig: 132, 132
+  offset: 14, 7
+  index: -1
+Shine_Effect/Shine_Effect_17
+  rotate: false
+  xy: 436, 57
+  size: 110, 103
+  orig: 132, 132
+  offset: 17, 7
+  index: -1
+Shine_Effect/Shine_Effect_18
+  rotate: false
+  xy: 536, 463
+  size: 106, 102
+  orig: 132, 132
+  offset: 21, 7
+  index: -1
+Shine_Effect/Shine_Effect_19
+  rotate: true
+  xy: 1967, 1955
+  size: 89, 42
+  orig: 132, 132
+  offset: 25, 7
+  index: -1
+Shine_Effect/Shine_Effect_20
+  rotate: false
+  xy: 2, 2
+  size: 73, 30
+  orig: 132, 132
+  offset: 35, 7
+  index: -1
+Spotlight
+  rotate: false
+  xy: 2, 1020
+  size: 937, 1024
+  orig: 952, 1024
+  offset: 15, 0
+  index: -1

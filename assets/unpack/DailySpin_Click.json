@@ -1,0 +1,293 @@
+{
+"skeleton": { "hash": "pHHcmFAgbYthYuMRTjNDWhGCYT4", "spine": "3.2.01", "width": 1407.33, "height": 1412.32 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "WHEEL MAIN CONTROLLER", "parent": "root" },
+	{ "name": "WHEEL", "parent": "WHEEL MAIN CONTROLLER" },
+	{ "name": "ClickEffect", "parent": "WHEEL", "rotation": 20, "x": 280.81, "y": 105.98 },
+	{ "name": "ButtonLight_controller2", "parent": "ClickEffect", "rotation": -20.09, "x": -300.12, "y": -3.51 },
+	{ "name": "CircleSpread _controller2", "parent": "ClickEffect", "rotation": -20.09, "x": -300.12, "y": -3.51 }
+],
+"slots": [
+	{
+		"name": "Generic_Center_Glow2",
+		"bone": "CircleSpread _controller2",
+		"color": "ff944b00",
+		"attachment": "Generic_Center_Glow",
+		"blend": "additive"
+	},
+	{
+		"name": "ParticleLight2",
+		"bone": "ButtonLight_controller2",
+		"color": "ff592d00",
+		"attachment": "Generic_Particle_01",
+		"blend": "additive"
+	}
+],
+"skins": {
+	"default": {
+		"Generic_Center_Glow2": {
+			"Generic_Center_Glow": { "width": 319, "height": 319 }
+		},
+		"ParticleLight2": {
+			"Generic_Particle_01": { "x": 15.98, "y": 6.84, "scaleX": 5, "scaleY": 5, "width": 281, "height": 282 }
+		}
+	}
+},
+"animations": {
+	"3_Gold_ClickButton_ClickHold": {
+		"slots": {
+			"Generic_Center_Glow2": {
+				"color": [
+					{ "time": 0, "color": "ff944b00" },
+					{ "time": 0.1, "color": "ff944bbf" }
+				]
+			},
+			"ParticleLight2": {
+				"color": [
+					{ "time": 0, "color": "ffa287ff", "curve": "stepped" },
+					{ "time": 0.1, "color": "ffa287ff" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.1, "x": 1, "y": 1 }
+				]
+			},
+			"ButtonLight_controller2": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.6, 0.35 ]
+					},
+					{
+						"time": 0.0666,
+						"x": 0.379,
+						"y": 0.471,
+						"curve": [ 0.316, 0.27, 0.653, 0.61 ]
+					},
+					{ "time": 0.1, "x": 0.812, "y": 0.88 }
+				]
+			},
+			"CircleSpread _controller2": {
+				"scale": [
+					{ "time": 0, "x": 3.141, "y": 3.14, "curve": "stepped" },
+					{ "time": 0.1, "x": 3.141, "y": 3.14 }
+				]
+			}
+		}
+	},
+	"3_Gold_ClickButton_release": {
+		"slots": {
+			"Generic_Center_Glow2": {
+				"color": [
+					{ "time": 0, "color": "ff944bbf" },
+					{
+						"time": 0.0333,
+						"color": "ff944bff",
+						"curve": [ 0.25, 0, 0.466, 1 ]
+					},
+					{ "time": 0.5666, "color": "ff944b00" }
+				]
+			},
+			"ParticleLight2": {
+				"color": [
+					{ "time": 0, "color": "ffa287ff", "curve": "stepped" },
+					{ "time": 0.0666, "color": "ffa287ff" },
+					{ "time": 0.4, "color": "ffa28700" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"ButtonLight_controller2": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 0.812,
+						"y": 0.88,
+						"curve": [ 0.327, 0.26, 0.672, 0.6 ]
+					},
+					{
+						"time": 0.0666,
+						"x": 2,
+						"y": 2,
+						"curve": [ 0.538, 0.27, 1, 0.63 ]
+					},
+					{ "time": 0.4, "x": 3, "y": 3, "curve": "stepped" },
+					{ "time": 0.5666, "x": 3, "y": 3 }
+				]
+			},
+			"CircleSpread _controller2": {
+				"scale": [
+					{ "time": 0, "x": 3.141, "y": 3.14 },
+					{
+						"time": 0.0333,
+						"x": 1.5,
+						"y": 1.5,
+						"curve": [ 0.25, 0, 1, 0.79 ]
+					},
+					{ "time": 0.5666, "x": 3.5, "y": 3.5 }
+				]
+			}
+		}
+	},
+	"3_Standard_ClickButton_ClickHold": {
+		"slots": {
+			"Generic_Center_Glow2": {
+				"color": [
+					{ "time": 0, "color": "ff944b00" },
+					{ "time": 0.1, "color": "ff944bbf" }
+				]
+			},
+			"ParticleLight2": {
+				"color": [
+					{ "time": 0, "color": "ffa287ff", "curve": "stepped" },
+					{ "time": 0.1, "color": "ffa287ff" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.1, "x": 1, "y": 1 }
+				]
+			},
+			"ButtonLight_controller2": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.6, 0.35 ]
+					},
+					{
+						"time": 0.0666,
+						"x": 0.379,
+						"y": 0.471,
+						"curve": [ 0.316, 0.27, 0.653, 0.61 ]
+					},
+					{ "time": 0.1, "x": 0.812, "y": 0.88 }
+				]
+			},
+			"CircleSpread _controller2": {
+				"scale": [
+					{ "time": 0, "x": 3.141, "y": 3.14, "curve": "stepped" },
+					{ "time": 0.1, "x": 3.141, "y": 3.14 }
+				]
+			}
+		}
+	},
+	"3_Standard_ClickButton_release": {
+		"slots": {
+			"Generic_Center_Glow2": {
+				"color": [
+					{ "time": 0, "color": "ff944bbf" },
+					{
+						"time": 0.0333,
+						"color": "ff944bff",
+						"curve": [ 0.335, 0, 0.668, 0.34 ]
+					},
+					{
+						"time": 0.0666,
+						"color": "ff944bf8",
+						"curve": [ 0.243, 0.11, 0.475, 1 ]
+					},
+					{ "time": 0.5666, "color": "ff944b00" }
+				]
+			},
+			"ParticleLight2": {
+				"color": [
+					{ "time": 0, "color": "ffa287ff", "curve": "stepped" },
+					{ "time": 0.0666, "color": "ffa287ff" },
+					{ "time": 0.4, "color": "ffa28700" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.0666, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.0666, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.0666, "x": 1, "y": 1 }
+				]
+			},
+			"ButtonLight_controller2": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 0.812,
+						"y": 0.88,
+						"curve": [ 0.327, 0.26, 0.672, 0.6 ]
+					},
+					{
+						"time": 0.0666,
+						"x": 2,
+						"y": 2,
+						"curve": [ 0.538, 0.27, 1, 0.63 ]
+					},
+					{ "time": 0.4, "x": 3, "y": 3, "curve": "stepped" },
+					{ "time": 0.5666, "x": 3, "y": 3 }
+				]
+			},
+			"CircleSpread _controller2": {
+				"scale": [
+					{ "time": 0, "x": 3.141, "y": 3.14 },
+					{
+						"time": 0.0333,
+						"x": 1.5,
+						"y": 1.5,
+						"curve": [ 0.298, 0, 0.633, 0.34 ]
+					},
+					{
+						"time": 0.0666,
+						"x": 1.531,
+						"y": 1.531,
+						"curve": [ 0.304, 0.08, 1, 0.8 ]
+					},
+					{ "time": 0.5666, "x": 3.5, "y": 3.5 }
+				]
+			}
+		}
+	}
+}
+}
