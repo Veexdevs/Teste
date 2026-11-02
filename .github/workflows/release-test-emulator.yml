@@ -50,6 +50,19 @@ jobs:
             --output "$RUNNER_TEMP/8Ball-Pool-Android-V2-5-release-unsigned.apk" \
             --report report/release-packaging.json
 
+      - name: Verificar metadados do ZIP reempacotado
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, pathlib
+          data = json.loads(pathlib.Path('report/release-packaging.json').read_text())
+          count = data.get('zip_data_descriptor_entries')
+          origin = data.get('original_asset_zip_data_descriptor_entries')
+          print(f"::notice title=ZIP data descriptors::output={count} original_asset={origin}")
+          if count != 0:
+              raise SystemExit(f"APK still has {count} data-descriptor entries")
+          PY
+
       - name: Gerar chave release de teste, assinar e verificar
         run: |
           set -euo pipefail
@@ -74,6 +87,8 @@ jobs:
             "$RUNNER_TEMP/8Ball-Pool-Android-V2-5-release-aligned.apk"
           "$BUILD_TOOLS/apksigner" verify --verbose --print-certs \
             "dist/8Ball-Pool-Android-V2-5-release-test.apk" > report/release-signature.txt 2>&1
+          "$BUILD_TOOLS/zipalign" -c -P 16 4 \
+            "dist/8Ball-Pool-Android-V2-5-release-test.apk" > report/zipalign-check.txt 2>&1
           "$BUILD_TOOLS/aapt2" dump badging \
             "dist/8Ball-Pool-Android-V2-5-release-test.apk" > report/release-badging.txt 2>&1
           sha256sum dist/*.apk > report/sha256.txt
