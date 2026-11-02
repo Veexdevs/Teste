@@ -2,6 +2,11 @@ name: Importar ZIP 8BallPool
 
 on:
   workflow_dispatch:
+  push:
+    branches: [arena/28562b70-teste]
+    paths:
+      - .github/workflows/import-8ball.yml
+      - .github/scripts/inspect_mediafire_zip.py
 
 permissions:
   contents: write
