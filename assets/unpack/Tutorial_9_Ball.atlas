@@ -1,0 +1,202 @@
+
+Tutorial_9_Ball.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Canvas
+  rotate: false
+  xy: 50, 58
+  size: 2, 2
+  orig: 2, 2
+  offset: 0, 0
+  index: -1
+TutorialAnim_AimCircle
+  rotate: false
+  xy: 10, 174
+  size: 44, 44
+  orig: 44, 44
+  offset: 0, 0
+  index: -1
+TutorialAnim_AimCircle_BallHighlight
+  rotate: false
+  xy: 1360, 966
+  size: 46, 46
+  orig: 48, 48
+  offset: 1, 1
+  index: -1
+TutorialAnim_AimLine
+  rotate: false
+  xy: 714, 242
+  size: 41, 10
+  orig: 41, 10
+  offset: 0, 0
+  index: -1
+TutorialAnim_AimLineEnd
+  rotate: false
+  xy: 10, 10
+  size: 21, 10
+  orig: 21, 10
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_Black8
+  rotate: false
+  xy: 1572, 970
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_BlackBase
+  rotate: false
+  xy: 116, 176
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_BlackShine
+  rotate: false
+  xy: 10, 30
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_Blue2
+  rotate: false
+  xy: 168, 202
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_BlueBase
+  rotate: false
+  xy: 1360, 914
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_Brown7
+  rotate: false
+  xy: 1360, 784
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_BrownBase
+  rotate: false
+  xy: 1416, 970
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_Green6
+  rotate: false
+  xy: 1572, 996
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_GreenBase
+  rotate: false
+  xy: 10, 122
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_Orange5
+  rotate: false
+  xy: 168, 176
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_OrangeBase
+  rotate: false
+  xy: 64, 176
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_Purple4
+  rotate: false
+  xy: 194, 202
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_PurpleBase
+  rotate: false
+  xy: 1360, 862
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_Red3
+  rotate: false
+  xy: 1360, 758
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_RedBase
+  rotate: false
+  xy: 1468, 970
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_StripesYellow9
+  rotate: false
+  xy: 1386, 784
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_StripesYellowBase
+  rotate: false
+  xy: 10, 70
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_White
+  rotate: false
+  xy: 1360, 810
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_WhitePoint
+  rotate: false
+  xy: 765, 246
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_Yellow1
+  rotate: false
+  xy: 1598, 996
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+TutorialAnim_Ball_YellowBase
+  rotate: false
+  xy: 1520, 970
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+TutorialAnim_Cue
+  rotate: false
+  xy: 10, 228
+  size: 694, 24
+  orig: 694, 24
+  offset: 0, 0
+  index: -1
+TutorialAnim_Table
+  rotate: false
+  xy: 10, 262
+  size: 1340, 750
+  orig: 1340, 750
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,13 @@
+
+VictoryBox_GreenArrow.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Collect_Button
+  rotate: false
+  xy: 10, 10
+  size: 231, 105
+  orig: 231, 105
+  offset: 0, 0
+  index: -1

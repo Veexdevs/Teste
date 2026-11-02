@@ -1,0 +1,13 @@
+
+SurpriseBoxes_Card.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Card_Bright
+  rotate: false
+  xy: 10, 10
+  size: 350, 468
+  orig: 350, 468
+  offset: 0, 0
+  index: -1

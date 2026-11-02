@@ -1,0 +1,1854 @@
+{
+"skeleton": { "hash": "/WuTFvpciJz2qs5kwR9q/1QcpLQ", "spine": "3.2.01", "width": 560.08, "height": 448.41 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "Arrow_Controller", "parent": "root", "rotation": -160.22, "x": 370.76, "y": 131.82 }
+],
+"slots": [
+	{ "name": "Arrow", "bone": "Arrow_Controller", "attachment": "Golden_Arrow" },
+	{ "name": "ArrowLights", "bone": "Arrow_Controller", "attachment": "ArrowLights", "blend": "additive" },
+	{ "name": "LabelNode_Arrow", "bone": "Arrow_Controller" }
+],
+"skins": {
+	"default": {
+		"Arrow": {
+			"Golden_Arrow": { "x": 7.52, "y": 25.56, "rotation": 160.21, "width": 549, "height": 442 },
+			"Spin_Arrow": { "x": 7.52, "y": 25.56, "rotation": 160.21, "width": 547, "height": 441 }
+		},
+		"ArrowLights": {
+			"ArrowLights": { "path": "Generic_ArrowLights", "x": -12.32, "y": -18.08, "rotation": 160.21, "width": 560, "height": 359 }
+		}
+	}
+},
+"animations": {
+	"1_Gold_StartScreen": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 1.1666,
+						"color": "ffffff00",
+						"curve": [ 0, 0.19, 0.75, 1 ]
+					},
+					{ "time": 2.1666, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Golden_Arrow" },
+					{ "time": 0.3333, "name": "Golden_Arrow" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1.1666, "color": "ffffff00" },
+					{ "time": 2.1666, "color": "ffffff4e" }
+				],
+				"attachment": [
+					{ "time": 1.1666, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 1.1666,
+						"color": "ffffff00",
+						"curve": [ 0, 0.19, 0.75, 1 ]
+					},
+					{ "time": 2.1666, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0, "curve": "stepped" },
+					{ "time": 2.1666, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 },
+					{
+						"time": 1.1666,
+						"x": 119.99,
+						"y": 43.16,
+						"curve": [ 0, 0.19, 0.46, 0.99 ]
+					},
+					{ "time": 2.1666, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.1666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2.1666, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"1_Standard_StartScreen": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 1.1666,
+						"color": "ffffff00",
+						"curve": [ 0, 0.19, 0.75, 1 ]
+					},
+					{ "time": 2.1666, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Spin_Arrow" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1.1666, "color": "ffffff00" },
+					{ "time": 2.1666, "color": "ffffff4e" }
+				],
+				"attachment": [
+					{ "time": 1.1666, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 1.1666,
+						"color": "ffffff00",
+						"curve": [ 0, 0.19, 0.75, 1 ]
+					},
+					{ "time": 2.1666, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0, "curve": "stepped" },
+					{ "time": 2.1666, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 },
+					{
+						"time": 1.1666,
+						"x": 119.99,
+						"y": 43.16,
+						"curve": [ 0, 0.19, 0.46, 0.99 ]
+					},
+					{ "time": 2.1666, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.1666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2.1666, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"1_Transition_GoldToStandard_Combined": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.6666, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.9333,
+						"color": "ffffff00",
+						"curve": [ 0, 0.29, 0.341, 0.62 ]
+					},
+					{
+						"time": 1,
+						"color": "ffffff20",
+						"curve": [ 0.174, 0.28, 0.517, 0.61 ]
+					},
+					{
+						"time": 1.1666,
+						"color": "ffffff41",
+						"curve": [ 0.162, 0.32, 0.775, 1 ]
+					},
+					{ "time": 1.6666, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Golden_Arrow" },
+					{ "time": 0.3333, "name": "Golden_Arrow" },
+					{ "time": 0.6666, "name": "Spin_Arrow" },
+					{ "time": 1, "name": "Spin_Arrow" },
+					{ "time": 1.1666, "name": "Spin_Arrow" },
+					{ "time": 1.6666, "name": "Spin_Arrow" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.6666, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.9333, "color": "ffffff00" },
+					{ "time": 1, "color": "ffffff03" },
+					{ "time": 1.1666, "color": "ffffff0a" },
+					{ "time": 1.6666, "color": "ffffff4e" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" },
+					{ "time": 0.3333, "name": "ArrowLights" },
+					{ "time": 0.6666, "name": "ArrowLights" },
+					{ "time": 0.9333, "name": "ArrowLights" },
+					{ "time": 1, "name": "ArrowLights" },
+					{ "time": 1.1666, "name": "ArrowLights" },
+					{ "time": 1.6666, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.6666, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.9333,
+						"color": "ffffff00",
+						"curve": [ 0, 0.29, 0.341, 0.62 ]
+					},
+					{
+						"time": 1,
+						"color": "ffffff20",
+						"curve": [ 0.174, 0.28, 0.517, 0.61 ]
+					},
+					{
+						"time": 1.1666,
+						"color": "ffffff41",
+						"curve": [ 0.162, 0.32, 0.775, 1 ]
+					},
+					{ "time": 1.6666, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.3333, "name": null },
+					{ "time": 0.6666, "name": null },
+					{ "time": 1, "name": null },
+					{ "time": 1.1666, "name": null },
+					{ "time": 1.6666, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.6666, "angle": 0, "curve": "stepped" },
+					{ "time": 0.9333, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0, "curve": "stepped" },
+					{ "time": 1.1666, "angle": 0, "curve": "stepped" },
+					{ "time": 1.6666, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 },
+					{ "time": 0.6666, "x": 37.33, "y": 13.42 },
+					{
+						"time": 0.9333,
+						"x": 119.99,
+						"y": 43.16,
+						"curve": [ 0, 0.29, 0.337, 0.62 ]
+					},
+					{
+						"time": 1,
+						"x": 99.22,
+						"y": 35.69,
+						"curve": [ 0.17, 0.28, 0.508, 0.62 ]
+					},
+					{
+						"time": 1.1666,
+						"x": 79.26,
+						"y": 28.51,
+						"curve": [ 0.104, 0.32, 0.522, 0.99 ]
+					},
+					{ "time": 1.6666, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.6666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.9333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.1666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.6666, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.6666, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0, "curve": "stepped" },
+					{ "time": 1.1666, "angle": 0, "curve": "stepped" },
+					{ "time": 1.6666, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.6666, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1.1666, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1.6666, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.6666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.1666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.6666, "x": 1, "y": 1 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0 },
+			{ "time": 0.3333 }
+		]
+	},
+	"1_Transition_GoldToStandard_End": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.2666,
+						"color": "ffffff00",
+						"curve": [ 0, 0.29, 0.341, 0.62 ]
+					},
+					{
+						"time": 0.3333,
+						"color": "ffffff20",
+						"curve": [ 0.174, 0.28, 0.517, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff41",
+						"curve": [ 0.162, 0.32, 0.775, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Spin_Arrow" },
+					{ "time": 0.3333, "name": "Spin_Arrow" },
+					{ "time": 0.5, "name": "Spin_Arrow" },
+					{ "time": 1, "name": "Spin_Arrow" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.2666, "color": "ffffff00" },
+					{ "time": 0.3333, "color": "ffffff03" },
+					{ "time": 0.5, "color": "ffffff0a" },
+					{ "time": 1, "color": "ffffff4e" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" },
+					{ "time": 0.2666, "name": "ArrowLights" },
+					{ "time": 0.3333, "name": "ArrowLights" },
+					{ "time": 0.5, "name": "ArrowLights" },
+					{ "time": 1, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.2666,
+						"color": "ffffff00",
+						"curve": [ 0, 0.29, 0.341, 0.62 ]
+					},
+					{
+						"time": 0.3333,
+						"color": "ffffff20",
+						"curve": [ 0.174, 0.28, 0.517, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff41",
+						"curve": [ 0.162, 0.32, 0.775, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.3333, "name": null },
+					{ "time": 0.5, "name": null },
+					{ "time": 1, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.2666, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.5, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 37.33, "y": 13.42 },
+					{
+						"time": 0.2666,
+						"x": 119.99,
+						"y": 43.16,
+						"curve": [ 0, 0.29, 0.337, 0.62 ]
+					},
+					{
+						"time": 0.3333,
+						"x": 99.22,
+						"y": 35.69,
+						"curve": [ 0.17, 0.28, 0.508, 0.62 ]
+					},
+					{
+						"time": 0.5,
+						"x": 79.26,
+						"y": 28.51,
+						"curve": [ 0.104, 0.32, 0.522, 0.99 ]
+					},
+					{ "time": 1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.5, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.5, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.5, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.5, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"1_Transition_GoldToStandard_Start": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.6666, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Golden_Arrow" },
+					{ "time": 0.3333, "name": "Golden_Arrow" },
+					{ "time": 0.6666, "name": "Spin_Arrow" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.6666, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" },
+					{ "time": 0.3333, "name": "ArrowLights" },
+					{ "time": 0.6666, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.6666, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.3333, "name": null },
+					{ "time": 0.6666, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.6666, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 },
+					{ "time": 0.6666, "x": 37.33, "y": 13.42 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.6666, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.6666, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.6666, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.6666, "x": 1, "y": 1 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0 },
+			{ "time": 0.3333 }
+		]
+	},
+	"1_Transition_StandardToGold_Combined": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.6666, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.9333,
+						"color": "ffffff00",
+						"curve": [ 0, 0.29, 0.341, 0.62 ]
+					},
+					{
+						"time": 1,
+						"color": "ffffff20",
+						"curve": [ 0.174, 0.28, 0.517, 0.61 ]
+					},
+					{
+						"time": 1.1666,
+						"color": "ffffff41",
+						"curve": [ 0.162, 0.32, 0.775, 1 ]
+					},
+					{ "time": 1.6666, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Golden_Arrow" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.6666, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.9333, "color": "ffffff00" },
+					{ "time": 1, "color": "ffffff03" },
+					{ "time": 1.1666, "color": "ffffff0a" },
+					{ "time": 1.6666, "color": "ffffff4e" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" },
+					{ "time": 0.3333, "name": "ArrowLights" },
+					{ "time": 0.6666, "name": "ArrowLights" },
+					{ "time": 0.9333, "name": "ArrowLights" },
+					{ "time": 1, "name": "ArrowLights" },
+					{ "time": 1.1666, "name": "ArrowLights" },
+					{ "time": 1.6666, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.6666, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.9333,
+						"color": "ffffff00",
+						"curve": [ 0, 0.29, 0.341, 0.62 ]
+					},
+					{
+						"time": 1,
+						"color": "ffffff20",
+						"curve": [ 0.174, 0.28, 0.517, 0.61 ]
+					},
+					{
+						"time": 1.1666,
+						"color": "ffffff41",
+						"curve": [ 0.162, 0.32, 0.775, 1 ]
+					},
+					{ "time": 1.6666, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.3333, "name": null },
+					{ "time": 0.6666, "name": null },
+					{ "time": 1, "name": null },
+					{ "time": 1.1666, "name": null },
+					{ "time": 1.6666, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.6666, "angle": 0, "curve": "stepped" },
+					{ "time": 0.9333, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0, "curve": "stepped" },
+					{ "time": 1.1666, "angle": 0, "curve": "stepped" },
+					{ "time": 1.6666, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 },
+					{ "time": 0.6666, "x": 37.33, "y": 13.42 },
+					{
+						"time": 0.9333,
+						"x": 119.99,
+						"y": 43.16,
+						"curve": [ 0, 0.29, 0.337, 0.62 ]
+					},
+					{
+						"time": 1,
+						"x": 99.22,
+						"y": 35.69,
+						"curve": [ 0.17, 0.28, 0.508, 0.62 ]
+					},
+					{
+						"time": 1.1666,
+						"x": 79.26,
+						"y": 28.51,
+						"curve": [ 0.104, 0.32, 0.522, 0.99 ]
+					},
+					{ "time": 1.6666, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.6666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.9333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.1666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.6666, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.6666, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0, "curve": "stepped" },
+					{ "time": 1.1666, "angle": 0, "curve": "stepped" },
+					{ "time": 1.6666, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.6666, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1.1666, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1.6666, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.6666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.1666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.6666, "x": 1, "y": 1 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0 },
+			{ "time": 0.3333 }
+		]
+	},
+	"1_Transition_StandardToGold_End": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.2666,
+						"color": "ffffff00",
+						"curve": [ 0, 0.29, 0.341, 0.62 ]
+					},
+					{
+						"time": 0.3333,
+						"color": "ffffff20",
+						"curve": [ 0.174, 0.28, 0.517, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff41",
+						"curve": [ 0.162, 0.32, 0.775, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Golden_Arrow" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.2666, "color": "ffffff00" },
+					{ "time": 0.3333, "color": "ffffff03" },
+					{ "time": 0.5, "color": "ffffff0a" },
+					{ "time": 1, "color": "ffffff4e" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" },
+					{ "time": 0.2666, "name": "ArrowLights" },
+					{ "time": 0.3333, "name": "ArrowLights" },
+					{ "time": 0.5, "name": "ArrowLights" },
+					{ "time": 1, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.2666,
+						"color": "ffffff00",
+						"curve": [ 0, 0.29, 0.341, 0.62 ]
+					},
+					{
+						"time": 0.3333,
+						"color": "ffffff20",
+						"curve": [ 0.174, 0.28, 0.517, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff41",
+						"curve": [ 0.162, 0.32, 0.775, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.3333, "name": null },
+					{ "time": 0.5, "name": null },
+					{ "time": 1, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.2666, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.5, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 37.33, "y": 13.42 },
+					{
+						"time": 0.2666,
+						"x": 119.99,
+						"y": 43.16,
+						"curve": [ 0, 0.29, 0.337, 0.62 ]
+					},
+					{
+						"time": 0.3333,
+						"x": 99.22,
+						"y": 35.69,
+						"curve": [ 0.17, 0.28, 0.508, 0.62 ]
+					},
+					{
+						"time": 0.5,
+						"x": 79.26,
+						"y": 28.51,
+						"curve": [ 0.104, 0.32, 0.522, 0.99 ]
+					},
+					{ "time": 1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.5, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.5, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.5, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.5, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"1_Transition_StandardToGold_Start": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.6666, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Golden_Arrow" },
+					{ "time": 0.3333, "name": "Golden_Arrow" },
+					{ "time": 0.6666, "name": "Spin_Arrow" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.6666, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" },
+					{ "time": 0.3333, "name": "ArrowLights" },
+					{ "time": 0.6666, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.6666, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.3333, "name": null },
+					{ "time": 0.6666, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.6666, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 },
+					{ "time": 0.6666, "x": 37.33, "y": 13.42 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.6666, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.6666, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.6666, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.6666, "x": 1, "y": 1 }
+				]
+			}
+		},
+		"drawOrder": [
+			{ "time": 0 },
+			{ "time": 0.3333 }
+		]
+	},
+	"2_Gold_IdleWaitingClick": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 3.3333, "color": "ffffffff" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffbc9500" },
+					{ "time": 0.1, "color": "ff85b771" },
+					{ "time": 0.2, "color": "ffbc9500" },
+					{ "time": 0.3, "color": "ff85b771" },
+					{ "time": 0.4, "color": "ffbc9500" },
+					{ "time": 0.5, "color": "ff85b771" },
+					{ "time": 0.6, "color": "ffbc9500" },
+					{ "time": 0.7, "color": "ff85b771" },
+					{ "time": 0.8, "color": "ffbc9500" },
+					{ "time": 0.9, "color": "ff85b771" },
+					{ "time": 1, "color": "ffbc9500" },
+					{ "time": 1.1, "color": "ff85b771" },
+					{ "time": 1.2, "color": "ffbc9500" },
+					{ "time": 1.3, "color": "ff85b771" },
+					{ "time": 1.4, "color": "ffbc9500" },
+					{ "time": 1.5, "color": "ff85b771" },
+					{ "time": 1.6, "color": "ffbc9500" },
+					{ "time": 1.7, "color": "ff85b771" },
+					{ "time": 1.8, "color": "ffbc9500" },
+					{ "time": 1.9, "color": "ff85b771" },
+					{ "time": 2, "color": "ffbc9500" },
+					{ "time": 2.1, "color": "ff85b771" },
+					{ "time": 2.2, "color": "ffbc9500" },
+					{ "time": 2.3, "color": "ff85b771" },
+					{ "time": 2.4, "color": "ffbc9500" },
+					{ "time": 2.5, "color": "ff85b771" },
+					{ "time": 2.6, "color": "ffbc9500" },
+					{ "time": 2.7, "color": "ff85b771" },
+					{ "time": 2.8, "color": "ffbc9500" },
+					{ "time": 2.9, "color": "ff85b771" },
+					{ "time": 3, "color": "ffbc9500" },
+					{ "time": 3.1, "color": "ff85b771" },
+					{ "time": 3.2, "color": "ffbc9500" },
+					{ "time": 3.3333, "color": "ff85b771" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 3.3333, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 3.3333, "angle": 0 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.539, 1 ]
+					},
+					{
+						"time": 0.8333,
+						"x": 30.8,
+						"y": 11.08,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 1.6666,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 2.5,
+						"x": 30.8,
+						"y": 11.08,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 3.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 3.3333, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 3.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 3.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 3.3333, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"2_Standard_IdleWaitingClick": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 3.3333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Spin_Arrow" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffbc9500" },
+					{ "time": 0.1, "color": "ff85b771" },
+					{ "time": 0.2, "color": "ffbc9500" },
+					{ "time": 0.3, "color": "ff85b771" },
+					{ "time": 0.4, "color": "ffbc9500" },
+					{ "time": 0.5, "color": "ff85b771" },
+					{ "time": 0.6, "color": "ffbc9500" },
+					{ "time": 0.7, "color": "ff85b771" },
+					{ "time": 0.8, "color": "ffbc9500" },
+					{ "time": 0.9, "color": "ff85b771" },
+					{ "time": 1, "color": "ffbc9500" },
+					{ "time": 1.1, "color": "ff85b771" },
+					{ "time": 1.2, "color": "ffbc9500" },
+					{ "time": 1.3, "color": "ff85b771" },
+					{ "time": 1.4, "color": "ffbc9500" },
+					{ "time": 1.5, "color": "ff85b771" },
+					{ "time": 1.6, "color": "ffbc9500" },
+					{ "time": 1.7, "color": "ff85b771" },
+					{ "time": 1.8, "color": "ffbc9500" },
+					{ "time": 1.9, "color": "ff85b771" },
+					{ "time": 2, "color": "ffbc9500" },
+					{ "time": 2.1, "color": "ff85b771" },
+					{ "time": 2.2, "color": "ffbc9500" },
+					{ "time": 2.3, "color": "ff85b771" },
+					{ "time": 2.4, "color": "ffbc9500" },
+					{ "time": 2.5, "color": "ff85b771" },
+					{ "time": 2.6, "color": "ffbc9500" },
+					{ "time": 2.7, "color": "ff85b771" },
+					{ "time": 2.8, "color": "ffbc9500" },
+					{ "time": 2.9, "color": "ff85b771" },
+					{ "time": 3, "color": "ffbc9500" },
+					{ "time": 3.1, "color": "ff85b771" },
+					{ "time": 3.2, "color": "ffbc9500" },
+					{ "time": 3.3333, "color": "ff85b771" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 3.3333, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 3.3333, "angle": 0 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.539, 1 ]
+					},
+					{
+						"time": 0.8333,
+						"x": 30.8,
+						"y": 11.08,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 1.6666,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 2.5,
+						"x": 30.8,
+						"y": 11.08,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 3.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 3.3333, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 3.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 3.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 3.3333, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"3_Gold_ClickButton_ClickHold": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1, "color": "ffffff00" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffbc9500", "curve": "stepped" },
+					{ "time": 0.1, "color": "ffbc9500" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" },
+					{ "time": 0.1, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.1, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.1, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"3_Gold_ClickButton_release": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffbc9500" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"3_Standard_ClickButton_ClickHold": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1, "color": "ffffff00" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffbc9500", "curve": "stepped" },
+					{ "time": 0.1, "color": "ffbc9500" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" },
+					{ "time": 0.1, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.1, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.1, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"3_Standard_ClickButton_release": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.0666, "color": "ffffff00" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffbc9500", "curve": "stepped" },
+					{ "time": 0.0666, "color": "ffbc9500" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" },
+					{ "time": 0.0666, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.0666, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.0666, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.0666, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.0666, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.0666, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.0666, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.0666, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"4_Gold_Spin": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffbc9500" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" },
+					{ "time": 2, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"4_Standard_Spin": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffbc9500" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" },
+					{ "time": 2, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"5_Gold_Win": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Golden_Arrow" },
+					{ "time": 1, "name": "Golden_Arrow" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffbc9500", "curve": "stepped" },
+					{ "time": 1, "color": "ffbc9500" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" },
+					{ "time": 1, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"5_Standard_Win": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Golden_Arrow" },
+					{ "time": 1, "name": "Spin_Arrow" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffbc9500", "curve": "stepped" },
+					{ "time": 1, "color": "ffbc9500" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" },
+					{ "time": 1, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"6_Gold_WinIdle": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Golden_Arrow" },
+					{ "time": 2, "name": "Golden_Arrow" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffbc9500" },
+					{ "time": 2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" },
+					{ "time": 2, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"6_Standard_WinIdle": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Golden_Arrow" },
+					{ "time": 2, "name": "Golden_Arrow" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffbc9500" },
+					{ "time": 2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" },
+					{ "time": 2, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"7_Gold_WinIdle_IdleWaitingClick": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0, 0.19, 0.75, 1 ]
+					},
+					{ "time": 0.8333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Golden_Arrow" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.8333, "color": "ffbc9500" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" },
+					{ "time": 0.8333, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0, 0.19, 0.75, 1 ]
+					},
+					{ "time": 0.8333, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.8333, "angle": 0 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": 119.99,
+						"y": 43.16,
+						"curve": [ 0, 0.19, 0.46, 0.99 ]
+					},
+					{ "time": 0.8333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.8333, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.6666, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.6666, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.6666, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"7_Standard_WinIdle_IdleWaitingClick": {
+		"slots": {
+			"Arrow": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0, 0.19, 0.75, 1 ]
+					},
+					{ "time": 0.8333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Spin_Arrow" }
+				]
+			},
+			"ArrowLights": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.8333, "color": "ffbc9500" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ArrowLights" },
+					{ "time": 0.8333, "name": "ArrowLights" }
+				]
+			},
+			"LabelNode_Arrow": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0, 0.19, 0.75, 1 ]
+					},
+					{ "time": 0.8333, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"Arrow_Controller": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.8333, "angle": 0 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": 119.99,
+						"y": 43.16,
+						"curve": [ 0, 0.19, 0.46, 0.99 ]
+					},
+					{ "time": 0.8333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.8333, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.6666, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.6666, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.6666, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

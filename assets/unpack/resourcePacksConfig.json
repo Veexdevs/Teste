@@ -1,0 +1,90 @@
+{
+    "SD":     {
+        "baseScale": 1,
+        "basePointScale" : 1,
+        "fallback": "",
+        "suffix": ""
+    },
+    "HDNoSuffix":     {
+        "baseScale": 2,
+        "basePointScale" : 1,
+        "fallback": "",
+        "suffix": ""
+    },
+    "HD":     {
+        "baseScale": 2,
+        "fallback": "HDNoSuffix",
+        "basePointScale" : 1,
+        "suffix": "-hd"
+    },
+    "iPadNoSuffix":     {
+        "baseScale": 0.936507,
+        "basePointScale" : 1,
+        "fallback": "",
+        "suffix": ""
+    },
+    "iPadWithiPhoneHD":     {
+        "baseScale": 0.936507,
+        "basePointScale" : 1,
+        "fallback": "iPadNoSuffix",
+        "suffix": "-hd"
+    },
+    "iPad":     {
+        "baseScale": 1,
+        "basePointScale" : 1,
+        "fallback": "iPadWithiPhoneHD",
+        "suffix": "-ipad"
+    },
+    "iPadHD":     {
+        "baseScale": 2,
+        "basePointScale" : 1,
+        "fallback": "iPad",
+        "suffix": "-ipadhd"
+    },
+    "iPad3and4":     {
+        "baseScale": 2,
+        "basePointScale" : 1,
+        "fallback": "iPad",
+        "suffix": "-ipad3and4"
+    },
+    "iPhone6DZ":     {
+        "baseScale": 2,
+        "basePointScale" : 1,
+        "fallback": "HDNoSuffix",
+        "suffix": "-hd",
+        "twinPacks":["iPhone6"]
+    },
+    "iPhone6":     {
+        "baseScale": 2.348592,
+        "basePointScale" : 1.17429577464789,
+        "fallback": "HD",
+        "suffix": "-iphone6",
+        "twinPacks":["HD"]
+    },
+    "iPhone6Plus":     {
+        "baseScale": 3.887324,
+        "basePointScale" : 1.29577464788732,
+        "fallback": "iPhone6PlusDZ",
+        "suffix": "-iphone6plus",
+        "twinPacks":["iPhone6PlusDZ"]
+    },
+    "iPhone6PlusDZ":     {
+        "baseScale": 3.522887,
+        "basePointScale" : 1.17429577464789,
+        "fallback": "iPhone6",
+        "suffix": "-iphone6plusdz",
+        "twinPacks":["iPhone6Plus"]
+    },
+    "iPhoneX":     {
+        "baseScale": 3.3256063609602537,
+        "basePointScale" : 1.17429577464789,
+        "fallback": "iPhone6",
+        "suffix": "-iphoneX"
+    },
+    "iPhoneXR":     {
+        "baseScale": 2.217070422535211,
+        "basePointScale" : 1.17429577464789,
+        "fallback": "HD",
+        "suffix": "-iphoneXR"
+    }
+}

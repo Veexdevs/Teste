@@ -1,0 +1,27 @@
+
+ClubsOverview_Bottom.png
+size: 982,445
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bottom
+  rotate: false
+  xy: 10, 10
+  size: 314, 425
+  orig: 314, 425
+  offset: 0, 0
+  index: -1
+Bottom_Achived
+  rotate: false
+  xy: 334, 10
+  size: 314, 425
+  orig: 314, 425
+  offset: 0, 0
+  index: -1
+Bottom_Highlight
+  rotate: false
+  xy: 658, 10
+  size: 314, 425
+  orig: 314, 425
+  offset: 0, 0
+  index: -1

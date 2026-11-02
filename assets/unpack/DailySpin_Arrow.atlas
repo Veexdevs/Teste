@@ -1,0 +1,27 @@
+
+DailySpin_Arrow.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Generic_ArrowLights
+  rotate: true
+  xy: 561, 335
+  size: 560, 359
+  orig: 560, 359
+  offset: 0, 0
+  index: -1
+Golden_Arrow
+  rotate: false
+  xy: 6, 453
+  size: 549, 442
+  orig: 549, 442
+  offset: 0, 0
+  index: -1
+Spin_Arrow
+  rotate: false
+  xy: 6, 6
+  size: 547, 441
+  orig: 547, 441
+  offset: 0, 0
+  index: -1

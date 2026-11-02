@@ -1,0 +1,418 @@
+
+PiggyBank_FullScreen.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+01_Right_Coin_Big
+  rotate: false
+  xy: 644, 50
+  size: 184, 66
+  orig: 184, 66
+  offset: 0, 0
+  index: -1
+01_Right_Coin_Big_Shadow_01
+  rotate: true
+  xy: 570, 30
+  size: 65, 62
+  orig: 65, 62
+  offset: 0, 0
+  index: -1
+01_Right_Coin_Big_Shadow_02
+  rotate: false
+  xy: 314, 44
+  size: 246, 51
+  orig: 246, 51
+  offset: 0, 0
+  index: -1
+01_Right_Coin_Small
+  rotate: true
+  xy: 1981, 1511
+  size: 117, 31
+  orig: 117, 31
+  offset: 0, 0
+  index: -1
+Bar/locker_01
+  rotate: false
+  xy: 1981, 1714
+  size: 57, 68
+  orig: 57, 68
+  offset: 0, 0
+  index: -1
+Bar/locker_02
+  rotate: true
+  xy: 1981, 1638
+  size: 66, 57
+  orig: 66, 57
+  offset: 0, 0
+  index: -1
+Clock_01
+  rotate: true
+  xy: 2022, 944
+  size: 12, 16
+  orig: 262, 262
+  offset: 129, 129
+  index: -1
+CoinRotate_Export/CoinRotate_2
+  rotate: false
+  xy: 1851, 70
+  size: 161, 176
+  orig: 200, 200
+  offset: 21, 12
+  index: -1
+Coins_02
+  rotate: false
+  xy: 1851, 29
+  size: 138, 31
+  orig: 138, 31
+  offset: 0, 0
+  index: -1
+Coins_03
+  rotate: true
+  xy: 1984, 966
+  size: 148, 54
+  orig: 148, 54
+  offset: 0, 0
+  index: -1
+Coins_05
+  rotate: false
+  xy: 1287, 1138
+  size: 362, 126
+  orig: 362, 126
+  offset: 0, 0
+  index: -1
+Coins_07
+  rotate: false
+  xy: 1649, 527
+  size: 120, 97
+  orig: 120, 97
+  offset: 0, 0
+  index: -1
+Coins_08
+  rotate: true
+  xy: 1659, 1138
+  size: 126, 59
+  orig: 126, 59
+  offset: 0, 0
+  index: -1
+Coins_Front_02
+  rotate: true
+  xy: 1957, 1792
+  size: 246, 73
+  orig: 246, 73
+  offset: 0, 0
+  index: -1
+Coins_Shadow
+  rotate: false
+  xy: 10, 30
+  size: 294, 65
+  orig: 727, 727
+  offset: 223, 557
+  index: -1
+FS_Light
+  rotate: false
+  xy: 1984, 928
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+Light_02_Overvay
+  rotate: true
+  xy: 1445, 507
+  size: 117, 194
+  orig: 117, 202
+  offset: 0, 8
+  index: -1
+Light_03_Hard
+  rotate: true
+  xy: 930, 16
+  size: 100, 151
+  orig: 117, 202
+  offset: 6, 9
+  index: -1
+Light_ray
+  rotate: false
+  xy: 644, 126
+  size: 482, 482
+  orig: 482, 482
+  offset: 0, 0
+  index: -1
+PiggyPieces_Export/piece10
+  rotate: true
+  xy: 838, 10
+  size: 106, 82
+  orig: 106, 82
+  offset: 0, 0
+  index: -1
+PiggyPieces_Export/piece11
+  rotate: true
+  xy: 1136, 230
+  size: 253, 210
+  orig: 253, 210
+  offset: 0, 0
+  index: -1
+PiggyPieces_Export/piece5
+  rotate: false
+  xy: 1834, 256
+  size: 168, 139
+  orig: 168, 139
+  offset: 0, 0
+  index: -1
+PiggyPieces_Export/piece6
+  rotate: false
+  xy: 1656, 1758
+  size: 291, 280
+  orig: 291, 280
+  offset: 0, 0
+  index: -1
+PiggyPieces_Export/piece7
+  rotate: true
+  xy: 1136, 77
+  size: 143, 245
+  orig: 143, 245
+  offset: 0, 0
+  index: -1
+PiggyPieces_Export/piece8
+  rotate: false
+  xy: 1745, 1124
+  size: 248, 199
+  orig: 248, 199
+  offset: 0, 0
+  index: -1
+PiggyPieces_Export/piece9
+  rotate: false
+  xy: 1273, 493
+  size: 162, 132
+  orig: 162, 132
+  offset: 0, 0
+  index: -1
+PiggyShine/PiggyShine_1
+  rotate: false
+  xy: 1834, 405
+  size: 150, 213
+  orig: 333, 333
+  offset: 56, 68
+  index: -1
+PiggyShine/PiggyShine_10
+  rotate: false
+  xy: 1287, 886
+  size: 244, 242
+  orig: 333, 333
+  offset: 47, 41
+  index: -1
+PiggyShine/PiggyShine_11
+  rotate: false
+  xy: 1273, 635
+  size: 244, 241
+  orig: 333, 333
+  offset: 47, 41
+  index: -1
+PiggyShine/PiggyShine_12
+  rotate: false
+  xy: 1730, 875
+  size: 244, 239
+  orig: 333, 333
+  offset: 47, 41
+  index: -1
+PiggyShine/PiggyShine_13
+  rotate: true
+  xy: 1356, 239
+  size: 244, 236
+  orig: 333, 333
+  offset: 47, 41
+  index: -1
+PiggyShine/PiggyShine_14
+  rotate: false
+  xy: 1527, 634
+  size: 244, 231
+  orig: 333, 333
+  offset: 47, 41
+  index: -1
+PiggyShine/PiggyShine_15
+  rotate: true
+  xy: 1602, 253
+  size: 244, 222
+  orig: 333, 333
+  offset: 47, 41
+  index: -1
+PiggyShine/PiggyShine_2
+  rotate: false
+  xy: 1541, 911
+  size: 179, 217
+  orig: 333, 333
+  offset: 55, 66
+  index: -1
+PiggyShine/PiggyShine_3
+  rotate: false
+  xy: 1391, 10
+  size: 201, 219
+  orig: 333, 333
+  offset: 55, 64
+  index: -1
+PiggyShine/PiggyShine_5
+  rotate: false
+  xy: 1781, 628
+  size: 224, 237
+  orig: 333, 333
+  offset: 54, 47
+  index: -1
+PiggyShine/PiggyShine_6
+  rotate: true
+  xy: 1602, 17
+  size: 226, 239
+  orig: 333, 333
+  offset: 54, 45
+  index: -1
+Piggy_Broke
+  rotate: false
+  xy: 10, 1392
+  size: 648, 646
+  orig: 727, 727
+  offset: 59, 43
+  index: -1
+Piggy_Broke_ears
+  rotate: true
+  xy: 1745, 1333
+  size: 415, 226
+  orig: 727, 727
+  offset: 260, 464
+  index: -1
+Piggy_Normal
+  rotate: false
+  xy: 10, 741
+  size: 644, 641
+  orig: 727, 727
+  offset: 60, 43
+  index: -1
+Piggy_Shadown
+  rotate: true
+  xy: 1166, 493
+  size: 617, 97
+  orig: 727, 727
+  offset: 30, 24
+  index: -1
+Platform
+  rotate: false
+  xy: 668, 1735
+  size: 978, 303
+  orig: 978, 303
+  offset: 0, 0
+  index: -1
+Ray_1
+  rotate: false
+  xy: 668, 1120
+  size: 609, 605
+  orig: 709, 705
+  offset: 50, 50
+  index: -1
+Ray_2
+  rotate: true
+  xy: 1287, 1274
+  size: 451, 448
+  orig: 451, 449
+  offset: 0, 0
+  index: -1
+VFX_Large_Circle
+  rotate: false
+  xy: 664, 618
+  size: 492, 492
+  orig: 492, 492
+  offset: 0, 0
+  index: -1
+VFX_thin_Circle
+  rotate: false
+  xy: 10, 105
+  size: 624, 626
+  orig: 624, 626
+  offset: 0, 0
+  index: -1
+
+PiggyBank_FullScreen2.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Clock_02
+  rotate: false
+  xy: 731, 84
+  size: 86, 86
+  orig: 262, 262
+  offset: 88, 88
+  index: -1
+Coins_01
+  rotate: false
+  xy: 731, 180
+  size: 155, 90
+  orig: 155, 90
+  offset: 0, 0
+  index: -1
+Coins_04
+  rotate: true
+  xy: 934, 368
+  size: 134, 64
+  orig: 134, 64
+  offset: 0, 0
+  index: -1
+Light_01
+  rotate: false
+  xy: 934, 275
+  size: 65, 83
+  orig: 117, 202
+  offset: 25, 4
+  index: -1
+Light_02_Hard
+  rotate: false
+  xy: 896, 141
+  size: 99, 124
+  orig: 117, 202
+  offset: 12, 0
+  index: -1
+PiggyShine/PiggyShine_16
+  rotate: true
+  xy: 261, 260
+  size: 242, 220
+  orig: 333, 333
+  offset: 49, 42
+  index: -1
+PiggyShine/PiggyShine_17
+  rotate: true
+  xy: 491, 262
+  size: 240, 216
+  orig: 333, 333
+  offset: 50, 43
+  index: -1
+PiggyShine/PiggyShine_18
+  rotate: true
+  xy: 717, 280
+  size: 222, 207
+  orig: 333, 333
+  offset: 67, 49
+  index: -1
+PiggyShine/PiggyShine_4
+  rotate: false
+  xy: 503, 29
+  size: 218, 223
+  orig: 333, 333
+  offset: 54, 61
+  index: -1
+PiggyShine/PiggyShine_7
+  rotate: false
+  xy: 259, 10
+  size: 234, 240
+  orig: 333, 333
+  offset: 53, 44
+  index: -1
+PiggyShine/PiggyShine_8
+  rotate: false
+  xy: 10, 10
+  size: 239, 240
+  orig: 333, 333
+  offset: 51, 43
+  index: -1
+PiggyShine/PiggyShine_9
+  rotate: true
+  xy: 10, 260
+  size: 242, 241
+  orig: 333, 333
+  offset: 49, 42
+  index: -1

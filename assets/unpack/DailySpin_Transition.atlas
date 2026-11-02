@@ -1,0 +1,13 @@
+
+DailySpin_Transition.png
+size: 32,32
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Generic_TransparentPixel
+  rotate: false
+  xy: 6, 6
+  size: 5, 5
+  orig: 5, 5
+  offset: 0, 0
+  index: -1

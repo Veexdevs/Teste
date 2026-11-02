@@ -1,0 +1,20 @@
+
+ClockIcon.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Clock
+  rotate: false
+  xy: 0, 0
+  size: 78, 77
+  orig: 78, 77
+  offset: 0, 0
+  index: -1
+Clock_pointer
+  rotate: false
+  xy: 78, 22
+  size: 56, 55
+  orig: 56, 55
+  offset: 0, 0
+  index: -1

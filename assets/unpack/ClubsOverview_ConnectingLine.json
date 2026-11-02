@@ -1,0 +1,85 @@
+{
+"skeleton": { "hash": "Mt1e1IDyxMKkn8U6s22oq2bYbTE", "spine": "3.6.52", "width": 2368, "height": 1334 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "3_CONNECTING_LINE                               ClubsOverview_ConnectingLine", "parent": "root" }
+],
+"slots": [
+	{
+		"name": "Connecting_Line",
+		"bone": "3_CONNECTING_LINE                               ClubsOverview_ConnectingLine",
+		"color": "363644ff",
+		"attachment": "Connecting_Line"
+	}
+],
+"skins": {
+	"default": {
+		"Connecting_Line": {
+			"Connecting_Line": { "width": 68, "height": 433 }
+		}
+	}
+},
+"animations": {
+	"1_Start_Top": {},
+	"2_Idle_Top": {},
+	"3_Transition_Top2Bottom": {},
+	"4_Idle_Bottom": {
+		"slots": {
+			"Connecting_Line": {
+				"color": [
+					{ "time": 0, "color": "363644ff", "curve": "stepped" },
+					{
+						"time": 0.1667,
+						"color": "363644ff",
+						"curve": [ 0.849, 0, 0.75, 1 ]
+					},
+					{
+						"time": 1,
+						"color": "009fd6ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 1.8333, "color": "363644ff" }
+				]
+			}
+		}
+	},
+	"5_Transition_Bottom2Top": {
+		"slots": {
+			"Connecting_Line": {
+				"color": [
+					{ "time": 0, "color": "363644ff", "curve": "stepped" },
+					{
+						"time": 0.8333,
+						"color": "363644ff",
+						"curve": [ 0.849, 0, 0.75, 1 ]
+					},
+					{
+						"time": 1.1667,
+						"color": "009fd6ff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 2, "color": "363644ff" }
+				]
+			}
+		}
+	},
+	"9_Achived_Bottom": {
+		"bones": {
+			"3_CONNECTING_LINE                               ClubsOverview_ConnectingLine": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			}
+		}
+	},
+	"9_Achived_Top": {
+		"bones": {
+			"3_CONNECTING_LINE                               ClubsOverview_ConnectingLine": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			}
+		}
+	}
+}
+}

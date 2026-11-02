@@ -1,0 +1,20 @@
+
+MainMenu_Box.png
+size: 288,277
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Glow
+  rotate: false
+  xy: 10, 10
+  size: 257, 257
+  orig: 257, 257
+  offset: 0, 0
+  index: -1
+Transparent_Pixel
+  rotate: false
+  xy: 277, 266
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1

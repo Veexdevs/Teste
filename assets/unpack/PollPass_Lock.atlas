@@ -1,0 +1,20 @@
+
+PollPass_Lock.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Keylock_Bottom
+  rotate: false
+  xy: 73, 20
+  size: 62, 55
+  orig: 62, 55
+  offset: 0, 0
+  index: -1
+Keylock_Top
+  rotate: false
+  xy: 10, 10
+  size: 53, 65
+  orig: 53, 65
+  offset: 0, 0
+  index: -1

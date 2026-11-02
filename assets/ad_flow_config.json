@@ -1,0 +1,866 @@
+{
+  "adFlow": {
+    "flowId": "reward_video_flow",
+    "flowName": "Rewarded Video Ad Flow",
+    "apiProviders": {
+      "Database": "com.zmaticoo.sdk.flow.api.DatabaseApiProvider",
+      "Network": "com.zmaticoo.sdk.flow.api.NetworkApiProvider",
+      "Storage": "com.zmaticoo.sdk.flow.api.StorageApiProvider",
+      "ClickHandler": "com.zmaticoo.sdk.flow.api.ClickHandlerApiProvider",
+      "Tracking": "com.zmaticoo.sdk.flow.api.TrackingApiProvider",
+      "VideoPlayer": "com.zmaticoo.sdk.flow.api.VideoPlayerApiProvider",
+      "Activity": "com.zmaticoo.sdk.flow.api.ActivityLifecycleApiProvider",
+      "IsReady": "com.zmaticoo.sdk.flow.api.IsReadyApiProvider",
+      "WebView": "com.zmaticoo.sdk.flow.api.WebViewApiProvider"
+    },
+    "scenes": {
+      "loadAd": {
+        "sceneId": "load_ad_scene",
+        "sceneName": "Ad Loading Scene",
+        "priority": 1,
+        "timeout": 30000,
+        "telemetry": {
+          "enabled": true,
+          "metrics": [
+            "duration",
+            "status"
+          ]
+        },
+        "subScenes": [
+          {
+            "sceneId": "cache_verify",
+            "sceneName": "Cache Verification",
+            "priority": 1,
+            "onError": "continue",
+            "onSuccessCallback": "adComplete",
+            "timeout": 5000,
+            "nextScene": "ad_request",
+            "telemetry": {
+              "enabled": true,
+              "metrics": [
+                "duration",
+                "status",
+                "cache_hit"
+              ]
+            }
+          },
+          {
+            "sceneId": "ad_request",
+            "sceneName": "Ad Campaign Request",
+            "priority": 2,
+            "onError": "failed",
+            "timeout": 29000,
+            "nextScene": "ad_response_verify",
+            "telemetry": {
+              "enabled": true,
+              "metrics": [
+                "duration",
+                "status",
+                "error_code"
+              ]
+            }
+          },
+          {
+            "sceneId": "ad_response_verify",
+            "sceneName": "Ad Response Verification",
+            "priority": 3,
+            "onError": "failed",
+            "nextScene": "asset_download",
+            "verifyFields": {
+              "interstitial-video": [
+                {
+                  "type": "field",
+                  "field": "mMediaFile",
+                  "required": true
+                },
+                {
+                  "type": "custom",
+                  "method": "isAppInstalled",
+                  "args": {
+                    "packageNameField": "mBundle"
+                  },
+                  "expected": false
+                }
+              ],
+              "interstitial-banner": [
+                {
+                  "type": "field",
+                  "field": "mResource",
+                  "required": false
+                },
+                {
+                  "type": "field",
+                  "field": "mTemplateUrl",
+                  "required": true
+                }
+              ],
+              "banner": [
+                {
+                  "type": "field",
+                  "field": "mResource",
+                  "required": false
+                },
+                {
+                  "type": "field",
+                  "field": "mTemplateUrl",
+                  "required": true
+                }
+              ],
+              "native-image": [
+                {
+                  "type": "field",
+                  "field": "mNativeResponse.imageUrls",
+                  "required": true
+                }
+              ],
+              "native-video": [
+                {
+                  "type": "field",
+                  "field": "mMediaFile",
+                  "required": true
+                }
+              ],
+              "default": [
+                {
+                  "type": "field",
+                  "field": "mMediaFile",
+                  "required": true
+                }
+              ]
+            },
+            "telemetry": {
+              "enabled": true,
+              "metrics": [
+                "duration",
+                "status",
+                "error_code",
+                "verify_result"
+              ]
+            }
+          },
+          {
+            "sceneId": "asset_download",
+            "sceneName": "Asset Download",
+            "priority": 3,
+            "onError": "failed",
+            "timeout": 29000,
+            "onSuccessCallback": "adComplete",
+            "onComplete": [
+              {
+                "api": "@{Database.update(adResponse)}",
+                "async": true
+              }
+            ],
+            "assetTypes": {
+              "interstitial-video": [
+                {
+                  "type": "video",
+                  "field": "${adResponse.mMediaFile}",
+                  "minProgress": 20,
+                  "completeOnProgress": true
+                },
+                {
+                  "type": "image",
+                  "field": "${adResponse.mJsonBody.icon_url}",
+                  "minProgress": 100,
+                  "completeOnProgress": false
+                },
+                {
+                  "type": "image",
+                  "field": "${adResponse.mJsonBody.image_url}",
+                  "minProgress": 100,
+                  "completeOnProgress": false
+                },
+                {
+                  "type": "image",
+                  "field": "${adResponse.mResource}",
+                  "minProgress": 100,
+                  "completeOnProgress": false
+                }
+              ],
+              "reward": [
+                {
+                  "type": "video",
+                  "field": "${adResponse.mMediaFile}",
+                  "minProgress": 20,
+                  "completeOnProgress": true
+                },
+                {
+                  "type": "image",
+                  "field": "${adResponse.mJsonBody.icon_url}",
+                  "minProgress": 100,
+                  "completeOnProgress": false
+                },
+                {
+                  "type": "image",
+                  "field": "${adResponse.mJsonBody.image_url}",
+                  "minProgress": 100,
+                  "completeOnProgress": false
+                },
+                {
+                  "type": "image",
+                  "field": "${adResponse.mResource}",
+                  "minProgress": 100,
+                  "completeOnProgress": false
+                }
+              ],
+              "interstitial-banner": [
+                {
+                  "type": "image",
+                  "field": "${adResponse.mResource}",
+                  "minProgress": 100,
+                  "completeOnProgress": false
+                }
+              ],
+              "banner": [
+                {
+                  "type": "image",
+                  "field": "${adResponse.mResource}",
+                  "minProgress": 100,
+                  "completeOnProgress": false
+                }
+              ],
+              "banner-video": [
+                {
+                  "type": "image",
+                  "field": "${adResponse.mResource}",
+                  "minProgress": 100,
+                  "completeOnProgress": false
+                },
+                {
+                  "type": "video",
+                  "field": "${adResponse.mMediaFile}",
+                  "minProgress": 20,
+                  "completeOnProgress": true
+                }
+              ],
+              "native-image": [
+                {
+                  "type": "image",
+                  "field": "${adResponse.mNativeResponse.iconUrl}",
+                  "minProgress": 100,
+                  "completeOnProgress": false
+                },
+                {
+                  "type": "image",
+                  "field": "${adResponse.mNativeResponse.imageUrls}",
+                  "minProgress": 100,
+                  "completeOnProgress": true
+                }
+              ],
+              "native-video": [
+                {
+                  "type": "image",
+                  "field": "${adResponse.mNativeResponse.iconUrl}",
+                  "minProgress": 100,
+                  "completeOnProgress": false
+                },
+                {
+                  "type": "video",
+                  "field": "${adResponse.mMediaFile}",
+                  "minProgress": 20,
+                  "completeOnProgress": true
+                }
+              ],
+              "default": [
+                {
+                  "type": "video",
+                  "field": "${adResponse.mMediaFile}",
+                  "minProgress": 20,
+                  "completeOnProgress": true
+                }
+              ]
+            },
+            "telemetry": {
+              "enabled": true,
+              "metrics": [
+                "duration",
+                "status",
+                "error_code",
+                "download_size"
+              ]
+            }
+          }
+        ]
+      },
+      "isReady": {
+        "sceneId": "is_ready_scene",
+        "sceneName": "Ad Ready Check",
+        "priority": 1,
+        "isReadyConfig": {
+          "checkExpire": true,
+          "checkDownload": true,
+          "checkRender": false,
+          "checkInstall": true,
+          "checkCustom": false
+        }
+      },
+      "show": {
+        "sceneId": "show_scene",
+        "sceneName": "Ad Display Scene",
+        "subScenes": [
+          {
+            "sceneId": "template_banner",
+            "sceneName": "interstitial_banner",
+            "priority": 1,
+            "onError": "failed",
+            "onComplete": [
+              {
+                "api": "@{Activity.finish(activity)}",
+                "async": false
+              }
+            ],
+            "IntermediateState": [
+              {
+                "apikey": "banner_show",
+                "apis": [
+                  {
+                    "api": "@{this.onAdShow()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{Database.delete(show_ad)}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "template_click",
+                "apis": [
+                  {
+                    "api": "@{Tracking.trackAdClick()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{ClickHandler.handleUrlClick()}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "maticoo_choice_click",
+                "api": "@{ClickHandler.handleMaticooChoicesClick()}",
+                "async": true
+              }
+            ]
+          },
+          {
+            "sceneId": "template_play",
+            "sceneName": "interstitial_video",
+            "priority": 2,
+            "onError": "continue",
+            "IntermediateState": [
+              {
+                "apikey": "prepare_player",
+                "api": "@{VideoPlayer.preparePlayer()}",
+                "async": true
+              },
+              {
+                "apikey": "first_frame",
+                "apis": [
+                  {
+                    "api": "@{this.onAdShow()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{Database.delete(show_ad)}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{WebView.create()}",
+                    "async": false
+                  },
+                  {
+                    "api": "@{WebView.load()}",
+                    "async": false
+                  }
+                ]
+              },
+              {
+                "apikey": "video_start",
+                "apis": [
+                  {
+                    "api": "@{VideoPlayer.start()}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "video_pause",
+                "apis": [
+                  {
+                    "api": "@{VideoPlayer.pause()}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "destroy_web_view",
+                "api": "@{WebView.destroy()}",
+                "async": true
+              },
+              {
+                "apikey": "video_close",
+                "api": "@{VideoPlayer.release()}",
+                "async": true
+              },
+              {
+                "apikey": "video_mute",
+                "apis": [
+                  {
+                    "api": "@{VideoPlayer.updateMute()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{Tracking.trackVideoEvent()}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "release_player",
+                "apis": [
+                  {
+                    "api": "@{VideoPlayer.release()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{WebView.clearListener()}",
+                    "async": false
+                  }
+                ]
+              },
+              {
+                "apikey": "template_click",
+                "api": "@{Tracking.trackAdClick()}",
+                "async": true
+              },
+              {
+                "apikey": "template_click",
+                "api": "@{ClickHandler.handleVideoClick()}",
+                "async": true
+              },
+              {
+                "apikey": "video_event",
+                "api": "@{Tracking.trackVideoEvent()}",
+                "async": true
+              },
+              {
+                "apikey": "maticoo_choice_click",
+                "api": "@{ClickHandler.handleMaticooChoicesClick()}",
+                "async": true
+              }
+            ],
+            "nextScene": "post_video_router"
+          },
+          {
+            "sceneId": "post_video_router",
+            "sceneName": "End Card Display",
+            "priority": 5,
+            "onError": "continue",
+            "interactionType": "playable",
+            "IntermediateState": [
+              {
+                "apikey": "get_web_view",
+                "api": "@{WebView.getView()}",
+                "async": true
+              },
+              {
+                "apikey": "destroy_web_view",
+                "api": "@{WebView.destroy()}",
+                "async": true
+              }
+            ]
+          },
+          {
+            "sceneId": "vast_companion",
+            "sceneName": "End Card Display",
+            "priority": 5,
+            "onError": "continue",
+            "interactionType": "playable",
+            "IntermediateState": [
+              {
+                "apikey": "get_web_view",
+                "api": "@{WebView.getView()}",
+                "async": true
+              },
+              {
+                "apikey": "destroy_web_view",
+                "api": "@{WebView.destroy()}",
+                "async": true
+              },
+              {
+                "apikey": "endcard_click",
+                "apis": [
+                  {
+                    "api": "@{ClickHandler.handleEndCardClick()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{Tracking.trackEndCardClick()}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "video_click",
+                "apis": [
+                  {
+                    "api": "@{ClickHandler.handleVideoClick()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{Tracking.trackEndCardClick()}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "maticoo_choice_click",
+                "api": "@{ClickHandler.handleMaticooChoicesClick()}",
+                "async": true
+              }
+            ],
+            "nextScene": "endcard2_display"
+          },
+          {
+            "sceneId": "endcard1_display",
+            "sceneName": "End Card Display",
+            "priority": 5,
+            "onError": "continue",
+            "interactionType": "playable",
+            "IntermediateState": [
+              {
+                "apikey": "endcard_click",
+                "api": "@{ClickHandler.handleVideoClick()}",
+                "async": true
+              },
+              {
+                "apikey": "endcard_click",
+                "api": "@{Tracking.trackAdClick()}",
+                "async": true
+              },
+              {
+                "apikey": "maticoo_choice_click",
+                "api": "@{ClickHandler.handleMaticooChoicesClick()}",
+                "async": true
+              }
+            ],
+            "nextScene": "endcard2_display"
+          },
+          {
+            "sceneId": "endcard2_display",
+            "sceneName": "End Card Display",
+            "priority": 6,
+            "interactionType": "playable",
+            "onComplete": [
+              {
+                "api": "@{Activity.finish(activity)}",
+                "async": false
+              }
+            ],
+            "IntermediateState": [
+              {
+                "apikey": "endcard2_click",
+                "api": "@{ClickHandler.handleVideoClick()}",
+                "async": true
+              },
+              {
+                "apikey": "endcard2_click",
+                "api": "@{Tracking.trackAdClick()}",
+                "async": true
+              },
+              {
+                "apikey": "maticoo_choice_click",
+                "api": "@{ClickHandler.handleMaticooChoicesClick()}",
+                "async": true
+              }
+            ]
+          },
+          {
+            "sceneId": "banner_video",
+            "sceneName": "Banner Video",
+            "priority": 3,
+            "onError": "failed",
+            "IntermediateState": [
+              {
+                "apikey": "prepare_player",
+                "api": "@{VideoPlayer.preparePlayer()}",
+                "async": true
+              },
+              {
+                "apikey": "maticoo_choice_click",
+                "api": "@{ClickHandler.handleMaticooChoicesClick()}",
+                "async": true
+              },
+              {
+                "apikey": "template_click",
+                "apis": [
+                  {
+                    "api": "@{ClickHandler.handleVideoClick()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{Tracking.trackAdClick()}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "ad_choice_click",
+                "apis": [
+                  {
+                    "api": "@{ClickHandler.handleAdChoicesClick()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{Tracking.trackAdChoicesClick()}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "ad_choice_view_track",
+                "api": "@{Tracking.trackAdChoicesImpression()}",
+                "async": true
+              },
+              {
+                "apikey": "video_event",
+                "api": "@{Tracking.trackVideoEvent()}",
+                "async": true
+              },
+              {
+                "apikey": "video_start",
+                "apis": [
+                  {
+                    "api": "@{VideoPlayer.start()}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "video_pause",
+                "apis": [
+                  {
+                    "api": "@{VideoPlayer.pause()}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "release_player",
+                "api": "@{VideoPlayer.release()}",
+                "async": true
+              },
+              {
+                "apikey": "video_event",
+                "api": "@{Tracking.trackVideoEvent()}",
+                "async": true
+              },
+              {
+                "apikey": "first_frame",
+                "apis": [
+                  {
+                    "api": "@{this.onAdShow()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{Database.delete(show_ad)}",
+                    "async": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "sceneId": "banner_view",
+            "sceneName": "Banner View",
+            "priority": 4,
+            "onError": "failed",
+            "IntermediateState": [
+              {
+                "apikey": "banner_show",
+                "apis": [
+                  {
+                    "api": "@{this.onAdShow()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{Database.delete(show_ad)}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "template_click",
+                "apis": [
+                  {
+                    "api": "@{Tracking.trackAdClick()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{ClickHandler.handleUrlClick()}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "maticoo_choice_click",
+                "api": "@{ClickHandler.handleMaticooChoicesClick()}",
+                "async": true
+              }
+            ]
+          },
+          {
+            "sceneId": "native_video",
+            "sceneName": "Native Video",
+            "priority": 3,
+            "onError": "failed",
+            "IntermediateState": [
+              {
+                "apikey": "prepare_player",
+                "api": "@{VideoPlayer.preparePlayer()}",
+                "async": true
+              },
+              {
+                "apikey": "maticoo_choice_click",
+                "api": "@{ClickHandler.handleMaticooChoicesClick()}",
+                "async": true
+              },
+              {
+                "apikey": "template_click",
+                "apis": [
+                  {
+                    "api": "@{ClickHandler.handleVideoClick()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{Tracking.trackAdClick()}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "ad_choice_click",
+                "apis": [
+                  {
+                    "api": "@{ClickHandler.handleAdChoicesClick()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{Tracking.trackAdChoicesClick()}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "ad_choice_view_track",
+                "api": "@{Tracking.trackAdChoicesImpression()}",
+                "async": true
+              },
+              {
+                "apikey": "video_event",
+                "api": "@{Tracking.trackVideoEvent()}",
+                "async": true
+              },
+              {
+                "apikey": "video_mute",
+                "apis": [
+                  {
+                    "api": "@{VideoPlayer.updateMute()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{Tracking.trackVideoEvent()}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "video_start",
+                "apis": [
+                  {
+                    "api": "@{VideoPlayer.start()}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "video_pause",
+                "apis": [
+                  {
+                    "api": "@{VideoPlayer.pause()}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "release_player",
+                "api": "@{VideoPlayer.release()}",
+                "async": true
+              },
+              {
+                "apikey": "video_event",
+                "api": "@{Tracking.trackVideoEvent()}",
+                "async": true
+              },
+              {
+                "apikey": "first_frame",
+                "apis": [
+                  {
+                    "api": "@{this.onAdShow()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{Database.delete(show_ad)}",
+                    "async": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "sceneId": "native_image",
+            "sceneName": "Native Image",
+            "priority": 4,
+            "onError": "failed",
+            "IntermediateState": [
+              {
+                "apikey": "banner_show",
+                "apis": [
+                  {
+                    "api": "@{this.onAdShow()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{Database.delete(show_ad)}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "template_click",
+                "apis": [
+                  {
+                    "api": "@{Tracking.trackAdClick()}",
+                    "async": true
+                  },
+                  {
+                    "api": "@{ClickHandler.handleUrlClick()}",
+                    "async": true
+                  }
+                ]
+              },
+              {
+                "apikey": "maticoo_choice_click",
+                "api": "@{ClickHandler.handleMaticooChoicesClick()}",
+                "async": true
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "minimum_supported_sdk_version":"2.0.5.1"
+}

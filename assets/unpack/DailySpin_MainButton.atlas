@@ -1,0 +1,20 @@
+
+DailySpin_MainButton.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Golden_Button
+  rotate: false
+  xy: 6, 6
+  size: 266, 275
+  orig: 266, 275
+  offset: 0, 0
+  index: -1
+Spin_Button
+  rotate: false
+  xy: 278, 30
+  size: 251, 251
+  orig: 251, 251
+  offset: 0, 0
+  index: -1

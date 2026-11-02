@@ -1,0 +1,6706 @@
+{
+"skeleton": { "hash": "XoSwbWT834AiH8qXxhs5+8ED8CI", "spine": "3.6.51", "width": 2368, "height": 1337.56 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "SLOT_1                           -MainMenu_Slot", "parent": "root" },
+	{ "name": "TAPtoUNLOCK", "parent": "SLOT_1                           -MainMenu_Slot", "x": 0.02, "y": -5.71 },
+	{ "name": "3 hours", "parent": "TAPtoUNLOCK", "x": -0.02, "y": -86.68 },
+	{ "name": "BUTTON", "parent": "SLOT_1                           -MainMenu_Slot" },
+	{ "name": "Button_Bright", "parent": "BUTTON", "y": -9.23 },
+	{ "name": "OPENNOW", "parent": "SLOT_1                           -MainMenu_Slot" },
+	{ "name": "OpenNow_CLOCK", "parent": "OPENNOW", "x": -69.69, "y": 109.62, "scaleX": 0.5, "scaleY": 0.5 },
+	{ "name": "Clock", "parent": "OpenNow_CLOCK" },
+	{ "name": "Clock_pointer", "parent": "OpenNow_CLOCK" },
+	{ "name": "FREE_SLOT", "parent": "SLOT_1                           -MainMenu_Slot" },
+	{ "name": "OPEN", "parent": "SLOT_1                           -MainMenu_Slot", "y": -94.59 },
+	{ "name": "OpenNow_Info", "parent": "OPENNOW", "x": -8.06, "y": -5.71 },
+	{ "name": "SpineNode_OpenNow_Money", "parent": "OpenNow_Info", "x": 8.06, "y": -88.88 },
+	{ "name": "SpineNode_OpenNow_Timer", "parent": "OpenNow_Info", "y": 114.11 },
+	{ "name": "Tap to unlock", "parent": "TAPtoUNLOCK", "y": 136.22 }
+],
+"slots": [
+	{ "name": "ButtonBase", "bone": "BUTTON", "attachment": "ButtonBase" },
+	{ "name": "ButtonBase_Bright", "bone": "BUTTON", "color": "ffffff00", "attachment": "ButtonBase", "blend": "additive" },
+	{ "name": "SpineNode_FreeSlot", "bone": "FREE_SLOT" },
+	{ "name": "3 hours", "bone": "3 hours" },
+	{ "name": "Tap to unlock", "bone": "Tap to unlock", "attachment": "Tap to unlock" },
+	{ "name": "Tap to unlock_Bright", "bone": "Tap to unlock", "attachment": "Tap to unlock", "blend": "additive" },
+	{ "name": "SpineNode_TapToUnlock_Hours", "bone": "3 hours" },
+	{ "name": "SpineNode_TapToUnlock_Text", "bone": "Tap to unlock" },
+	{ "name": "Open", "bone": "OPEN" },
+	{ "name": "SpineNode_Open_Text", "bone": "OPEN" },
+	{ "name": "OpenNow", "bone": "OpenNow_Info" },
+	{ "name": "SpineNode_OpenNow_Timer", "bone": "SpineNode_OpenNow_Timer" },
+	{ "name": "SpineNode_OpenNow_Money", "bone": "SpineNode_OpenNow_Money" },
+	{ "name": "Button_Bright", "bone": "Button_Bright", "color": "ffffff00", "attachment": "Button_Bright", "blend": "additive" },
+	{ "name": "Clock", "bone": "Clock" },
+	{ "name": "Clock_pointer", "bone": "Clock_pointer" },
+	{ "name": "Transparent_Pixel", "bone": "SLOT_1                           -MainMenu_Slot", "attachment": "Transparent_Pixel" }
+],
+"skins": {
+	"default": {
+		"3 hours": {
+			"3 hours": { "x": 0.02, "width": 210, "height": 73 }
+		},
+		"ButtonBase": {
+			"ButtonBase": { "width": 253, "height": 305 },
+			"ButtonBase_FreeSlot": { "width": 253, "height": 305 },
+			"ButtonBase_Open": { "width": 253, "height": 305 },
+			"ButtonBase_OpenNow": { "width": 253, "height": 305 }
+		},
+		"ButtonBase_Bright": {
+			"ButtonBase": { "width": 253, "height": 305 }
+		},
+		"Button_Bright": {
+			"Button_Bright": { "y": 8.2, "width": 253, "height": 305 }
+		},
+		"Clock": {
+			"Clock": { "width": 78, "height": 77 }
+		},
+		"Clock_pointer": {
+			"Clock_pointer": { "width": 56, "height": 55 }
+		},
+		"Open": {
+			"Open": { "width": 210, "height": 73 }
+		},
+		"OpenNow": {
+			"OpenNow": { "x": 8.06, "y": -88.88, "width": 210, "height": 73 }
+		},
+		"Tap to unlock": {
+			"Tap to unlock": { "y": -8.36, "width": 188, "height": 94 }
+		},
+		"Tap to unlock_Bright": {
+			"Tap to unlock": { "y": -8.36, "width": 188, "height": 94 }
+		},
+		"Transparent_Pixel": {
+			"Transparent_Pixel": { "width": 1, "height": 1 }
+		}
+	}
+},
+"events": {
+	"Particles_Box": {},
+	"sfx_victoryBoxes_menu_boxFlyIntoSlot": {},
+	"sfx_victoryBoxes_menu_slotWithBoxBecomesGreen": {},
+	"sfx_victoryBoxes_menu_tapToUnlockPopupIn": {},
+	"sfx_victoryBoxes_menu_unlockPopupsOut": {}
+},
+"animations": {
+	"MOCKUP_ALL": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" },
+					{ "time": 2.8, "color": "ffffff00" },
+					{ "time": 3, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 6, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 6.0333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 8.0333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 8.3667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 10.3667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 10.4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 12.0667, "color": "ffffffff" },
+					{ "time": 12.4, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 13.7333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 19.0667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 19.1, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 19.2667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 20.1, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 23.4333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 2.8, "name": "3 hours" },
+					{ "time": 4, "name": "3 hours" },
+					{ "time": 6, "name": "3 hours" },
+					{ "time": 6.0333, "name": "3 hours" },
+					{ "time": 8.0333, "name": "3 hours" },
+					{ "time": 8.3667, "name": "3 hours" },
+					{ "time": 10.3667, "name": "3 hours" },
+					{ "time": 10.4, "name": "3 hours" },
+					{ "time": 12.0667, "name": "3 hours" },
+					{ "time": 12.4, "name": "3 hours" },
+					{ "time": 13.7333, "name": "3 hours" },
+					{ "time": 19.0667, "name": "3 hours" },
+					{ "time": 19.1, "name": null },
+					{ "time": 19.2667, "name": null },
+					{ "time": 20.1, "name": null },
+					{ "time": 23.4333, "name": null }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 6, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 6.0333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 8.0333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 8.3667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 10.3667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 10.4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 12.0667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 12.4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 13.7333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 19.0667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 19.1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 20.1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 23.4333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase_FreeSlot" },
+					{ "time": 2, "name": "ButtonBase_FreeSlot" },
+					{ "time": 2.8, "name": "ButtonBase" },
+					{ "time": 4, "name": "ButtonBase" },
+					{ "time": 6, "name": "ButtonBase" },
+					{ "time": 6.0333, "name": "ButtonBase" },
+					{ "time": 8.0333, "name": "ButtonBase" },
+					{ "time": 8.3667, "name": "ButtonBase" },
+					{ "time": 10.3667, "name": "ButtonBase" },
+					{ "time": 10.4, "name": "ButtonBase" },
+					{ "time": 12.0667, "name": "ButtonBase_OpenNow" },
+					{ "time": 13.7333, "name": "ButtonBase_OpenNow" },
+					{ "time": 19.0667, "name": "ButtonBase_OpenNow" },
+					{ "time": 19.1, "name": "ButtonBase_Open" },
+					{ "time": 19.2667, "name": "ButtonBase_Open" },
+					{ "time": 20.1, "name": "ButtonBase_Open" },
+					{ "time": 23.4333, "name": "ButtonBase_Open" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" },
+					{ "time": 2.8, "color": "ffffff00" },
+					{ "time": 3, "color": "ffffff72" },
+					{ "time": 3.6, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 4, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 6, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 6.0333, "color": "ffffff00" },
+					{ "time": 6.2, "color": "ffffff5f", "curve": "stepped" },
+					{ "time": 8.0333, "color": "ffffff5f" },
+					{ "time": 8.3667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 10.3667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 10.4, "color": "ffffff00" },
+					{ "time": 10.5667, "color": "ffffff5f", "curve": "stepped" },
+					{ "time": 12.0667, "color": "ffffff5f" },
+					{ "time": 12.4, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 13.7333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 19.0667, "color": "ffffff00" },
+					{ "time": 19.1, "color": "ffffffff" },
+					{ "time": 19.4333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 20.1, "color": "ffffff00" },
+					{ "time": 21.1, "color": "ffffff4a" },
+					{ "time": 21.4333, "color": "ffffff00" },
+					{ "time": 23.1, "color": "ffffff4a" },
+					{ "time": 23.4333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 2, "name": null },
+					{ "time": 2.8, "name": "ButtonBase" },
+					{ "time": 4, "name": "ButtonBase" },
+					{ "time": 6, "name": "ButtonBase" },
+					{ "time": 6.0333, "name": "ButtonBase" },
+					{ "time": 8.0333, "name": "ButtonBase" },
+					{ "time": 8.3667, "name": "ButtonBase" },
+					{ "time": 10.3667, "name": "ButtonBase" },
+					{ "time": 10.4, "name": "ButtonBase" },
+					{ "time": 12.0667, "name": "ButtonBase" },
+					{ "time": 12.4, "name": "ButtonBase" },
+					{ "time": 13.7333, "name": "ButtonBase" },
+					{ "time": 19.0667, "name": "ButtonBase" },
+					{ "time": 19.1, "name": "ButtonBase" },
+					{ "time": 20.1, "name": "ButtonBase" },
+					{ "time": 23.4333, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 6, "color": "ffffffff" },
+					{ "time": 6.0333, "color": "ffffff00" },
+					{ "time": 6.2, "color": "ffffff11", "curve": "stepped" },
+					{ "time": 8.0333, "color": "ffffff11" },
+					{ "time": 8.3667, "color": "ffffff00" },
+					{ "time": 10.3667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 10.4, "color": "ffffffff" },
+					{ "time": 12.0667, "color": "23fff3ff" },
+					{ "time": 12.4, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 13.7333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 19.0667, "color": "ffffff00" },
+					{ "time": 19.1, "color": "ffffffff" },
+					{ "time": 19.2667, "color": "00ff17ff" },
+					{ "time": 19.4333, "color": "55ff6300" },
+					{ "time": 19.7667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 20.1, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 22.1, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 2, "name": null },
+					{ "time": 4, "name": null },
+					{ "time": 6, "name": null },
+					{ "time": 6.0333, "name": "Button_Bright" },
+					{ "time": 8.0333, "name": "Button_Bright" },
+					{ "time": 8.3667, "name": null },
+					{ "time": 10.3667, "name": null },
+					{ "time": 10.4, "name": null },
+					{ "time": 12.0667, "name": "Button_Bright" },
+					{ "time": 12.4, "name": "Button_Bright" },
+					{ "time": 13.7333, "name": "Button_Bright" },
+					{ "time": 19.0667, "name": "Button_Bright" },
+					{ "time": 19.1, "name": "Button_Bright" },
+					{ "time": 20.1, "name": "Button_Bright" },
+					{ "time": 22.1, "name": "Button_Bright" }
+				]
+			},
+			"Clock": {
+				"color": [
+					{ "time": 6.0333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 8.0333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 8.3667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 10.4, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 12.0667, "color": "ffffff00" },
+					{ "time": 12.4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 13.7333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 19.0667, "color": "ffffffff" },
+					{ "time": 19.1, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 19.2667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 6.0333, "name": null },
+					{ "time": 8.0333, "name": null },
+					{ "time": 8.3667, "name": null },
+					{ "time": 10.4, "name": null },
+					{ "time": 12.0667, "name": "Clock" },
+					{ "time": 12.4, "name": "Clock" },
+					{ "time": 13.7333, "name": "Clock" },
+					{ "time": 19.0667, "name": "Clock" },
+					{ "time": 19.1, "name": "Clock" },
+					{ "time": 20.1, "name": null }
+				]
+			},
+			"Clock_pointer": {
+				"color": [
+					{ "time": 6.0333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 8.0333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 8.3667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 10.4, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 12.0667, "color": "ffffff00" },
+					{ "time": 12.4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 13.7333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 19.0667, "color": "ffffffff" },
+					{ "time": 19.1, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 19.2667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 6.0333, "name": null },
+					{ "time": 8.0333, "name": null },
+					{ "time": 8.3667, "name": null },
+					{ "time": 10.4, "name": null },
+					{ "time": 12.0667, "name": "Clock_pointer" },
+					{ "time": 12.4, "name": "Clock_pointer" },
+					{ "time": 13.7333, "name": "Clock_pointer" },
+					{ "time": 19.0667, "name": "Clock_pointer" },
+					{ "time": 19.1, "name": "Clock_pointer" },
+					{ "time": 20.1, "name": null }
+				]
+			},
+			"Open": {
+				"color": [
+					{ "time": 19.1, "color": "ffffffea" },
+					{ "time": 19.2667, "color": "ffffff00" },
+					{ "time": 20.1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 6.0333, "name": null },
+					{ "time": 8.0333, "name": null },
+					{ "time": 8.3667, "name": null },
+					{ "time": 10.4, "name": null },
+					{ "time": 12.0667, "name": null },
+					{ "time": 12.4, "name": null },
+					{ "time": 13.7333, "name": null },
+					{ "time": 19.0667, "name": null },
+					{ "time": 19.1, "name": "Open" },
+					{ "time": 19.2667, "name": "Open" },
+					{ "time": 20.1, "name": "Open" },
+					{ "time": 23.4333, "name": "Open" }
+				]
+			},
+			"OpenNow": {
+				"color": [
+					{ "time": 6.0333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 8.0333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 8.3667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 10.4, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 12.0667, "color": "ffffff00" },
+					{ "time": 12.4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 13.7333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 19.0667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 19.1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 20.1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 23.4333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 6.0333, "name": "OpenNow" },
+					{ "time": 8.0333, "name": "OpenNow" },
+					{ "time": 8.3667, "name": null },
+					{ "time": 10.4, "name": "OpenNow" },
+					{ "time": 12.0667, "name": "OpenNow" },
+					{ "time": 12.4, "name": "OpenNow" },
+					{ "time": 13.7333, "name": "OpenNow" },
+					{ "time": 19.0667, "name": "OpenNow" },
+					{ "time": 19.1, "name": null },
+					{ "time": 19.2667, "name": null },
+					{ "time": 20.1, "name": null },
+					{ "time": 23.4333, "name": null }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 19.0667, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 2.8, "name": null },
+					{ "time": 19.0667, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"color": [
+					{ "time": 6.0333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 8.0333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 8.3667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 10.4, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 12.0667, "color": "ffffff00" },
+					{ "time": 12.4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 13.7333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 19.0667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 19.1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 20.1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 23.4333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 6.0333, "name": null },
+					{ "time": 8.0333, "name": null },
+					{ "time": 8.3667, "name": null },
+					{ "time": 19.1, "name": null },
+					{ "time": 19.2667, "name": null },
+					{ "time": 20.1, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"color": [
+					{ "time": 6.0333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 8.0333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 8.3667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 10.4, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 12.0667, "color": "ffffff00" },
+					{ "time": 12.4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 13.7333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 19.0667, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 2, "name": null },
+					{ "time": 4, "name": null },
+					{ "time": 8.3667, "name": null },
+					{ "time": 19.1, "name": null },
+					{ "time": 19.2667, "name": null },
+					{ "time": 20.1, "name": null },
+					{ "time": 23.4333, "name": null }
+				]
+			},
+			"SpineNode_Open_Text": {
+				"color": [
+					{ "time": 19.1, "color": "ffffffea" },
+					{ "time": 19.2667, "color": "ffffff00" },
+					{ "time": 20.1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 6.0333, "name": null },
+					{ "time": 8.0333, "name": null },
+					{ "time": 8.3667, "name": null },
+					{ "time": 10.4, "name": null },
+					{ "time": 12.0667, "name": null },
+					{ "time": 12.4, "name": null },
+					{ "time": 13.7333, "name": null },
+					{ "time": 19.0667, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" },
+					{ "time": 2.8, "color": "ffffff00" },
+					{ "time": 3, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 6, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 6.0333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 8.0333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 8.3667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 10.3667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 10.4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 12.0667, "color": "ffffffff" },
+					{ "time": 12.4, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 13.7333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 19.0667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 19.1, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 19.2667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 20.1, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 23.4333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 13.7333, "name": null },
+					{ "time": 19.0667, "name": null },
+					{ "time": 19.1, "name": null },
+					{ "time": 20.1, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" },
+					{ "time": 2.8, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 3.3333, "color": "ffffff00" },
+					{ "time": 4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 6, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 6.0333, "color": "ffffffff" },
+					{ "time": 6.2, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 7.7333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 8.0333, "color": "ffffff00" },
+					{ "time": 8.2, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 8.3667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 10.3667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 10.4, "color": "ffffffff" },
+					{ "time": 10.5667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 12.0667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 12.4, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 13.7333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 19.0667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 19.1, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 20.1, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 22.1, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 2, "name": null }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" },
+					{ "time": 2.8, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 3.3333, "color": "ffffff00" },
+					{ "time": 4, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 6, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 6.0333, "color": "ffffffff" },
+					{ "time": 6.2, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 7.7333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 8.0333, "color": "ffffff00" },
+					{ "time": 8.2, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 8.3667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 10.3667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 10.4, "color": "ffffffff" },
+					{ "time": 10.5667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 12.0667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 12.4, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 13.7333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 19.0667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 19.1, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 20.1, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 22.1, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 2, "name": null },
+					{ "time": 2.8, "name": "Tap to unlock" },
+					{ "time": 4, "name": "Tap to unlock" },
+					{ "time": 6, "name": "Tap to unlock" },
+					{ "time": 6.0333, "name": "Tap to unlock" },
+					{ "time": 6.2, "name": "Tap to unlock" },
+					{ "time": 7.7333, "name": "Tap to unlock" },
+					{ "time": 8.0333, "name": "Tap to unlock" },
+					{ "time": 8.2, "name": "Tap to unlock" },
+					{ "time": 8.3667, "name": "Tap to unlock" },
+					{ "time": 10.3667, "name": "Tap to unlock" },
+					{ "time": 10.4, "name": "Tap to unlock" },
+					{ "time": 10.5667, "name": "Tap to unlock" },
+					{ "time": 12.0667, "name": "Tap to unlock" },
+					{ "time": 12.4, "name": "Tap to unlock" },
+					{ "time": 13.7333, "name": "Tap to unlock" },
+					{ "time": 19.0667, "name": "Tap to unlock" },
+					{ "time": 19.1, "name": null },
+					{ "time": 20.1, "name": "Tap to unlock" },
+					{ "time": 22.1, "name": "Tap to unlock" }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 2, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 3.8, "color": "ffffff00" },
+					{ "time": 4, "color": "fffffffd" },
+					{ "time": 4.6667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 5.3333, "color": "ffffff00" },
+					{ "time": 6, "color": "fffffffd" },
+					{ "time": 6.0333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 8.0333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 8.2, "color": "ffffff00" },
+					{ "time": 8.3667, "color": "fffffffd" },
+					{ "time": 9.0333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 9.7, "color": "ffffff00" },
+					{ "time": 10.3667, "color": "fffffffd" },
+					{ "time": 10.4, "color": "ffffffff" },
+					{ "time": 10.5667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 12.0667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 12.4, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 13.7333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 19.0667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 19.1, "color": "ffffff00" },
+					{ "time": 19.2333, "color": "ffffff79" },
+					{ "time": 19.4333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 20.1, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 22.1, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 2, "name": null },
+					{ "time": 2.8, "name": "Tap to unlock" },
+					{ "time": 4, "name": "Tap to unlock" },
+					{ "time": 6.0333, "name": "Tap to unlock" },
+					{ "time": 6.2, "name": "Tap to unlock" },
+					{ "time": 7.7333, "name": "Tap to unlock" },
+					{ "time": 8.0333, "name": "Tap to unlock" },
+					{ "time": 8.2, "name": "Tap to unlock" },
+					{ "time": 8.3667, "name": "Tap to unlock" },
+					{ "time": 10.4, "name": null },
+					{ "time": 12.0667, "name": null },
+					{ "time": 13.7333, "name": "Tap to unlock" },
+					{ "time": 19.0667, "name": "Tap to unlock" },
+					{ "time": 19.1, "name": null },
+					{ "time": 20.1, "name": "Tap to unlock" },
+					{ "time": 22.1, "name": "Tap to unlock" }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" },
+					{ "time": 6.0333, "name": "Transparent_Pixel" },
+					{ "time": 8.0333, "name": "Transparent_Pixel" },
+					{ "time": 8.3667, "name": "Transparent_Pixel" },
+					{ "time": 10.4, "name": "Transparent_Pixel" },
+					{ "time": 12.0667, "name": "Transparent_Pixel" },
+					{ "time": 13.7333, "name": "Transparent_Pixel" },
+					{ "time": 19.0667, "name": "Transparent_Pixel" },
+					{ "time": 19.1, "name": "Transparent_Pixel" },
+					{ "time": 20.1, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 4, "angle": 0, "curve": "stepped" },
+					{ "time": 6, "angle": 0, "curve": "stepped" },
+					{ "time": 6.0333, "angle": 0, "curve": "stepped" },
+					{ "time": 8.0333, "angle": 0, "curve": "stepped" },
+					{ "time": 8.3667, "angle": 0, "curve": "stepped" },
+					{ "time": 10.3667, "angle": 0, "curve": "stepped" },
+					{ "time": 10.4, "angle": 0, "curve": "stepped" },
+					{ "time": 12.0667, "angle": 0, "curve": "stepped" },
+					{ "time": 12.4, "angle": 0, "curve": "stepped" },
+					{ "time": 13.7333, "angle": 0, "curve": "stepped" },
+					{ "time": 19.0667, "angle": 0, "curve": "stepped" },
+					{ "time": 19.1, "angle": 0, "curve": "stepped" },
+					{ "time": 20.1, "angle": 0, "curve": "stepped" },
+					{ "time": 23.4333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 4, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 6, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 6.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 8.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 8.3667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 10.3667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 10.4, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 12.0667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 12.4, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 13.7333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 19.0667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 19.1, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 20.1, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 23.4333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 4, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 6, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 6.0333, "x": 1, "y": 1 },
+					{ "time": 6.2, "x": 1.06, "y": 1.064, "curve": "stepped" },
+					{ "time": 8.0333, "x": 1.06, "y": 1.064 },
+					{ "time": 8.3667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 10.3667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 10.4, "x": 1, "y": 1 },
+					{ "time": 10.5667, "x": 1.06, "y": 1.064, "curve": "stepped" },
+					{ "time": 12.0667, "x": 1.06, "y": 1.064 },
+					{ "time": 12.4, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 13.7333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 19.0667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 19.1, "x": 1, "y": 1 },
+					{ "time": 19.2667, "x": 1.06, "y": 1.064 },
+					{ "time": 19.4333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 20.1, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 23.4333, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 4, "angle": 0, "curve": "stepped" },
+					{ "time": 6, "angle": 0, "curve": "stepped" },
+					{ "time": 6.0333, "angle": 0, "curve": "stepped" },
+					{ "time": 8.0333, "angle": 0, "curve": "stepped" },
+					{ "time": 8.3667, "angle": 0, "curve": "stepped" },
+					{ "time": 10.3667, "angle": 0, "curve": "stepped" },
+					{ "time": 10.4, "angle": 0, "curve": "stepped" },
+					{ "time": 12.0667, "angle": 0, "curve": "stepped" },
+					{ "time": 12.4, "angle": 0, "curve": "stepped" },
+					{ "time": 13.7333, "angle": 0, "curve": "stepped" },
+					{ "time": 19.0667, "angle": 0, "curve": "stepped" },
+					{ "time": 19.1, "angle": 0, "curve": "stepped" },
+					{ "time": 20.1, "angle": 0, "curve": "stepped" },
+					{ "time": 22.1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 4, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 6, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 6.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 8.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 8.3667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 10.3667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 10.4, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 12.0667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 12.4, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 13.7333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 19.0667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 19.1, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 20.1, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 22.1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 4, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 6, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 6.0333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 8.0333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 8.3667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 10.3667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 10.4, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 12.0667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 12.4, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 13.7333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 19.0667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 19.1, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 20.1, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 22.1, "x": 1, "y": 1 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 4, "angle": 0, "curve": "stepped" },
+					{ "time": 6, "angle": 0, "curve": "stepped" },
+					{ "time": 6.0333, "angle": 0, "curve": "stepped" },
+					{ "time": 6.2, "angle": 0, "curve": "stepped" },
+					{ "time": 7.7333, "angle": 0, "curve": "stepped" },
+					{ "time": 8.0333, "angle": 0, "curve": "stepped" },
+					{ "time": 8.2, "angle": 0, "curve": "stepped" },
+					{ "time": 8.3667, "angle": 0, "curve": "stepped" },
+					{ "time": 10.3667, "angle": 0, "curve": "stepped" },
+					{ "time": 10.4, "angle": 0, "curve": "stepped" },
+					{ "time": 10.5667, "angle": 0, "curve": "stepped" },
+					{ "time": 12.0667, "angle": 0, "curve": "stepped" },
+					{ "time": 12.4, "angle": 0, "curve": "stepped" },
+					{ "time": 13.7333, "angle": 0, "curve": "stepped" },
+					{ "time": 19.0667, "angle": 0, "curve": "stepped" },
+					{ "time": 19.1, "angle": 0, "curve": "stepped" },
+					{ "time": 20.1, "angle": 0, "curve": "stepped" },
+					{ "time": 22.1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 0 },
+					{
+						"time": 3.3333,
+						"x": 0,
+						"y": 62.54,
+						"curve": [ 0.474, 0, 0.542, 0.52 ]
+					},
+					{
+						"time": 3.6333,
+						"x": 0,
+						"y": 10.82,
+						"curve": [ 0.183, 0.43, 0.469, 0.84 ]
+					},
+					{
+						"time": 4,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.379, 0, 0.606, 1 ]
+					},
+					{
+						"time": 5,
+						"x": 0,
+						"y": 13.65,
+						"curve": [ 0.379, 0, 0.647, 1 ]
+					},
+					{ "time": 6, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 6.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 8.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{
+						"time": 8.3667,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.379, 0, 0.606, 1 ]
+					},
+					{
+						"time": 9.3667,
+						"x": 0,
+						"y": 13.65,
+						"curve": [ 0.379, 0, 0.647, 1 ]
+					},
+					{ "time": 10.3667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 10.4, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 12.0667, "x": 0, "y": 0 },
+					{ "time": 13.7333, "x": 0, "y": 53.06, "curve": "stepped" },
+					{ "time": 19.0667, "x": 0, "y": 53.06, "curve": "stepped" },
+					{ "time": 19.1, "x": 0, "y": 53.06, "curve": "stepped" },
+					{ "time": 20.1, "x": 0, "y": 53.06, "curve": "stepped" },
+					{ "time": 22.1, "x": 0, "y": 53.06 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 4, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 6, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 6.0333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 6.2, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 7.7333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 8.0333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 8.2, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 8.3667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 10.3667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 10.4, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 10.5667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 12.0667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 12.4, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 13.7333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 19.0667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 19.1, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 20.1, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 22.1, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 19.0667, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 19.0667, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 19.0667, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 19.1, "angle": 0, "curve": "stepped" },
+					{ "time": 20.1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 19.1, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 20.1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 19.1, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 20.1, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 6.0333, "angle": 0, "curve": "stepped" },
+					{ "time": 8.0333, "angle": 0, "curve": "stepped" },
+					{ "time": 8.3667, "angle": 0, "curve": "stepped" },
+					{ "time": 10.4, "angle": 0, "curve": "stepped" },
+					{ "time": 12.0667, "angle": 0, "curve": "stepped" },
+					{ "time": 13.7333, "angle": 0, "curve": "stepped" },
+					{ "time": 19.0667, "angle": 0, "curve": "stepped" },
+					{ "time": 19.1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 6.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 8.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 8.3667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 10.4, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 12.0667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 13.7333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 19.0667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 19.1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 6.0333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 8.0333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 8.3667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 10.4, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 12.0667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 13.7333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 19.0667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 19.1, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 6.0333, "angle": -120 },
+					{ "time": 8.0333, "angle": -126 },
+					{ "time": 8.3667, "angle": 0 },
+					{ "time": 10.4, "angle": -120 },
+					{ "time": 12.0667, "angle": -126 },
+					{ "time": 12.4, "angle": 180 },
+					{ "time": 13.7333, "angle": 0, "curve": "stepped" },
+					{
+						"time": 14.0667,
+						"angle": 0,
+						"curve": [ 0.5, 0, 1, 0.5 ]
+					},
+					{ "time": 14.7333, "angle": -88 },
+					{ "time": 14.9, "angle": -66.83 },
+					{ "time": 15.0667, "angle": -88, "curve": "stepped" },
+					{
+						"time": 15.4,
+						"angle": -88,
+						"curve": [ 0.5, 0, 1, 0.5 ]
+					},
+					{ "time": 16.0667, "angle": 180 },
+					{ "time": 16.2333, "angle": -156.23 },
+					{ "time": 16.4, "angle": 180, "curve": "stepped" },
+					{
+						"time": 16.7333,
+						"angle": 180,
+						"curve": [ 0.5, 0, 1, 0.5 ]
+					},
+					{ "time": 17.4, "angle": 90 },
+					{ "time": 17.5667, "angle": 115.5 },
+					{ "time": 17.7333, "angle": 90, "curve": "stepped" },
+					{
+						"time": 18.0667,
+						"angle": 90,
+						"curve": [ 0.5, 0, 1, 0.5 ]
+					},
+					{ "time": 18.7333, "angle": 0 },
+					{ "time": 18.9, "angle": 22.83 },
+					{ "time": 19.0667, "angle": 0, "curve": "stepped" },
+					{ "time": 19.1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 6.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 8.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 8.3667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 10.4, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 12.0667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 13.7333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 18.7333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 19.0667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 19.1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 6.0333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 8.0333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 8.3667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 10.4, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 12.0667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 13.7333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 18.7333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 19.0667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 19.1, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 6.0333, "angle": 0, "curve": "stepped" },
+					{ "time": 8.0333, "angle": 0, "curve": "stepped" },
+					{ "time": 8.3667, "angle": 0, "curve": "stepped" },
+					{ "time": 10.4, "angle": 0, "curve": "stepped" },
+					{ "time": 12.0667, "angle": 0, "curve": "stepped" },
+					{ "time": 13.7333, "angle": 0, "curve": "stepped" },
+					{ "time": 19.0667, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 6.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 8.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 8.3667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 10.4, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 12.0667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 13.7333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 19.0667, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 6.0333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 8.0333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 8.3667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 10.4, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 12.0667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 13.7333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 19.0667, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 19.0667, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 19.0667, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 19.0667, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 6.0333, "angle": 0, "curve": "stepped" },
+					{ "time": 8.0333, "angle": 0, "curve": "stepped" },
+					{ "time": 8.3667, "angle": 0, "curve": "stepped" },
+					{ "time": 10.4, "angle": 0, "curve": "stepped" },
+					{ "time": 12.0667, "angle": 0, "curve": "stepped" },
+					{ "time": 13.7333, "angle": 0, "curve": "stepped" },
+					{ "time": 19.0667, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 6.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 8.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 8.3667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 10.4, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 12.0667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 13.7333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 19.0667, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 6.0333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 8.0333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 8.3667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 10.4, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 12.0667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 13.7333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 19.0667, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 6.0333, "angle": 0, "curve": "stepped" },
+					{ "time": 8.0333, "angle": 0, "curve": "stepped" },
+					{ "time": 8.3667, "angle": 0, "curve": "stepped" },
+					{ "time": 10.4, "angle": 0, "curve": "stepped" },
+					{ "time": 12.0667, "angle": 0, "curve": "stepped" },
+					{ "time": 13.7333, "angle": 0, "curve": "stepped" },
+					{ "time": 19.0667, "angle": 0, "curve": "stepped" },
+					{ "time": 19.1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 6.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 8.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 8.3667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 10.4, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 12.0667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 13.7333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 19.0667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 19.1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 6.0333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 8.0333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 8.3667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 10.4, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 12.0667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 13.7333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 19.0667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 19.1, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 6.0333, "angle": 0, "curve": "stepped" },
+					{ "time": 6.2, "angle": 0, "curve": "stepped" },
+					{ "time": 8.0333, "angle": 0, "curve": "stepped" },
+					{ "time": 8.3667, "angle": 0, "curve": "stepped" },
+					{ "time": 10.4, "angle": 0, "curve": "stepped" },
+					{ "time": 10.5667, "angle": 0, "curve": "stepped" },
+					{ "time": 12.0667, "angle": 0, "curve": "stepped" },
+					{ "time": 12.4, "angle": 0, "curve": "stepped" },
+					{ "time": 13.7333, "angle": 0, "curve": "stepped" },
+					{ "time": 19.0667, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 6.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 6.2, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 8.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 8.3667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 10.4, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 10.5667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 12.0667, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 12.4, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 13.7333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 19.0667, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 6.0333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 6.2, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 8.0333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 8.3667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 10.4, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 10.5667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 12.0667, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 12.4, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 13.7333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 19.0667, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"MainMenu_0_FreeSlot": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase_FreeSlot" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Clock": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Clock_pointer": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Open": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"OpenNow": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_Open_Text": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"MainMenu_1_BoxAppear": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.8, "color": "ffffff00" },
+					{ "time": 1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.8, "name": "3 hours" },
+					{ "time": 2, "name": "3 hours" }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase_FreeSlot" },
+					{ "time": 0.8, "name": "ButtonBase" },
+					{ "time": 2, "name": "ButtonBase" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.8, "color": "ffffff00" },
+					{ "time": 1, "color": "ffffff72" },
+					{ "time": 1.6, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.8, "name": "ButtonBase" },
+					{ "time": 2, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 2, "name": null }
+				]
+			},
+			"Clock": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Clock_pointer": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Open": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"OpenNow": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"attachment": [
+					{ "time": 0.8, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 2, "name": null }
+				]
+			},
+			"SpineNode_Open_Text": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.8, "color": "ffffff00" },
+					{ "time": 1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.8, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1.3333, "color": "ffffff00" },
+					{ "time": 2, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.8, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1.3333, "color": "ffffff00" },
+					{ "time": 2, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.8, "name": "Tap to unlock" },
+					{ "time": 2, "name": "Tap to unlock" }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1.8, "color": "ffffff00" },
+					{ "time": 2, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.8, "name": "Tap to unlock" },
+					{ "time": 2, "name": "Tap to unlock" }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{
+						"time": 1.3333,
+						"x": 0,
+						"y": 62.54,
+						"curve": [ 0.474, 0, 0.542, 0.52 ]
+					},
+					{
+						"time": 1.6333,
+						"x": 0,
+						"y": 10.82,
+						"curve": [ 0.183, 0.43, 0.469, 0.84 ]
+					},
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			},
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0, "name": "sfx_victoryBoxes_menu_boxFlyIntoSlot", "string": "sfx_victoryBoxes_menu_boxFlyIntoSlot" }
+		]
+	},
+	"MainMenu_1_BoxAppear_Idle": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "3 hours" },
+					{ "time": 2, "name": "3 hours" }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" },
+					{ "time": 2, "name": "ButtonBase" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" },
+					{ "time": 2, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 2, "name": null }
+				]
+			},
+			"Clock": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Clock_pointer": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Open": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"OpenNow": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_Open_Text": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" },
+					{ "time": 2, "name": "Tap to unlock" }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "fffffffd" },
+					{ "time": 0.6667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1.3333, "color": "ffffff00" },
+					{ "time": 2, "color": "fffffffd" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.379, 0, 0.606, 1 ]
+					},
+					{
+						"time": 1,
+						"x": 0,
+						"y": 13.65,
+						"curve": [ 0.379, 0, 0.647, 1 ]
+					},
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			},
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"MainMenu_1_BoxAppear_NoBanner": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.8, "color": "ffffff00" },
+					{ "time": 1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.8, "name": "3 hours" },
+					{ "time": 2, "name": "3 hours" }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase_FreeSlot" },
+					{ "time": 0.8, "name": "ButtonBase" },
+					{ "time": 2, "name": "ButtonBase" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.8, "color": "ffffff00" },
+					{ "time": 1, "color": "ffffff72" },
+					{ "time": 1.6, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.8, "name": "ButtonBase" },
+					{ "time": 2, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 2, "name": null }
+				]
+			},
+			"Clock": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Clock_pointer": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Open": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"OpenNow": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"attachment": [
+					{ "time": 0.8, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 2, "name": null }
+				]
+			},
+			"SpineNode_Open_Text": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.8, "color": "ffffff00" },
+					{ "time": 1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0, "name": "sfx_victoryBoxes_menu_boxFlyIntoSlot", "string": "sfx_victoryBoxes_menu_boxFlyIntoSlot" }
+		]
+	},
+	"MainMenu_1_TapToUnlock_1frame": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "3 hours" }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Clock": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Clock_pointer": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Open": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"OpenNow": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_Open_Text": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "fffffffd" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			},
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"MainMenu_2_Lock": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "3 hours" }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Clock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Clock_pointer": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Open": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"OpenNow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "OpenNow" }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"SpineNode_Open_Text": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" },
+					{ "time": 0.3333, "name": "Tap to unlock" }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": -120 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"MainMenu_2_Lock_NoBanner": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "3 hours" }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Clock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Clock_pointer": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Open": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"OpenNow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "OpenNow" }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"SpineNode_Open_Text": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": -120 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"MainMenu_2_OpenNow_Accept": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "3 hours" },
+					{ "time": 0.3333, "name": "3 hours" }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase_OpenNow" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff5f" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" },
+					{ "time": 0.3333, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "23fff3ff" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Button_Bright" },
+					{ "time": 0.3333, "name": "Button_Bright" }
+				]
+			},
+			"Clock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.3333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Clock" },
+					{ "time": 0.3333, "name": "Clock" }
+				]
+			},
+			"Clock_pointer": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.3333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Clock_pointer" },
+					{ "time": 0.3333, "name": "Clock_pointer" }
+				]
+			},
+			"Open": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"OpenNow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.3333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "OpenNow" },
+					{ "time": 0.3333, "name": "OpenNow" }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.3333, "color": "ffffffff" }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.3333, "color": "ffffffff" }
+				]
+			},
+			"SpineNode_Open_Text": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" },
+					{ "time": 0.3333, "name": "Tap to unlock" }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1.06, "y": 1.064 },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": -126 },
+					{ "time": 0.3333, "angle": 180 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"MainMenu_2_OpenNow_Decline": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "3 hours" },
+					{ "time": 0.3, "name": "3 hours" }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" },
+					{ "time": 0.3, "name": "ButtonBase" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff5f" },
+					{ "time": 0.3, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" },
+					{ "time": 0.3, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff11" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Button_Bright" }
+				]
+			},
+			"Clock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.3, "name": "Clock" }
+				]
+			},
+			"Clock_pointer": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.3, "name": "Clock_pointer" }
+				]
+			},
+			"Open": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"OpenNow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "OpenNow" },
+					{ "time": 0.3, "name": "OpenNow" }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"SpineNode_Open_Text": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.1667, "color": "ffffffff" }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.1667, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" },
+					{ "time": 0.1667, "name": "Tap to unlock" }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ffffff00" },
+					{ "time": 0.3, "color": "ffffff79" },
+					{ "time": 0.5, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" },
+					{ "time": 0.1667, "name": "Tap to unlock" }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1.06, "y": 1.064 },
+					{ "time": 0.3, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.1667, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.1667, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": -126 },
+					{ "time": 0.3, "angle": 180 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0, "name": "sfx_victoryBoxes_menu_unlockPopupsOut", "string": "sfx_victoryBoxes_menu_unlockPopupsOut" }
+		]
+	},
+	"MainMenu_2_OpenNow_OpenPopup": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "3 hours" }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.1667, "color": "ffffff5f" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Clock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Clock_pointer": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Open": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"OpenNow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "OpenNow" }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"SpineNode_Open_Text": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.1667, "color": "ffffff00" }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.1667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" },
+					{ "time": 0.1667, "name": "Tap to unlock" }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.1667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.1667, "x": 1.06, "y": 1.064 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.1667, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.1667, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": -120 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0, "name": "sfx_victoryBoxes_menu_tapToUnlockPopupIn", "string": "sfx_victoryBoxes_menu_tapToUnlockPopupIn" }
+		]
+	},
+	"MainMenu_2_Unlock": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "3 hours" },
+					{ "time": 0.3, "name": "3 hours" }
+				]
+			},
+			"ButtonBase": {
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Button_Bright" }
+				]
+			},
+			"Clock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.3, "name": "Clock" }
+				]
+			},
+			"Clock_pointer": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.3, "name": "Clock_pointer" }
+				]
+			},
+			"Open": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"OpenNow": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "OpenNow" },
+					{ "time": 0.3, "name": "OpenNow" }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"SpineNode_Open_Text": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.1667, "color": "ffffffff" }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.1667, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" },
+					{ "time": 0.1667, "name": "Tap to unlock" }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ffffff00" },
+					{ "time": 0.3, "color": "ffffff79" },
+					{ "time": 0.5, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" },
+					{ "time": 0.1667, "name": "Tap to unlock" }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.1667, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.1667, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": -126 },
+					{ "time": 0.3, "angle": 180 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"MainMenu_3_OpenNow_ClockIdle": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "3 hours" }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase_OpenNow" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Button_Bright" }
+				]
+			},
+			"Clock": {
+				"attachment": [
+					{ "time": 0, "name": "Clock" }
+				]
+			},
+			"Clock_pointer": {
+				"attachment": [
+					{ "time": 0, "name": "Clock_pointer" }
+				]
+			},
+			"Open": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"OpenNow": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "OpenNow" }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"SpineNode_Open_Text": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 53.06 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{
+						"time": 0.3333,
+						"angle": 0,
+						"curve": [ 0.5, 0, 1, 0.5 ]
+					},
+					{ "time": 1, "angle": -88 },
+					{ "time": 1.1667, "angle": -66.83 },
+					{ "time": 1.3333, "angle": -88, "curve": "stepped" },
+					{
+						"time": 1.6667,
+						"angle": -88,
+						"curve": [ 0.5, 0, 1, 0.5 ]
+					},
+					{ "time": 2.3333, "angle": 180 },
+					{ "time": 2.5, "angle": -156.23 },
+					{ "time": 2.6667, "angle": 180, "curve": "stepped" },
+					{
+						"time": 3,
+						"angle": 180,
+						"curve": [ 0.5, 0, 1, 0.5 ]
+					},
+					{ "time": 3.6667, "angle": 90 },
+					{ "time": 3.8333, "angle": 115.5 },
+					{ "time": 4, "angle": 90, "curve": "stepped" },
+					{
+						"time": 4.3333,
+						"angle": 90,
+						"curve": [ 0.5, 0, 1, 0.5 ]
+					},
+					{ "time": 5, "angle": 0 },
+					{ "time": 5.1667, "angle": 22.83 },
+					{ "time": 5.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 5, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 5.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 5, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 5.3333, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"MainMenu_3_OpenNow_ClockIdle_IdleToShake": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "3 hours" }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase_OpenNow" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Button_Bright" }
+				]
+			},
+			"Clock": {
+				"attachment": [
+					{ "time": 0, "name": "Clock" }
+				]
+			},
+			"Clock_pointer": {
+				"attachment": [
+					{ "time": 0, "name": "Clock_pointer" }
+				]
+			},
+			"Open": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"OpenNow": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "OpenNow" }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"SpineNode_Open_Text": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 53.06 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.1, "name": "Particles_Box", "string": "Particles_Box" }
+		]
+	},
+	"MainMenu_3_OpenNow_ClockIdle_Shake": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "3 hours" }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase_OpenNow" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Button_Bright" }
+				]
+			},
+			"Clock": {
+				"attachment": [
+					{ "time": 0, "name": "Clock" }
+				]
+			},
+			"Clock_pointer": {
+				"attachment": [
+					{ "time": 0, "name": "Clock_pointer" }
+				]
+			},
+			"Open": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"OpenNow": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "OpenNow" }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"SpineNode_Open_Text": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 53.06 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"MainMenu_5_Open": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.1667, "name": null },
+					{ "time": 1, "name": null }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase_Open" },
+					{ "time": 0.1667, "name": "ButtonBase_Open" },
+					{ "time": 1, "name": "ButtonBase_Open" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" },
+					{ "time": 1, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.1667, "color": "00ff17ff" },
+					{ "time": 0.3333, "color": "55ff6300" },
+					{ "time": 0.6667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Button_Bright" },
+					{ "time": 1, "name": "Button_Bright" }
+				]
+			},
+			"Clock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Clock" },
+					{ "time": 1, "name": null }
+				]
+			},
+			"Clock_pointer": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Clock_pointer" },
+					{ "time": 1, "name": null }
+				]
+			},
+			"Open": {
+				"color": [
+					{ "time": 0, "color": "ffffffea" },
+					{ "time": 0.1667, "color": "ffffff00" },
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Open" },
+					{ "time": 0.1667, "name": "Open" },
+					{ "time": 1, "name": "Open" }
+				]
+			},
+			"OpenNow": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.1667, "name": null },
+					{ "time": 1, "name": null }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.1667, "name": null },
+					{ "time": 1, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.1667, "name": null },
+					{ "time": 1, "name": null }
+				]
+			},
+			"SpineNode_Open_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffffea" },
+					{ "time": 0.1667, "color": "ffffff00" },
+					{ "time": 1, "color": "ffffffff" }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1, "color": "ffffff00" }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1, "name": "Tap to unlock" }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.1333, "color": "ffffff79" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1, "name": "Tap to unlock" }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" },
+					{ "time": 1, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.1667, "x": 1.06, "y": 1.064 },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 53.06, "curve": "stepped" },
+					{ "time": 1, "x": 0, "y": 53.06 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0, "name": "sfx_victoryBoxes_menu_slotWithBoxBecomesGreen", "string": "sfx_victoryBoxes_menu_slotWithBoxBecomesGreen" }
+		]
+	},
+	"MainMenu_6_Open_Idle": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 3.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 3.3333, "name": null }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 3.3333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase_Open" },
+					{ "time": 3.3333, "name": "ButtonBase_Open" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 1, "color": "ffffff4a" },
+					{ "time": 1.3333, "color": "ffffff00" },
+					{ "time": 3, "color": "ffffff4a" },
+					{ "time": 3.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" },
+					{ "time": 3.3333, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Button_Bright" },
+					{ "time": 2, "name": "Button_Bright" }
+				]
+			},
+			"Clock": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Clock_pointer": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Open": {
+				"attachment": [
+					{ "time": 0, "name": "Open" },
+					{ "time": 3.3333, "name": "Open" }
+				]
+			},
+			"OpenNow": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 3.3333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 3.3333, "name": null }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 3.3333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 3.3333, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 3.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 2, "color": "ffffff00" }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" },
+					{ "time": 2, "name": "Tap to unlock" }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" },
+					{ "time": 2, "name": "Tap to unlock" }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 3.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 3.3333, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 53.06, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 53.06 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"MainMenu_6_Open_IdleToShake": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.2333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.2333, "name": null },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.2333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase_Open" },
+					{ "time": 0.2333, "name": "ButtonBase_Open" },
+					{ "time": 0.3333, "name": "ButtonBase_Open" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.2333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" },
+					{ "time": 0.2333, "name": "ButtonBase" },
+					{ "time": 0.3333, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.2333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Button_Bright" },
+					{ "time": 0.2333, "name": "Button_Bright" },
+					{ "time": 0.3333, "name": "Button_Bright" }
+				]
+			},
+			"Clock": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.2333, "name": null },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"Clock_pointer": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.2333, "name": null },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"Open": {
+				"attachment": [
+					{ "time": 0, "name": "Open" },
+					{ "time": 0.2333, "name": "Open" },
+					{ "time": 0.3333, "name": "Open" }
+				]
+			},
+			"OpenNow": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.2333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.2333, "name": null },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.2333, "name": null },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.2333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.2333, "name": null },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.2333, "name": null },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.2333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.2333, "name": null },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.2333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.2333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" },
+					{ "time": 0.2333, "name": "Tap to unlock" },
+					{ "time": 0.3333, "name": "Tap to unlock" }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.2333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" },
+					{ "time": 0.2333, "name": "Tap to unlock" },
+					{ "time": 0.3333, "name": "Tap to unlock" }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" },
+					{ "time": 0.2333, "name": "Transparent_Pixel" },
+					{ "time": 0.3333, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.2333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.2333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.2333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.2333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 53.06, "curve": "stepped" },
+					{ "time": 0.2333, "x": 0, "y": 53.06, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 53.06 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.2333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.2333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.2333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.2333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.2333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.2333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.2333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.2333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.2333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.2333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.2333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.2333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.2333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.2333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.2333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.2333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.2333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.2333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.2333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.2333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.2333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.2333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.2333, "angle": 0, "curve": "stepped" },
+					{ "time": 0.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.2333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.2333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.1, "name": "Particles_Box", "string": "Particles_Box" }
+		]
+	},
+	"MainMenu_6_Open_Shake": {
+		"slots": {
+			"3 hours": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 3.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 3.3333, "name": null }
+				]
+			},
+			"ButtonBase": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 3.3333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase_Open" },
+					{ "time": 3.3333, "name": "ButtonBase_Open" }
+				]
+			},
+			"ButtonBase_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 1, "color": "ffffff4a" },
+					{ "time": 1.3333, "color": "ffffff00" },
+					{ "time": 3, "color": "ffffff4a" },
+					{ "time": 3.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "ButtonBase" },
+					{ "time": 3.3333, "name": "ButtonBase" }
+				]
+			},
+			"Button_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Button_Bright" },
+					{ "time": 2, "name": "Button_Bright" }
+				]
+			},
+			"Clock": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Clock_pointer": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"Open": {
+				"attachment": [
+					{ "time": 0, "name": "Open" },
+					{ "time": 3.3333, "name": "Open" }
+				]
+			},
+			"OpenNow": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 3.3333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 3.3333, "name": null }
+				]
+			},
+			"SpineNode_FreeSlot": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 3.3333, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 3.3333, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Hours": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 3.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"SpineNode_TapToUnlock_Text": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 2, "color": "ffffff00" }
+				]
+			},
+			"Tap to unlock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" },
+					{ "time": 2, "name": "Tap to unlock" }
+				]
+			},
+			"Tap to unlock_Bright": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "Tap to unlock" },
+					{ "time": 2, "name": "Tap to unlock" }
+				]
+			},
+			"Transparent_Pixel": {
+				"attachment": [
+					{ "time": 0, "name": "Transparent_Pixel" }
+				]
+			}
+		},
+		"bones": {
+			"BUTTON": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 3.3333, "angle": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 3.3333, "x": 1, "y": 1 }
+				]
+			},
+			"Button_Bright": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			},
+			"Tap to unlock": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 53.06, "curve": "stepped" },
+					{ "time": 2, "x": 0, "y": 53.06 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_Info": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"3 hours": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPEN": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SLOT_1                           -MainMenu_Slot": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"Clock_pointer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Money": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"SpineNode_OpenNow_Timer": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"FREE_SLOT": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"TAPtoUNLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OpenNow_CLOCK": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"OPENNOW": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

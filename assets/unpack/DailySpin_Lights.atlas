@@ -1,0 +1,55 @@
+
+DailySpin_Lights.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Generic_Big_Circle_Glow_Cut
+  rotate: false
+  xy: 6, 436
+  size: 540, 540
+  orig: 540, 540
+  offset: 0, 0
+  index: -1
+Generic_Button_Glow
+  rotate: false
+  xy: 331, 123
+  size: 217, 307
+  orig: 217, 307
+  offset: 0, 0
+  index: -1
+Generic_Center_Glow
+  rotate: false
+  xy: 6, 111
+  size: 319, 319
+  orig: 319, 319
+  offset: 0, 0
+  index: -1
+Generic_Lights_02
+  rotate: false
+  xy: 839, 693
+  size: 132, 283
+  orig: 132, 283
+  offset: 0, 0
+  index: -1
+Generic_Lights_03
+  rotate: false
+  xy: 552, 605
+  size: 183, 83
+  orig: 183, 83
+  offset: 0, 0
+  index: -1
+Generic_ParticleTrail
+  rotate: true
+  xy: 6, 6
+  size: 99, 427
+  orig: 99, 427
+  offset: 0, 0
+  index: -1
+Generic_Particle_01
+  rotate: false
+  xy: 552, 694
+  size: 281, 282
+  orig: 281, 282
+  offset: 0, 0
+  index: -1

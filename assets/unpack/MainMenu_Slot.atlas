@@ -1,0 +1,90 @@
+
+MainMenu_Slot.png
+size: 1633,321
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3 hours
+  rotate: false
+  xy: 1313, 240
+  size: 210, 73
+  orig: 210, 73
+  offset: 0, 0
+  index: -1
+ButtonBase
+  rotate: false
+  xy: 8, 8
+  size: 253, 305
+  orig: 253, 305
+  offset: 0, 0
+  index: -1
+ButtonBase_FreeSlot
+  rotate: false
+  xy: 269, 8
+  size: 253, 305
+  orig: 253, 305
+  offset: 0, 0
+  index: -1
+ButtonBase_Open
+  rotate: false
+  xy: 530, 8
+  size: 253, 305
+  orig: 253, 305
+  offset: 0, 0
+  index: -1
+ButtonBase_OpenNow
+  rotate: false
+  xy: 791, 8
+  size: 253, 305
+  orig: 253, 305
+  offset: 0, 0
+  index: -1
+Button_Bright
+  rotate: false
+  xy: 1052, 8
+  size: 253, 305
+  orig: 253, 305
+  offset: 0, 0
+  index: -1
+Clock
+  rotate: false
+  xy: 1531, 40
+  size: 78, 77
+  orig: 78, 77
+  offset: 0, 0
+  index: -1
+Clock_pointer
+  rotate: false
+  xy: 1313, 15
+  size: 56, 55
+  orig: 56, 55
+  offset: 0, 0
+  index: -1
+Open
+  rotate: false
+  xy: 1313, 159
+  size: 210, 73
+  orig: 210, 73
+  offset: 0, 0
+  index: -1
+OpenNow
+  rotate: false
+  xy: 1313, 78
+  size: 210, 73
+  orig: 210, 73
+  offset: 0, 0
+  index: -1
+Tap to unlock
+  rotate: true
+  xy: 1531, 125
+  size: 188, 94
+  orig: 188, 94
+  offset: 0, 0
+  index: -1
+Transparent_Pixel
+  rotate: false
+  xy: 1617, 116
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1

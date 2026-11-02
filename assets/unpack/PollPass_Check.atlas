@@ -1,0 +1,20 @@
+
+PollPass_Check.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Check
+  rotate: false
+  xy: 168, 48
+  size: 109, 111
+  orig: 109, 111
+  offset: 0, 0
+  index: -1
+Check_Bright
+  rotate: false
+  xy: 10, 10
+  size: 148, 149
+  orig: 148, 149
+  offset: 0, 0
+  index: -1
