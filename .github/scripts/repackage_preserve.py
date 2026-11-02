@@ -47,6 +47,7 @@ def file_crc_and_sha256(path: Path):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--preserve-v1", action="store_true")
+    parser.add_argument("--source-code-modified", action="store_true")
     parser.add_argument("--output", required=True)
     parser.add_argument("--report", required=True)
     args = parser.parse_args()
@@ -146,7 +147,7 @@ def main():
 
     report = {
         "mode": "preserve-v1" if args.preserve_v1 else "release-unsigned",
-        "source_code_modified": False,
+        "source_code_modified": bool(args.source_code_modified),
         "files_packaged": included,
         "source_bytes_packaged": total,
         "output_bytes": output.stat().st_size,
