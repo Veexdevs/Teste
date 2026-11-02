@@ -11,6 +11,7 @@ on:
     branches: [arena/7a59dd82-teste]
     paths:
       - .github/workflows/arm64-test-only.yml
+      - .github/scripts/emulator-crash-test.sh
 
 permissions:
   contents: write
