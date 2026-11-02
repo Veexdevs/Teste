@@ -7,6 +7,10 @@ on:
         description: Tag da pré-release com o APK compat
         required: true
         default: v2.5-compat-41447529163
+  push:
+    branches: [arena/7a59dd82-teste]
+    paths:
+      - .github/workflows/arm64-test-only.yml
 
 permissions:
   contents: write
@@ -33,7 +37,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p dist
-          gh release download "${{ inputs.tag }}" --repo "${{ github.repository }}" \
+          gh release download "${{ github.event.inputs.tag || 'v2.5-compat-41447529163' }}" --repo "${{ github.repository }}" \
             --pattern '8Ball-Pool-Android-V2-5-compat.apk' --dir dist --clobber
           cp dist/8Ball-Pool-Android-V2-5-compat.apk dist/8Ball-Pool-Android-V2-5-release-test.apk
 
@@ -87,7 +91,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -uo pipefail
-          tag="${{ inputs.tag }}"
+          tag="${{ github.event.inputs.tag || 'v2.5-compat-41447529163' }}"
           gh release view "$tag" --repo "${{ github.repository }}" --json body --jq .body > release-body.md
           {
             echo
