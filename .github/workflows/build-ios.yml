@@ -1,0 +1,111 @@
+name: build-ios
+# Tenta produzir um .ipa real no runner macOS. Sem certificados Apple o
+# pacote sai NAO ASSINADO (install-on-device exige Apple Developer account).
+# O projecto Xcode completo e sempre gerado como fallback.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/build-ios.yml'
+      - 'project.godot'
+      - 'export_presets.cfg'
+      - 'icon.png'
+      - 'game/**'
+
+jobs:
+  ipa:
+    runs-on: macos-14
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Descarregar Godot 4.5 macOS + templates
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/godot && cd /tmp/godot
+          curl -fsSL --retry 3 -o editor.zip \
+            https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_macos.universal.zip
+          unzip -q -o editor.zip
+          curl -fsSL --retry 3 -o templates.tpz \
+            https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_export_templates.tpz
+          mkdir -p "$HOME/Library/Application Support/Godot/export_templates/4.5.stable"
+          unzip -q -o templates.tpz -d tpz
+          cp -r tpz/templates/. "$HOME/Library/Application Support/Godot/export_templates/4.5.stable/"
+          BIN="$(find . -type f -path '*/Contents/MacOS/Godot*' | head -1)"
+          if [ -z "$BIN" ]; then BIN="$(find . -type f -name 'Godot*' -path '*MacOS*' | head -1)"; fi
+          if [ -z "$BIN" ]; then echo "Editor Godot nao encontrado no ZIP"; find . -maxdepth 4 | head -30; exit 1; fi
+          chmod +x "$BIN"
+          echo "GODOT_BIN=$PWD/$BIN" >> "$GITHUB_ENV"
+          "$PWD/$BIN" --headless --version
+
+      - name: Gerar projecto Xcode (Godot iOS export)
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p builds
+          "$GODOT_BIN" --headless --path . --export-release "iOS" builds/SENTINELA_ios.ipa
+          cd builds
+          zip -q -r -y SENTINELA_ios_xcode.zip \
+            SENTINELA_ios SENTINELA_ios.pck SENTINELA_ios.xcodeproj \
+            SENTINELA_ios.xcframework MoltenVK.xcframework PrivacyInfo.xcprivacy
+          cd ..
+          ls -lh builds/
+
+      - name: Compilar .app e empacotar .ipa (sem assinatura)
+        shell: bash
+        run: |
+          set +e
+          xcodebuild -project builds/SENTINELA_ios.xcodeproj \
+            -scheme SENTINELA_ios -configuration Release -sdk iphoneos \
+            -destination 'generic/platform=iOS' -derivedDataPath /tmp/dd \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" DEVELOPMENT_TEAM="" \
+            CODE_SIGN_ENTITLEMENTS="" build 2>&1 | tee /tmp/xcodebuild.log
+          RC=${PIPESTATUS[0]}
+          echo "xcodebuild exit=$RC"
+          APP="$(find /tmp/dd/Build/Products -maxdepth 3 -type d -name '*.app' | head -1)"
+          echo "APP=$APP"
+          if [ -n "$APP" ] && [ -d "$APP" ]; then
+            rm -rf /tmp/ipa && mkdir -p /tmp/ipa/Payload
+            cp -R "$APP" /tmp/ipa/Payload/
+            (cd /tmp/ipa && zip -q -r -y SENTINELA_ios_unsigned.ipa Payload)
+            cp /tmp/ipa/SENTINELA_ios_unsigned.ipa builds/SENTINELA_ios_unsigned.ipa
+            echo "IPA_OK=1" >> "$GITHUB_ENV"
+          else
+            echo "IPA_OK=0" >> "$GITHUB_ENV"
+            echo "::warning::Nao foi possivel gerar o .ipa; o projecto Xcode continua disponivel."
+            tail -40 /tmp/xcodebuild.log
+          fi
+          exit 0
+
+      - name: Upload de artefactos
+        uses: actions/upload-artifact@v4
+        with:
+          name: sentinela-ios
+          path: |
+            builds/SENTINELA_ios_xcode.zip
+            builds/SENTINELA_ios_unsigned.ipa
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Anexar ao GitHub Release
+        if: env.IPA_OK == '1'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG="v1.0.0"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" builds/SENTINELA_ios_unsigned.ipa --clobber
+          else
+            gh release create "$TAG" builds/SENTINELA_ios_unsigned.ipa \
+              --title "SENTINELA 1.0.0 - builds nativos" \
+              --notes "iOS .ipa nao assinado + projecto Xcode. Necessaria conta Apple Developer para instalar em dispositivo." \
+              || gh release upload "$TAG" builds/SENTINELA_ios_unsigned.ipa --clobber
+          fi
