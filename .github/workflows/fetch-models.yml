@@ -1,0 +1,47 @@
+name: fetch-models
+on:
+  workflow_dispatch:
+  push:
+    paths: ['.github/workflows/fetch-models.yml']
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download public glTF/GLB models stored in Git LFS
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/m
+          fetch() {
+            local owner_repo="$1" ref="$2" path="$3" out="$4"
+            local url="https://media.githubusercontent.com/media/${owner_repo}/${ref}/${path}"
+            echo "GET $url"
+            curl -fsSL --retry 3 --max-time 180 -o "/tmp/m/${out}" "$url" || echo "FAILED $out" >> /tmp/m/report.txt
+          }
+          fetch "JoseRamonRenteroJimenez/DVI_G8" main "assets/glb/M4A1.glb" m4a1.bin
+          fetch "loingtan/fps-threejs-game" main "src/assets/guns/ak47/ak47.glb" ak47.bin
+          fetch "shadow-kernel/Vortex-Engine-Horror-Template" main "Assets/Models/Viewmodel/vm_mp5.glb" vm_mp5.bin
+          fetch "skyelynwaddell/vector0-godot" main "blender/arms_m4a1.glb" arms_m4a1.bin
+          fetch "habibmukhlis/3D-shooter-game" main "public/assets/models/assault_rifle.glb" assault_rifle.bin
+          fetch "aminere/powerplay-threejs" master "game/public/models/resources/ak47.glb" ak47_low.bin
+          echo "=== downloaded ===" | tee -a /tmp/m/report.txt
+          for f in /tmp/m/*.bin; do
+            printf "%s %s bytes magic=" "$(basename "$f")" "$(stat -c%s "$f")" | tee -a /tmp/m/report.txt
+            head -c 4 "$f" | tee -a /tmp/m/report.txt
+            echo "" | tee -a /tmp/m/report.txt
+            if [ "$(head -c 4 "$f")" != "glTF" ]; then rm -f "$f"; echo "REMOVED (not GLB) $f" | tee -a /tmp/m/report.txt; fi
+          done
+      - uses: actions/checkout@v4
+        if: always()
+      - name: Commit models
+        if: always()
+        run: |
+          mkdir -p .toolkit/models
+          cp /tmp/m/*.bin .toolkit/models/ 2>/dev/null || true
+          cp /tmp/m/report.txt .toolkit/models/report.txt 2>/dev/null || true
+          git config user.name "arena-bot"
+          git config user.email "arena-bot@users.noreply.github.com"
+          git add -f .toolkit/models/
+          git commit -m "ci: 3d model assets [skip ci]" || true
+          git push || true
