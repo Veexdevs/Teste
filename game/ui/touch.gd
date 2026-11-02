@@ -53,10 +53,24 @@ func layout() -> void:
     var W = s.x
     var H = s.y
     for e in buttons:
-        var p: Vector2 = e.pos
+        var a: String = e.action
         var sz: Vector2 = e.sz
-        var x = p.x if p.x < W * 0.5 else W - p.x
-        var y = p.y if p.y < H * 0.5 else H - p.y
+        var x = W - 110.0
+        var y = H - 110.0
+        match a:
+            "fire": x = W - 104.0; y = H - 106.0
+            "aim": x = W - 210.0; y = H - 96.0
+            "jump": x = W - 108.0; y = H - 214.0
+            "crouch": x = W - 196.0; y = H - 214.0
+            "reload": x = W - 286.0; y = H - 160.0
+            "interact": x = W - 286.0; y = H - 92.0
+            "build_toggle": x = W - 374.0; y = H - 160.0
+            "build_cycle": x = W - 374.0; y = H - 92.0
+            "build_rotate": x = W - 462.0; y = H - 160.0
+            "secondary": x = W - 462.0; y = H - 92.0
+            "pause": x = W - 76.0; y = 14.0; sz = Vector2(62, 36)
+        x = clampf(x, W * 0.42, W - sz.x - 8.0)
+        y = clampf(y, 8.0, H - sz.y - 8.0)
         (e.node as Control).position = Vector2(x, y)
         (e.node as Control).size = sz
     left_base = Vector2(130.0, H - 130.0)

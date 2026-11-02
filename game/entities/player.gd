@@ -24,6 +24,8 @@ var money = 800
 var spectate_t = 0.0
 var spectate_idx = 0
 var primary_key = "m4a1"
+var camera_pivot: Node3D
+var third_person = true
 
 func setup_player(p_primary: String) -> void:
     primary_key = p_primary
@@ -33,13 +35,17 @@ func _ready() -> void:
     is_player = true
     display_name = "TU / LIDER DE ASSALTO"
     weapon_key = primary_key
+    camera_pivot = Node3D.new()
+    camera_pivot.name = "CameraPivot"
+    camera_pivot.position = Vector3(0, 1.48, 0)
+    add_child(camera_pivot)
     camera = Camera3D.new()
-    camera.fov = 76.0
+    camera.fov = 72.0
     camera.near = 0.04
     camera.far = 320.0
-    camera.position = Vector3(0, G.tuning.eye_height, 0)
+    camera.position = Vector3(0.62, 0.20, 2.85)
     camera.current = true
-    add_child(camera)
+    camera_pivot.add_child(camera)
     capsule = get_node("BodyShape").shape as CapsuleShape3D
     _create_weapons()
     build_sys = BuildScript.new()
@@ -61,7 +67,7 @@ func _create_weapons() -> void:
     active_slot = 0
     for i in range(weapons.size()):
         if weapons[i].viewmodel != null:
-            weapons[i].viewmodel.visible = i == 0
+            weapons[i].viewmodel.visible = false
 
 func change_primary(key: String) -> void:
     if not G.weapons.has(key):
@@ -89,18 +95,15 @@ func think(delta: float) -> void:
     rotation.y += look.x * sens
     pitch = clampf(pitch + look.y * sens, -1.45, 1.45)
     recoil = recoil.lerp(Vector2.ZERO, clampf(delta * 7.0, 0.0, 1.0))
-    camera.rotation.x = pitch + recoil.y * 0.011
-    camera.rotation.y = recoil.x * 0.008
+    camera_pivot.rotation.x = pitch + recoil.y * 0.011
+    camera_pivot.rotation.y = recoil.x * 0.008
     var lean_target = 0.0
     if c.lean_left:
         lean_target = 1.0
     elif c.lean_right:
         lean_target = -1.0
     lean = lerpf(lean, lean_target, clampf(delta * 9.0, 0.0, 1.0))
-    camera.rotation.z = lean * 0.13
-    camera.position.x = lerpf(camera.position.x, lean * 0.16, clampf(delta * 9.0, 0.0, 1.0))
-    var eye = G.tuning.crouch_eye if crouched else G.tuning.eye_height
-    camera.position.y = lerpf(camera.position.y, eye, clampf(delta * 11.0, 0.0, 1.0))
+    camera.rotation.z = lean * 0.10
     crouched = c.crouch
     var h = 1.15 if crouched else 1.78
     capsule.height = lerpf(capsule.height, h, clampf(delta * 12.0, 0.0, 1.0))
@@ -146,7 +149,21 @@ func think(delta: float) -> void:
     else:
         bob = lerpf(bob, 0.0, clampf(delta * 4.0, 0.0, 1.0))
     aiming = c.aim and (build_sys == null or not build_sys.active)
-    camera.fov = lerpf(camera.fov, 55.0 if aiming else 76.0, clampf(delta * 12.0, 0.0, 1.0))
+    camera.fov = lerpf(camera.fov, 55.0 if aiming else 72.0, clampf(delta * 12.0, 0.0, 1.0))
+    var tp = not aiming
+    third_person = tp
+    var target_pos = Vector3(0.62, 0.20, 2.85)
+    if not tp:
+        target_pos = Vector3(0.0, G.tuning.eye_height - camera_pivot.position.y, 0.0)
+    elif crouched:
+        target_pos.y = 0.02
+    target_pos.x += lean * 0.12
+    camera.position = camera.position.lerp(target_pos, clampf(delta * 11.0, 0.0, 1.0))
+    if model_root != null:
+        model_root.visible = tp
+    for w in weapons:
+        if w.viewmodel != null:
+            w.viewmodel.visible = (not tp) and (w == weapon)
     if switch_t > 0.0:
         switch_t -= delta
     if c.reload and weapon != null:
@@ -165,7 +182,8 @@ func think(delta: float) -> void:
         var pressed = c.fire_just or (c.fire and bool(weapon.data.auto))
         if pressed:
             var spread = weapon.current_spread_deg(aiming, hspeed, crouched, not on_floor)
-            weapon.fire(camera.global_position, -camera.global_transform.basis.z, spread, aiming)
+            var shot_origin = global_position + Vector3(0, 1.32 if not crouched else 1.02, 0) - camera.global_transform.basis.z * 0.65
+            weapon.fire(shot_origin, -camera.global_transform.basis.z, spread, aiming)
     if G.match_mgr != null:
         G.match_mgr.update_interact(self, c.interact, delta)
 
@@ -174,7 +192,7 @@ func _switch(slot: int) -> void:
         return
     for i in range(weapons.size()):
         if weapons[i].viewmodel != null:
-            weapons[i].viewmodel.visible = i == slot
+            weapons[i].viewmodel.visible = (not third_person) and i == slot
     active_slot = slot
     weapon = weapons[slot]
     switch_t = 0.42
@@ -202,6 +220,9 @@ func get_recoil_offset() -> Vector2:
 func get_bob() -> float:
     return bob
 
+func get_muzzle_hint() -> Vector3:
+    return global_position + Vector3(0, 1.30 if not crouched else 1.0, 0) - global_transform.basis.z * 0.62
+
 func die(killer: Node, headshot: bool = false) -> void:
     if not alive:
         return
@@ -213,6 +234,7 @@ func die(killer: Node, headshot: bool = false) -> void:
         build_sys.reset_round()
     G.controls.set_capture(false)
     camera.top_level = true
+    camera_pivot.rotation = Vector3.ZERO
     spectate_t = 0.0
     spectate_idx = 0
 
@@ -242,13 +264,17 @@ func reset_for_round(pos: Vector3) -> void:
     recoil = Vector2.ZERO
     bob = 0.0
     camera.top_level = false
-    camera.position = Vector3(0, G.tuning.eye_height, 0)
+    camera_pivot.rotation = Vector3.ZERO
+    camera.position = Vector3(0.62, 0.20, 2.85)
     camera.rotation = Vector3.ZERO
     camera.current = true
+    third_person = true
+    if model_root != null:
+        model_root.visible = true
     for i in range(weapons.size()):
         weapons[i].refill()
         if weapons[i].viewmodel != null:
-            weapons[i].viewmodel.visible = i == active_slot
+            weapons[i].viewmodel.visible = false
     if build_sys != null:
         build_sys.reset_round()
     G.controls.set_capture(true)

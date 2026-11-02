@@ -57,6 +57,7 @@ func _build_body() -> void:
     if is_player:
         tint = Color(0.90, 0.92, 0.82)
     G.models.tint_model(m, tint)
+    _add_gear(tint)
     skeleton = _find_skeleton(m)
     anim = _find_anim(m)
     if anim != null:
@@ -69,6 +70,39 @@ func _build_body() -> void:
             elif low.contains("run"):
                 clip_run = a
         anim.play(clip_idle, 0.15)
+
+
+func _add_gear(tint: Color) -> void:
+    var vest = G.materials.flat(Color(0.17, 0.19, 0.15), 0.92, 0.05)
+    var pouch = G.materials.get_mat("fabric", tint.darkened(0.35), 1.0)
+    var dark = G.materials.flat(Color(0.10, 0.11, 0.10), 0.85, 0.10)
+    var metal = G.materials.flat(Color(0.16, 0.17, 0.17), 0.55, 0.65)
+    # capacete balístico
+    G.models.box(model_root, Vector3(0.36, 0.20, 0.34), Vector3(0, 1.71, 0), vest)
+    G.models.box(model_root, Vector3(0.40, 0.045, 0.37), Vector3(0, 1.62, 0), dark)
+    G.models.box(model_root, Vector3(0.30, 0.045, 0.05), Vector3(0, 1.66, -0.18), metal)
+    # colete / placas
+    G.models.box(model_root, Vector3(0.48, 0.44, 0.30), Vector3(0, 1.28, 0.01), vest)
+    G.models.box(model_root, Vector3(0.40, 0.30, 0.05), Vector3(0, 1.30, -0.16), dark)
+    G.models.box(model_root, Vector3(0.42, 0.14, 0.06), Vector3(0, 1.06, -0.16), pouch)
+    for i in range(3):
+        G.models.box(model_root, Vector3(0.11, 0.11, 0.07),
+            Vector3(-0.15 + i * 0.15, 1.08, -0.20), pouch)
+    # mochila / rádio
+    G.models.box(model_root, Vector3(0.36, 0.42, 0.20), Vector3(0, 1.28, 0.24), pouch)
+    G.models.box(model_root, Vector3(0.07, 0.22, 0.05), Vector3(0.24, 1.42, 0.24), dark)
+    # ombreiras
+    for sx in [-1.0, 1.0]:
+        G.models.box(model_root, Vector3(0.16, 0.12, 0.26),
+            Vector3(sx * 0.31, 1.48, 0), vest, Vector3(0, 0, sx * 0.25))
+    # luvas e joelheiras
+    for sx in [-1.0, 1.0]:
+        G.models.box(model_root, Vector3(0.14, 0.12, 0.16),
+            Vector3(sx * 0.32, 1.08, -0.06), dark)
+        G.models.box(model_root, Vector3(0.18, 0.14, 0.12),
+            Vector3(sx * 0.13, 0.50, -0.10), dark)
+    # cinto
+    G.models.box(model_root, Vector3(0.44, 0.07, 0.30), Vector3(0, 0.98, 0), dark)
 
 func _find_skeleton(n: Node) -> Skeleton3D:
     if n is Skeleton3D:
@@ -89,26 +123,10 @@ func _find_anim(n: Node) -> AnimationPlayer:
     return null
 
 func _attach_helmet(_m: Node3D) -> void:
-    if armor < 50.0 or has_helmet:
+    if has_helmet:
         return
-    var helm = G.models.helmet_model()
-    if helm == null:
-        return
-    var attached = false
-    if skeleton != null:
-        for i in range(skeleton.get_bone_count()):
-            var bn = skeleton.get_bone_name(i)
-            if bn.to_lower().contains("head"):
-                var ba = BoneAttachment3D.new()
-                ba.bone_name = bn
-                skeleton.add_child(ba)
-                helm.position = Vector3(0, 0.10, 0)
-                ba.add_child(helm)
-                attached = true
-                break
-    if not attached:
-        helm.position = Vector3(0, 1.68, 0)
-        model_root.add_child(helm)
+    G.models.box(model_root, Vector3(0.10, 0.07, 0.18), Vector3(0, 1.74, -0.16),
+        G.materials.flat(Color(0.12, 0.13, 0.13), 0.6, 0.55))
     has_helmet = true
 
 func think(_delta: float) -> void:

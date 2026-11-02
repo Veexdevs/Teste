@@ -55,6 +55,15 @@ func _build_view() -> void:
         muzzle = Node3D.new()
         muzzle.position = Vector3(0.0, 0.01, -0.58)
         viewmodel.add_child(muzzle)
+        if owner_node.has_node("Body"):
+            var holder = Node3D.new()
+            holder.name = "WorldWeapon"
+            holder.scale = Vector3(0.82, 0.82, 0.82)
+            var wm = G.models.weapon_model(data.model)
+            holder.add_child(wm)
+            holder.position = Vector3(0.30, 1.22, -0.18)
+            holder.rotation.y = PI
+            owner_node.get_node("Body").add_child(holder)
 
 func _find_anim(n: Node) -> AnimationPlayer:
     if n is AnimationPlayer:
@@ -167,7 +176,9 @@ func fire(origin: Vector3, base_dir: Vector3, spread_deg: float, aiming: bool) -
     spread_heat = minf(spread_heat + 1.0, 8.0)
     var dir = add_ai_spread(base_dir, maxf(spread_deg, 0.0))
     var muzzle_pos = origin
-    if muzzle != null:
+    if owner_node.is_player and owner_node.has_method("get_muzzle_hint"):
+        muzzle_pos = owner_node.get_muzzle_hint()
+    elif muzzle != null:
         muzzle_pos = muzzle.global_position
     G.fx.muzzle(muzzle_pos, dir)
     G.fx.shell(muzzle_pos + Vector3(0.05, -0.06, 0.05))
@@ -248,6 +259,8 @@ func _trace(origin: Vector3, dir: Vector3) -> void:
     G.fx.tracer(muzzle_pos_for_tracer(origin), end)
 
 func muzzle_pos_for_tracer(origin: Vector3) -> Vector3:
+    if owner_node.is_player and owner_node.has_method("get_muzzle_hint"):
+        return owner_node.get_muzzle_hint()
     if muzzle != null:
         return muzzle.global_position
     return origin

@@ -10,6 +10,12 @@ linha de visão e cobertura de campo destrutível.
 > **Não é HTML nem jogo de navegador.** Não existe preset Web/HTML5. Todos os
 > alvos são binários nativos: Android (`.apk`), Windows (`.exe`), Linux,
 > macOS (`.app`) e iOS (projecto Xcode / `.ipa`).
+>
+> **Visual:** câmara em terceira pessoa por cima do ombro (ADS passa a
+> primeira pessoa), cidade em ruínas com texturas PBR fotorrealistas,
+> entulho, viaturas queimadas, fumo, névoa e paleta dessaturada; HUD
+> minimalista com minimapa circular A/B, placar `5 | 1:42 | 5`, silhueta da
+> arma com `30 / 90`, vida/colete e mira discreta.
 
 ---
 
@@ -46,10 +52,13 @@ Os mesmos ficheiros são publicados automaticamente no **GitHub Release
   e zonas de dano (cabeça 4×, peito, abdómen, membros).
 - **Áudio:** 19 amostras PCM sintetizadas em runtime (disparos, recarga,
   passos, impactos, rádio, vento, carga, explosão) — sem ficheiros externos.
-- **Modelos 3D prontos:** soldador rigado (Mixamo/three.js), capacete
-  (DamagedHelmet), espingarda e seis armas glTF em viewmodel, carregados em
-  runtime via `GLTFDocument`. Se faltar algum ficheiro, o jogo gera armas e
-  corpos procedurais automaticamente.
+- **Modelos 3D prontos:** soldado rigado (Mixamo/three.js) com capacete,
+  colete, mochila e equipamento táctico procedurais; espingarda e seis armas
+  glTF em viewmodel, carregados em runtime via `GLTFDocument`. Se faltar
+  algum ficheiro, o jogo gera armas e corpos procedurais automaticamente.
+- **Texturas fotorrealistas:** `game/assets/textures/concrete_ruin.*` e
+  `asphalt_rubble.*` (betão destruído e asfalto com entulho) são lidas como
+  PNG em runtime e aplicadas como albedo PBR com normais procedurais.
 
 ### Controlos (desktop)
 
@@ -58,7 +67,7 @@ Os mesmos ficheiros são publicados automaticamente no **GitHub Release
 | `W A S D` | mover |
 | Rato | olhar |
 | Botão esquerdo | disparar |
-| Botão direito | mirar (ADS) |
+| Botão direito | mirar (ADS — passa a primeira pessoa) |
 | `Shift` | correr (gasta fôlego) |
 | `Ctrl` / `C` | agachar |
 | `Espaço` | saltar |
@@ -145,6 +154,7 @@ game/entities/           soldado, jogador, IA, armas, fortificações
 game/match/              rondas, economia, carga/desactivação
 game/ui/                 HUD, menu, minimapa, controlos tácteis
 game/assets/models/      GLB prontos (9 ficheiros .bin)
+game/assets/textures/    albedos PBR fotorrealistas (.png + .bin)
 game/assets/licenses/    créditos e licenças de terceiros
 tools/                   fetch_assets.py, make_icon.py, build_all.sh
 certs/debug.keystore     chave de debug Android (alias androiddebugkey / android)

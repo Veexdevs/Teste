@@ -12,7 +12,7 @@ Para gerar localmente: `GODOT_BIN=/caminho/godot bash tools/build_all.sh`.
 
 | Ficheiro | Alvo | Notas |
 | --- | --- | --- |
-| `SENTINELA.apk` | Android | Assinado (v2+v3) com `certs/debug.keystore`. |
+| `SENTINELA.apk` | Android | Assinado (v2+v3) com `certs/debug.keystore`. Câmara por cima do ombro, HUD novo, cidade em ruínas. |
 | `SENTINELA.exe` | Windows x86_64 | PCK embutido, ficheiro único. |
 | `SENTINELA.x86_64` | Linux x86_64 | PCK embutido, executável único. |
 | `SENTINELA_macos.zip` | macOS universal | `.app` com assinatura ad-hoc. |

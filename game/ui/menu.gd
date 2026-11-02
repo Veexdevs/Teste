@@ -18,45 +18,45 @@ func _ready() -> void:
     process_mode = Node.PROCESS_MODE_ALWAYS
     layer = 20
     bg = ColorRect.new()
-    bg.color = Color(0.022, 0.032, 0.030, 1.0)
+    bg.color = Color(0.020, 0.024, 0.024, 0.72)
     bg.set_anchors_preset(Control.PRESET_FULL_RECT)
     add_child(bg)
     title = Label.new()
     title.text = "S E N T I N E L A"
     title.add_theme_font_size_override("font_size", 52)
-    title.add_theme_color_override("font_color", Color(0.90, 0.93, 0.78))
+    title.add_theme_color_override("font_color", Color(0.94, 0.94, 0.91))
     title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     add_child(title)
     sub = Label.new()
     sub.text = "OPERACAO CERRADO  //  INCURSAO TACTICA  //  MOTOR GODOT 4.5"
     sub.add_theme_font_size_override("font_size", 15)
-    sub.add_theme_color_override("font_color", Color(0.60, 0.74, 0.60))
+    sub.add_theme_color_override("font_color", Color(0.66, 0.67, 0.65))
     sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     add_child(sub)
     panel = Panel.new()
     var s = StyleBoxFlat.new()
-    s.bg_color = Color(0.06, 0.09, 0.075, 0.96)
+    s.bg_color = Color(0.045, 0.050, 0.050, 0.94)
     s.set_corner_radius_all(6)
     s.border_width_left = 1
     s.border_width_right = 1
     s.border_width_top = 1
     s.border_width_bottom = 1
-    s.border_color = Color(0.30, 0.40, 0.30)
+    s.border_color = Color(0.40, 0.41, 0.40, 0.35)
     panel.add_theme_stylebox_override("panel", s)
     add_child(panel)
     var t = Label.new()
     t.name = "PTitle"
     t.text = "PREPARACAO DA MISSAO"
     t.add_theme_font_size_override("font_size", 22)
-    t.add_theme_color_override("font_color", Color(0.95, 0.90, 0.62))
+    t.add_theme_color_override("font_color", Color(0.98, 0.74, 0.20))
     t.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     panel.add_child(t)
-    diff_value = _label("DIFICULDADE: NORMAL", 14, Color(0.80, 0.88, 0.76), panel)
+    diff_value = _label("DIFICULDADE: NORMAL", 14, Color(0.88, 0.89, 0.87), panel)
     var dl = ["RECRUTA", "TREINADO", "NORMAL", "VETERANO", "ELITE"]
     for i in range(dl.size()):
         var idx = i
         diff_buttons.append(_button(dl[i], panel, func(): _set_diff(idx), Vector2(92, 34), 12))
-    primary_value = _label("ARMAMENTO: M4A1 CARABINA", 14, Color(0.80, 0.88, 0.76), panel)
+    primary_value = _label("ARMAMENTO: M4A1 CARABINA", 14, Color(0.88, 0.89, 0.87), panel)
     var pl = ["M4A1", "AK-47", "MP5", "SNIPER"]
     var pk = ["m4a1", "ak47", "mp5", "sniper"]
     for i in range(pl.size()):
@@ -67,12 +67,12 @@ func _ready() -> void:
         "WASD mover  |  RATO olhar  |  ESQ disparar  |  DIR mirar  |  SHIFT correr\n" +
         "CTRL agachar  |  ESPACO saltar  |  R recarregar  |  1/2 armas  |  Q/E inclinar\n" +
         "F plantar/desactivar  |  B fortificar  |  TAB placar  |  ESC pausa  |  F1 ajuda",
-        12, Color(0.65, 0.74, 0.64), panel)
+        12, Color(0.66, 0.67, 0.65), panel)
     controls_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     var foot = Label.new()
     foot.text = "SIMULACAO TACTICA FICCIONAL  -  SEM CONEXAO A ARMAS OU OPERACOES REAIS"
     foot.add_theme_font_size_override("font_size", 11)
-    foot.add_theme_color_override("font_color", Color(0.40, 0.50, 0.42))
+    foot.add_theme_color_override("font_color", Color(0.45, 0.46, 0.45))
     foot.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     add_child(foot)
     foot.name = "Foot"
@@ -94,14 +94,14 @@ func _button(text: String, parent: Control, cb: Callable, sz: Vector2, size: int
     b.text = text
     b.custom_minimum_size = sz
     b.add_theme_font_size_override("font_size", size)
-    b.add_theme_color_override("font_color", Color(0.88, 0.92, 0.80))
-    b.add_theme_color_override("font_hover_color", Color(1.0, 0.92, 0.60))
+    b.add_theme_color_override("font_color", Color(0.93, 0.93, 0.91))
+    b.add_theme_color_override("font_hover_color", Color(0.98, 0.74, 0.20))
     var st = StyleBoxFlat.new()
-    st.bg_color = Color(0.13, 0.19, 0.14, 1.0)
+    st.bg_color = Color(0.11, 0.12, 0.12, 1.0)
     st.set_corner_radius_all(3)
     b.add_theme_stylebox_override("normal", st)
     var st2 = st.duplicate()
-    st2.bg_color = Color(0.24, 0.34, 0.22, 1.0)
+    st2.bg_color = Color(0.22, 0.23, 0.21, 1.0)
     b.add_theme_stylebox_override("hover", st2)
     parent.add_child(b)
     b.pressed.connect(cb)
