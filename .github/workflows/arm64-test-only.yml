@@ -84,6 +84,8 @@ jobs:
 
       - name: Instalar e iniciar APKs
         if: always()
+        env:
+          TEST_ONLY_PATCHED: '1'
         run: |
           set -uo pipefail
           export ANDROID_SERIAL=127.0.0.1:5555
@@ -117,7 +119,7 @@ jobs:
             fi
             if [ -f emulator-report/summary.md ]; then
               echo '```text'
-              head -c 70000 emulator-report/summary.md
+              head -c 110000 emulator-report/summary.md
               echo
               echo '```'
             fi
