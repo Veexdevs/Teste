@@ -57,7 +57,9 @@ test_apk() {
   adb shell am force-stop "$PKG" >/dev/null 2>&1 || true
 }
 
-test_apk "original" "assets/SignatureKiller/origin.apk"
+if [ "${TEST_ONLY_PATCHED:-0}" != "1" ]; then
+  test_apk "original" "assets/SignatureKiller/origin.apk"
+fi
 test_apk "release-test" "dist/8Ball-Pool-Android-V2-5-release-test.apk"
 
 python3 - <<'PY'
