@@ -13,6 +13,8 @@ adb shell getconf PAGE_SIZE > "$REPORT/page-size.txt" 2>&1 || true
 adb shell getprop ro.build.version.release > "$REPORT/android-release.txt" 2>&1 || true
 adb shell getprop ro.build.version.sdk > "$REPORT/android-sdk.txt" 2>&1 || true
 adb shell getprop ro.product.model > "$REPORT/emulator-model.txt" 2>&1 || true
+adb shell getprop ro.product.cpu.abilist > "$REPORT/abilist.txt" 2>&1 || true
+adb shell getprop ro.dalvik.vm.native.bridge > "$REPORT/native-bridge.txt" 2>&1 || true
 adb shell cat /proc/cpuinfo > "$REPORT/cpuinfo.txt" 2>&1 || true
 
 capture() {
@@ -63,7 +65,7 @@ import re
 report = Path('emulator-report')
 patterns = re.compile(r'FATAL EXCEPTION|AndroidRuntime|Process: com\.miniclip\.eightballpool|signal \d+|dlopen failed|SignatureKiller|signature|VERIFY|not 16 KB|page.size|UnsatisfiedLinkError|SecurityException', re.I)
 lines_out = ['# Emulator crash test summary', '']
-for name in ['page-size.txt', 'android-release.txt', 'android-sdk.txt', 'emulator-model.txt']:
+for name in ['page-size.txt', 'android-release.txt', 'android-sdk.txt', 'emulator-model.txt', 'abilist.txt', 'native-bridge.txt']:
     path = report / name
     if path.exists():
         lines_out.append(f'- {name}: `{path.read_text(errors="replace").strip()}`')
