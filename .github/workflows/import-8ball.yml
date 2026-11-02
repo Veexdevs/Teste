@@ -1,0 +1,34 @@
+name: Importar ZIP 8BallPool
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: import-8ball-zip
+  cancel-in-progress: false
+
+jobs:
+  inspect:
+    name: Verificar e inventariar o ZIP
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout da branch de trabalho
+        uses: actions/checkout@v4
+        with:
+          ref: arena/28562b70-teste
+          fetch-depth: 0
+
+      - name: Baixar e conferir o ZIP sem abrir os códigos
+        run: python3 .github/scripts/inspect_mediafire_zip.py
+
+      - name: Salvar somente o inventário de arquivos
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/import-manifest.json
+          git commit -m "Record verified 8BallPool ZIP inventory"
+          git push origin HEAD:arena/28562b70-teste
