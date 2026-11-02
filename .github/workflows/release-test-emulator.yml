@@ -19,8 +19,8 @@ concurrency:
 jobs:
   release-test:
     name: Assinar com chave release e capturar crash em ARM64
-    runs-on: macos-14
-    timeout-minutes: 75
+    runs-on: macos-15
+    timeout-minutes: 90
     steps:
       - name: Checkout com arquivos grandes
         uses: actions/checkout@v4
@@ -101,8 +101,10 @@ jobs:
           profile: pixel_5
           cores: 4
           ram-size: 4096M
+          disk-size: 8G
           force-avd-creation: true
-          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -no-snapshot -wipe-data -partition-size 4096
+          emulator-boot-timeout: 1200
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -no-snapshot -wipe-data
           disable-animations: true
           script: bash .github/scripts/emulator-crash-test.sh
 
