@@ -1,0 +1,25 @@
+name: probe
+on:
+  workflow_dispatch:
+  push:
+    paths: ['.github/workflows/probe.yml']
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Env
+        run: |
+          echo "runner=$RUNNER_OS actor=$GITHUB_ACTOR ref=$GITHUB_REF"
+          curl -sSI https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_linux.x86_64.zip | head -5
+          echo "PROBE_OK $(date -u)" > probe.txt
+      - uses: actions/checkout@v4
+      - name: Commit result
+        run: |
+          git config user.name "arena-bot"
+          git config user.email "arena-bot@users.noreply.github.com"
+          cp /home/runner/work/Teste/Teste/probe.txt ./probe.txt 2>/dev/null || cp probe.txt ./probe.txt
+          git add probe.txt
+          git commit -m "ci probe result [skip ci]" || true
+          git push
