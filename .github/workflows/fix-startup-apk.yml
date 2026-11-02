@@ -206,7 +206,9 @@ jobs:
             fi
             sleep 5
           done
-          docker logs redroid-test > emulator-report/redroid-docker.log 2>&1 || true
+          docker logs --tail 300 redroid-test > emulator-report/redroid-docker.log 2>&1 || true
+          adb devices -l >> emulator-report/host.txt 2>&1 || true
+          sudo dmesg | tail -n 120 > emulator-report/dmesg-tail.txt 2>&1 || true
           echo "Redroid did not boot in time" | tee -a emulator-report/host.txt
           exit 1
 
@@ -223,15 +225,39 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -uo pipefail
+          tag="${{ needs.build.outputs.tag }}"
           if [ -f emulator-report/summary.md ]; then
             cp emulator-report/summary.md emulator-report/arm64-summary.md
-            gh release upload "${{ needs.build.outputs.tag }}" emulator-report/arm64-summary.md \
+            gh release upload "$tag" emulator-report/arm64-summary.md \
               --repo "${{ github.repository }}" --clobber
           fi
           if [ -f emulator-report/host.txt ]; then
-            gh release upload "${{ needs.build.outputs.tag }}" emulator-report/host.txt \
+            gh release upload "$tag" emulator-report/host.txt \
               --repo "${{ github.repository }}" --clobber
           fi
+          gh release view "$tag" --repo "${{ github.repository }}" --json body --jq .body > release-body.md
+          {
+            echo
+            echo "## Resultado do teste ARM64"
+            echo
+            if [ -f emulator-report/host.txt ]; then
+              echo '```text'
+              cat emulator-report/host.txt
+              echo '```'
+            fi
+            if [ -f emulator-report/summary.md ]; then
+              echo '```text'
+              cat emulator-report/summary.md
+              echo '```'
+            fi
+            if [ -f emulator-report/redroid-docker.log ]; then
+              echo '```text'
+              tail -n 120 emulator-report/redroid-docker.log
+              echo '```'
+            fi
+          } >> release-body.md
+          gh release edit "$tag" --repo "${{ github.repository }}" --notes-file release-body.md
+          cat release-body.md
 
       - name: Enviar relatório ARM64
         if: always()
