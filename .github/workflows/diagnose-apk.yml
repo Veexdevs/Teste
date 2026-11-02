@@ -9,7 +9,7 @@ on:
       - .github/scripts/repackage_preserve.py
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: diagnose-8ball-apk-${{ github.ref }}
@@ -135,6 +135,38 @@ jobs:
                           print(f"::notice title={name} {key}::{escape(item)}")
           PY
 
+      - name: Verificar alinhamento de 16 KB das bibliotecas nativas
+        run: |
+          set -euo pipefail
+          mkdir -p report
+          : > report/native-16kb.txt
+          while IFS= read -r lib; do
+            echo "## $lib" >> report/native-16kb.txt
+            readelf -lW "$lib" | grep -E '^\s*LOAD' >> report/native-16kb.txt || true
+          done < <(find lib -type f -name '*.so' | sort)
+          python3 - <<'PY'
+          import pathlib, re
+          path = pathlib.Path('report/native-16kb.txt')
+          bad = []
+          current = None
+          for line in path.read_text(errors='replace').splitlines():
+              if line.startswith('## '):
+                  current = line[3:]
+              elif 'LOAD' in line:
+                  parts = line.split()
+                  align = parts[-1]
+                  try:
+                      value = int(align, 16) if align.startswith('0x') else int(align)
+                  except ValueError:
+                      value = 0
+                  if value < 0x4000:
+                      bad.append(f'{current}: LOAD align={align}')
+          if bad:
+              print('::warning title=Bibliotecas nativas sem alinhamento de 16 KB::' + '%0A'.join(bad[:20]))
+          else:
+              print('::notice title=Bibliotecas nativas::Todos os segmentos LOAD verificados têm alinhamento >= 16 KB.')
+          PY
+
       - name: Publicar relatório e variantes
         uses: actions/upload-artifact@v4
         with:
@@ -145,3 +177,20 @@ jobs:
           if-no-files-found: error
           retention-days: 14
           compression-level: 0
+
+      - name: Publicar APK debug de teste em pré-release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="v2.5-debug-diag-${{ github.run_id }}"
+          gh release create "$tag" \
+            dist/8Ball-Pool-Android-V2-5-debug.apk \
+            report/sha256.txt \
+            report/summary.md \
+            report/native-16kb.txt \
+            --repo "${{ github.repository }}" \
+            --target "${{ github.sha }}" \
+            --prerelease \
+            --title "8BallPool V2.5 - APK debug de teste" \
+            --notes "Variante debug para diagnosticar fechamento na inicialização. Não usa a assinatura original. O relatório inclui metadados de assinatura e alinhamento nativo. Se ainda fechar, é necessário logcat do dispositivo."
