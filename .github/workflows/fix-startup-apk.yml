@@ -1,0 +1,273 @@
+name: Corrigir inicializacao do APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [arena/7a59dd82-teste]
+    paths:
+      - .github/workflows/fix-startup-apk.yml
+      - .github/scripts/patch_startup_compat.py
+      - .github/scripts/repackage_preserve.py
+      - .github/scripts/emulator-crash-test.sh
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fix-startup-8ball-apk-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Aplicar correção de inicialização e assinar
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      tag: ${{ steps.release.outputs.tag }}
+    steps:
+      - name: Checkout com arquivos grandes
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Configurar Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Configurar Android SDK
+        uses: android-actions/setup-android@v4
+        with:
+          packages: platform-tools
+          log-accepted-android-sdk-licenses: false
+
+      - name: Instalar ferramentas de empacotamento
+        run: sdkmanager "build-tools;35.0.0"
+
+      - name: Instalar analisador DEX
+        run: python3 -m pip install --quiet androguard==4.1.4
+
+      - name: Corrigir exceção fatal no módulo de compatibilidade
+        run: |
+          set -euo pipefail
+          mkdir -p report
+          python3 .github/scripts/patch_startup_compat.py \
+            --dex classes18.dex \
+            --report report/startup-patch.json
+          cat report/startup-patch.json >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Reempacotar APK
+        run: |
+          set -euo pipefail
+          mkdir -p dist report
+          python3 .github/scripts/repackage_preserve.py \
+            --source-code-modified \
+            --output "$RUNNER_TEMP/8Ball-Pool-Android-V2-5-compat-unsigned.apk" \
+            --report report/compat-packaging.json
+          python3 - <<'PY'
+          import json, pathlib
+          data = json.loads(pathlib.Path('report/compat-packaging.json').read_text())
+          count = data.get('zip_data_descriptor_entries')
+          print(f"::notice title=ZIP data descriptors::output={count}")
+          if count != 0:
+              raise SystemExit(f"APK has {count} data-descriptor entries")
+          PY
+
+      - name: Assinar com chave release gerada e verificar
+        run: |
+          set -euo pipefail
+          BUILD_TOOLS="$ANDROID_HOME/build-tools/35.0.0"
+          KEYSTORE="$RUNNER_TEMP/compat-release.keystore"
+          STOREPASS="$(openssl rand -hex 24)"
+          keytool -genkeypair -noprompt \
+            -keystore "$KEYSTORE" \
+            -storepass "$STOREPASS" -keypass "$STOREPASS" \
+            -alias compat-release -keyalg RSA -keysize 4096 -validity 10000 \
+            -dname "CN=8BallPool Compat, O=Community Build, C=BR"
+          "$BUILD_TOOLS/zipalign" -P 16 -f 4 \
+            "$RUNNER_TEMP/8Ball-Pool-Android-V2-5-compat-unsigned.apk" \
+            "$RUNNER_TEMP/8Ball-Pool-Android-V2-5-compat-aligned.apk"
+          "$BUILD_TOOLS/apksigner" sign \
+            --ks "$KEYSTORE" \
+            --ks-key-alias compat-release \
+            --ks-pass "pass:$STOREPASS" --key-pass "pass:$STOREPASS" \
+            --v1-signing-enabled true --v2-signing-enabled true \
+            --v3-signing-enabled true --v4-signing-enabled false \
+            --out "dist/8Ball-Pool-Android-V2-5-compat.apk" \
+            "$RUNNER_TEMP/8Ball-Pool-Android-V2-5-compat-aligned.apk"
+          "$BUILD_TOOLS/apksigner" verify --verbose --print-certs \
+            "dist/8Ball-Pool-Android-V2-5-compat.apk" > report/compat-signature.txt 2>&1
+          "$BUILD_TOOLS/zipalign" -c -P 16 4 \
+            "dist/8Ball-Pool-Android-V2-5-compat.apk" > report/zipalign-check.txt 2>&1
+          "$BUILD_TOOLS/aapt2" dump badging \
+            "dist/8Ball-Pool-Android-V2-5-compat.apk" > report/compat-badging.txt 2>&1
+          sha256sum dist/*.apk > report/sha256.txt
+          {
+            echo "# APK com correção de inicialização"
+            echo
+            echo "- Correção pontual em classes18.dex: falhas ao limpar caches internos do Android deixam de derrubar o processo durante a inicialização."
+            echo "- Assinado com chave release gerada no Actions; não é a assinatura original. Desinstale versões anteriores antes de instalar."
+            echo "- ZIP sem data descriptors, alinhado e verificado com apksigner/zipalign."
+            echo
+            echo '```json'
+            cat report/startup-patch.json
+            echo '```'
+            echo
+            echo '```text'
+            head -n 30 report/compat-signature.txt
+            echo '```'
+          } > report/summary.md
+          cat report/summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Enviar APK para teste ARM64
+        uses: actions/upload-artifact@v4
+        with:
+          name: compat-apk
+          path: dist/8Ball-Pool-Android-V2-5-compat.apk
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Enviar relatório de build
+        uses: actions/upload-artifact@v4
+        with:
+          name: compat-build-report
+          path: report/*
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Publicar pré-release
+        id: release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="v2.5-compat-${{ github.run_id }}"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          gh release create "$tag" \
+            dist/8Ball-Pool-Android-V2-5-compat.apk \
+            report/sha256.txt \
+            report/summary.md \
+            report/startup-patch.json \
+            --repo "${{ github.repository }}" \
+            --target "${{ github.sha }}" \
+            --prerelease \
+            --title "8BallPool V2.5 - correção de inicialização" \
+            --notes "APK com correção pontual no módulo de compatibilidade de assinatura para evitar exceção fatal na inicialização. Chave release gerada, não original. Desinstale versões anteriores antes de instalar. Teste ARM64 será anexado quando disponível."
+
+  test-arm64:
+    name: Testar em Android ARM64 nativo via Redroid
+    needs: build
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 45
+    steps:
+      - name: Checkout com arquivos grandes
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Baixar APK corrigido
+        uses: actions/download-artifact@v4
+        with:
+          name: compat-apk
+          path: dist
+
+      - name: Instalar ADB e preparar Redroid
+        id: redroid
+        continue-on-error: true
+        run: |
+          set -uo pipefail
+          mkdir -p emulator-report "$RUNNER_TEMP/redroid-data"
+          {
+            echo "## Host ARM64"
+            uname -a
+            getconf PAGE_SIZE
+            docker version --format '{{.Server.Arch}}' || true
+          } > emulator-report/host.txt
+          sudo apt-get update
+          sudo apt-get install -y adb "linux-modules-extra-$(uname -r)" || true
+          sudo modprobe binder_linux devices=binder,hwbinder,vndbinder || true
+          sudo modprobe ashmem_linux || true
+          docker pull redroid/redroid:14.0.0_64only-latest
+          docker run -d --privileged --name redroid-test \
+            -v "$RUNNER_TEMP/redroid-data:/data" \
+            -p 127.0.0.1:5555:5555 \
+            redroid/redroid:14.0.0_64only-latest \
+            androidboot.use_memfd=true \
+            androidboot.redroid_gpu_mode=guest \
+            androidboot.redroid_width=720 \
+            androidboot.redroid_height=1280 \
+            androidboot.redroid_fps=30
+          for i in $(seq 1 60); do
+            adb connect 127.0.0.1:5555 >/dev/null 2>&1 || true
+            if adb -s 127.0.0.1:5555 shell getprop sys.boot_completed 2>/dev/null | grep -q 1; then
+              echo "Redroid boot completed" | tee -a emulator-report/host.txt
+              exit 0
+            fi
+            sleep 5
+          done
+          docker logs --tail 300 redroid-test > emulator-report/redroid-docker.log 2>&1 || true
+          adb devices -l >> emulator-report/host.txt 2>&1 || true
+          sudo dmesg | tail -n 120 > emulator-report/dmesg-tail.txt 2>&1 || true
+          echo "Redroid did not boot in time" | tee -a emulator-report/host.txt
+          exit 1
+
+      - name: Instalar e iniciar APKs
+        if: always()
+        run: |
+          set -uo pipefail
+          cp dist/8Ball-Pool-Android-V2-5-compat.apk dist/8Ball-Pool-Android-V2-5-release-test.apk
+          bash .github/scripts/emulator-crash-test.sh
+
+      - name: Anexar relatório ARM64 à pré-release
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -uo pipefail
+          tag="${{ needs.build.outputs.tag }}"
+          if [ -f emulator-report/summary.md ]; then
+            cp emulator-report/summary.md emulator-report/arm64-summary.md
+            gh release upload "$tag" emulator-report/arm64-summary.md \
+              --repo "${{ github.repository }}" --clobber
+          fi
+          if [ -f emulator-report/host.txt ]; then
+            gh release upload "$tag" emulator-report/host.txt \
+              --repo "${{ github.repository }}" --clobber
+          fi
+          gh release view "$tag" --repo "${{ github.repository }}" --json body --jq .body > release-body.md
+          {
+            echo
+            echo "## Resultado do teste ARM64"
+            echo
+            if [ -f emulator-report/host.txt ]; then
+              echo '```text'
+              cat emulator-report/host.txt
+              echo '```'
+            fi
+            if [ -f emulator-report/summary.md ]; then
+              echo '```text'
+              cat emulator-report/summary.md
+              echo '```'
+            fi
+            if [ -f emulator-report/redroid-docker.log ]; then
+              echo '```text'
+              tail -n 120 emulator-report/redroid-docker.log
+              echo '```'
+            fi
+          } >> release-body.md
+          gh release edit "$tag" --repo "${{ github.repository }}" --notes-file release-body.md
+          cat release-body.md
+
+      - name: Enviar relatório ARM64
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: compat-arm64-report
+          path: emulator-report/*
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Encerrar Redroid
+        if: always()
+        run: docker rm -f redroid-test || true
