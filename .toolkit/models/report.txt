@@ -1,0 +1,7 @@
+=== downloaded ===
+ak47.bin 13804592 bytes magic=glTF
+ak47_low.bin 108208 bytes magic=glTF
+arms_m4a1.bin 867244 bytes magic=glTF
+assault_rifle.bin 205844 bytes magic=glTF
+m4a1.bin 10051304 bytes magic=glTF
+vm_mp5.bin 250528 bytes magic=glTF

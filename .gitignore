@@ -1,0 +1,4 @@
+
+# artefactos pesados de CI (engine/templates) nunca entram no repo final
+.toolkit/
+ci/probe-report.txt

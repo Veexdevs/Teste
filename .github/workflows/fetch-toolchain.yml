@@ -1,0 +1,53 @@
+name: fetch-toolchain
+on:
+  workflow_dispatch:
+  push:
+    paths: ['.github/workflows/fetch-toolchain.yml']
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download Godot 4.5 editor + export templates
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/tk /tmp/tk/templates
+          cd /tmp/tk
+          curl -fsSL --retry 3 -o editor.zip https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_linux.x86_64.zip
+          curl -fsSL --retry 3 -o templates.tpz https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_export_templates.tpz
+          unzip -q editor.zip
+          unzip -q templates.tpz -d tpz
+          echo "=== template listing ===" | tee listing.txt
+          find tpz/templates -maxdepth 1 -type f -printf '%s %f\n' | sort -k2 | tee -a listing.txt
+          BIN=$(find . -maxdepth 1 -name 'Godot_v4.5-stable_linux.x86_64' -type f | head -1)
+          cp "$BIN" editor_bin
+          chmod +x editor_bin
+          for f in version.txt windows_release_x86_64.exe windows_debug_x86_64.exe windows_release_x86_64_console.exe linux_release.x86_64 linux_debug.x86_64 android_release.apk android_debug.apk android_source.zip macos.zip ios.zip web_release.zip; do
+            if [ -f "tpz/templates/$f" ]; then cp "tpz/templates/$f" "templates/$f"; fi
+          done
+          keytool -genkeypair -v -keystore debug.keystore -storepass android -keypass android -alias androiddebugkey -dname "CN=Android Debug,O=Android,C=US" -keyalg RSA -keysize 2048 -validity 10000 >/dev/null 2>&1
+          cp templates/version.txt templates_version.txt
+          tar czf toolkit.tar.gz editor_bin templates debug.keystore
+          split -b 80m toolkit.tar.gz toolkit.part_
+          echo "=== parts ===" | tee -a listing.txt
+          ls -lh toolkit.part_* | tee -a listing.txt
+          echo "editor version: $(./editor_bin --headless --version)" | tee -a listing.txt
+      - name: Upload tiny probe artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: toolkit-listing
+          path: /tmp/tk/listing.txt
+      - uses: actions/checkout@v4
+        if: always()
+      - name: Commit toolkit parts
+        if: always()
+        run: |
+          mkdir -p .toolkit
+          cp /tmp/tk/toolkit.part_* .toolkit/ 2>/dev/null || true
+          cp /tmp/tk/listing.txt .toolkit/listing.txt 2>/dev/null || true
+          git config user.name "arena-bot"
+          git config user.email "arena-bot@users.noreply.github.com"
+          git add -f .toolkit/
+          git commit -m "ci: godot toolkit parts [skip ci]" || true
+          git push || true
