@@ -94,21 +94,59 @@ for label in ['original', 'release-test']:
         lines_out.extend(crash_path.read_text(errors='replace').splitlines()[:200])
         lines_out.append('```')
     hits = []
+    app_rows = []
+    custom_rows = []
     log_path = report / f'{label}-logcat.txt'
     if log_path.exists():
         rows = log_path.read_text(errors='replace').splitlines()
+        app_pids = set()
+        for row in rows:
+            for pattern in (
+                r'Start proc (\d+):com\.miniclip\.eightballpool',
+                r'am_proc_start: \[\d+,(\d+),',
+                r'Process com\.miniclip\.eightballpool \(pid (\d+)\)',
+            ):
+                match = re.search(pattern, row)
+                if match:
+                    app_pids.add(match.group(1))
+        custom = re.compile(
+            r'loader|samurai|PwfNative|SignatureKiller|KillerApplication|HiddenApiBypass|'
+            r'EightBallPool|eightballpool|isVerified|installer|verification|license|'
+            r'killProcess|SIGKILL|dlopen|UnsatisfiedLinkError|System\.loadLibrary',
+            re.I,
+        )
+        seen = set()
         for i, row in enumerate(rows):
+            parts = row.split(None, 5)
+            pid = parts[2] if len(parts) > 2 else ''
+            if app_pids and pid in app_pids and row not in seen:
+                app_rows.append(row)
+                seen.add(row)
+            if custom.search(row) and row not in seen:
+                custom_rows.append(row)
+                seen.add(row)
             if strict.search(row):
                 start = max(0, i - 2)
                 end = min(len(rows), i + 12)
-                hits.extend(rows[start:end])
+                for candidate in rows[start:end]:
+                    if candidate not in seen:
+                        hits.append(candidate)
+                        seen.add(candidate)
                 if len(hits) > 200:
                     break
+    if app_rows:
+        lines_out.append('\n### app process logs\n```text')
+        lines_out.extend(app_rows[:300])
+        lines_out.append('```')
+    if custom_rows:
+        lines_out.append('\n### loader / signature / mod logs\n```text')
+        lines_out.extend(custom_rows[:200])
+        lines_out.append('```')
     if hits:
         lines_out.append('\n### logcat highlights\n```text')
         lines_out.extend(hits[:200])
         lines_out.append('```')
-    else:
+    elif not app_rows and not custom_rows:
         lines_out.append('\nNo fatal/crash/native-load keywords found in captured logcat.')
 summary = '\n'.join(lines_out) + '\n'
 (report / 'summary.md').write_text(summary, encoding='utf-8')
